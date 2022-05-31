@@ -1,0 +1,47 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Parallel Programming</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34093</md:content-id>
+  <md:title>Parallel Programming</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>181ac084-d5a8-4a47-adf3-2bd87724d4af</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id12133622">In 1985, by design, G was developed to address and simplify parallel programming. If you have gone through the examples in this book, you have already developed various parallel programs.</para>
+    <para id="id12133632">In the following example, we will develop a simple program where interactivity and parallelism are part of the program.</para>
+    <figure id="id12133641"><media id="id12133641_media" alt="A diagram of Parallel Programming. The diagram consists of two rows of icons. The upper row from left to right consist of an orange box contina '0.02' over a blue box containg 'i'. lines connect these icons to a triangular icon with apex pointing right and it contains 'x'. A line connects this to a graph icon and then that is connected to another triangle icon and that triangle that points to a final graph icon labeled 'sine wave'. The bottom row of icons consist of an orange icon labeled 'amplitude' which connects via a line to the second triangle in the upper row. To the right of the 'Amplitude' icon is  'stop' button icon.">
+        <image mime-type="image/png" src="../../media/Picture 105.png" id="id12133641__onlineimage" height="134" width="252"/>
+      </media>
+      
+    <caption>Select Diagram for Parallel Programming</caption></figure>
+    <para id="id12133667">From the menu select <emphasis effect="bold">Edit &gt;&gt; Copy</emphasis>.</para>
+    <figure id="id12133681"><media id="id12133681_media" alt="A typical edit menu in Windows with the item 'copy' highlighted.">
+        <image mime-type="image/png" src="../../media/Picture 109-a4cb.png" id="id12133681__onlineimage" height="104" width="238"/>
+      </media>
+      
+    <caption>Copy Selected Diagram</caption></figure>
+    <para id="id12133707">Create a copy of the while loop and its contents by selecting <emphasis effect="bold">Edit &gt;&gt; Paste</emphasis>. Organize the diagram as shown in the figure below.</para>
+    <figure id="id12133724"><media id="id12133724_media" alt="A diagram of two Parallel Programming diagrams. The diagrams consist of two rows of icons and are idenitical except for a names of icons. The upper row from left to right they consist of an orange box contina '0.02' over a blue box containg 'i'. lines connect these icons to a triangular icon with apex pointing right and it contains 'x'. A line connects this to a graph icon and then that is connected to another triangle icon and that triangle that points to a final graph icon labeled 'sine wave'. In the second diagram the final icon is labeled 'sine wave 2'. The bottom row of icons consist of an orange icon labeled 'amplitude' or 'amplitude 2' for the second diagram which connects via a line to the second triangle in the upper row. To the right of the 'Amplitude' icon is  'stop' button icon.">
+        <image mime-type="image/png" src="../../media/Picture 110-3023.png" id="id12133724__onlineimage" height="132" width="488"/>
+      </media>
+      
+    <caption>Paste Diagram</caption></figure>
+    <para id="id12133751">Go the Front Panel window and organize the input and output controls as shown in the figure below.</para>
+    <para id="id12133757">
+      <figure id="id12133761"><media id="id12133761_media" alt="Two parallel empty graphs.">
+          <image mime-type="image/png" src="../../media/Picture 111.png" id="id12133761__onlineimage" height="176" width="622"/>
+        </media>
+        
+      <caption>Parallel G Program</caption></figure>
+    </para>
+    <para id="id12133787">You have just completed your first parallel interactive program using G. Save the program, run it and interact with it.</para>
+    <figure id="id12133799"><media id="id12133799_media" alt="Two parallel graphs containing sine waves. The graph on the left contains a sine wave with a large amplitude than the one on the rightt.">
+        <image mime-type="image/png" src="../../media/Picture 112.png" id="id12133799__onlineimage" height="173" width="607"/>
+      </media>
+      
+    <caption>Parallel Interactive G Program</caption></figure>
+    <para id="id12133825">To end this program click on the <emphasis effect="bold">stop</emphasis> and <emphasis effect="bold">stop 2</emphasis> terminals.</para>
+  </content>
+</document>

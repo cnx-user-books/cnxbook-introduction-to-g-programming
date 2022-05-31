@@ -1,0 +1,208 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Graphs</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34091</md:content-id>
+  <md:title>Graphs</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>60e40a8f-5a77-4f56-a1d4-f2df1e065a87</md:uuid>
+</metadata>
+
+<content>
+    
+    <section id="id2241200">
+      <title>Waveform Chart</title>
+      <para id="id2241207">Waveform Charts provide a historical graphical representation of numeric data.</para>
+      <para id="id2212360">The following example will build a simple G program that will allow you to chart a sine wave as it is being generated on a point-by-point basis using the equation:</para>
+      
+      <equation id="eip-487"><m:math>
+<m:msub>
+<m:mi>y</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>sin</m:mo>
+<m:mo>(</m:mo>
+<m:mn>0.2</m:mn>
+<m:mi>x</m:mi>
+<m:mi>i</m:mi>
+<m:mo>)</m:mo>
+</m:math></equation><figure id="id1391669"><media id="id1391669_media" alt="A waveform chart with containing a Sine Wave. The amplitude of the Sine wave is 1.">
+          <image mime-type="image/png" src="../../media/Picture 3-ceea.png" id="id1391669__onlineimage" height="226" width="342"/>
+        </media>
+        
+      <caption>Waveform Chart</caption></figure>
+      <para id="id2209594">Start with a while loop and add into it a Multiply and Sine functions, a numeric constant with value 0.2 and a Boolean control to stop the loop when its value is True. Arrange the diagram to look as in <link target-id="id2209612"/>.</para>
+      <figure id="id2209612"><media id="id2209612_media" alt="A diagram of a 'while loop for waveform chart'. The diagram consists of several icons from left to right there is an orange box containing '0.2' and underneath this there is a blue box containg 'i'. lines connect these icons to a triangular box containing 'x'. A line then connects this triangle to a wave icon. Underneath this row of icons, there is a 'stop' icon connected to a red button icon.">
+          <image mime-type="image/png" src="../../media/Picture 6-bba1.png" id="id2209612__onlineimage" height="101" width="161"/>
+        </media>
+        
+      <caption>While Loop For Waveform Chart</caption></figure>
+      <para id="id1217459">To select a waveform chart, right click on the Front Panel window and select Waveform Chart from the <emphasis effect="bold">Controls &gt;&gt; Modern &gt;&gt; Graph</emphasis> menu.</para>
+      <para id="id2237643">
+        <figure id="id2237647"><media id="id2237647_media" alt="A row of icons. The row is labeled 'waveform chart'.">
+            <image mime-type="image/png" src="../../media/Picture 9-e734.png" id="id2237647__onlineimage" height="89" width="313"/>
+          </media>
+          
+        <caption>Selecting Waveform Chart</caption></figure>
+      </para>
+      <para id="id2215063">This places the Waveform Chart in the Front Panel window.</para>
+      <figure id="id2215071"><media id="id2215071_media" alt="An empty waveform chart.">
+          <image mime-type="image/png" src="../../media/Picture 10-8c5a.png" id="id2215071__onlineimage" height="248" width="341"/>
+        </media>
+        
+      <caption>Waveform Chart in Front Panel window</caption></figure>
+      <para id="id2193660">In the Block Diagram window, make sure that the Waveform Chart terminal is inside the while loop. Wire the output of the Sine function to this terminal.</para>
+      <para id="id2302812">Notice that Waveform Chart terminal is that of a numeric output.</para>
+      <figure id="id2302820"><media id="id2302820_media" alt="A diagram of a 'while loop for waveform chart'. The diagram consists of several icons from left to right there is an orange box containing '0.2' and underneath this there is a blue box containg 'i'. lines connect these icons to a triangular box containing 'x'. A line then connects this triangle to a wave icon and finally the wave icon is connected to a graph icon. Underneath this row of icons, there is a 'stop' icon connected to a red button icon.">
+          <image mime-type="image/png" src="../../media/Picture 12-8f22.png" id="id2302820__onlineimage" height="101" width="161"/>
+        </media>
+        
+      <caption>Waveform Chart Terminal</caption></figure>
+      <para id="id2304495">Most modern computers will run this program too fast. Thus, before this program is executed, a delay of 125 milliseconds will be inserted in the while loop. This will allow users to see how the Waveform Chart operates as data samples are plotted in the chard.</para>
+      <para id="id2304505">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Timing</emphasis> select <emphasis effect="bold">Wait Until Next ms Multiple</emphasis>. This will put the while loop to sleep for the indicated number of milliseconds.</para>
+      <figure id="id2296033"><media id="id2296033_media" alt="A row of four icons labeled from left to right, 'tick count (ms)', 'wait (ms)', and 'wait until ne..'. This row is listed under the level headers Programming and Timing.">
+          <image mime-type="image/png" src="../../media/Picture 13-3ec8.png" id="id2296033__onlineimage" height="105" width="278"/>
+        </media>
+        
+      <caption>Wait Until Next ms Multiple</caption></figure>
+      <para id="id2193880">Drop the Wait Until Next ms Multiple function inside the loop and wire a constant to it with the value 125. This will delay the loop for 125 milliseconds. The final Waveform Chart program is shown in <link target-id="id2278079"/>.</para>
+      <figure id="id2278079"><media id="id2278079_media" alt="A diagram of a 'while loop for waveform chart'. The diagram consists of several icons from left to right there is an orange box containing '0.2' and underneath this there is a blue box containg 'i'. lines connect these icons to a triangular box containing 'x'. A line then connects this triangle to a wave icon and finally the wave icon is connected to a graph icon. Underneath this row of icons, there is another row of icons from left to right there is a blue box containing '125' that is also connected to a metronome icon. There is also a 'stop' icon connected to a red button icon.">
+          <image mime-type="image/png" src="../../media/Picture 34-a462.png" id="id2278079__onlineimage" height="101" width="161"/>
+        </media>
+        
+      <caption>Waveform Chart Program</caption></figure>
+      <para id="id2304850">The default graphing mode of the Waveform Chart is autoscaling. You will notice the auto-scaling property when the program first begins to run and the y-axis, labeled Amplitude, updates automatically as new numerical values are aggregated and displayed on the chart.</para>
+      <figure id="id2304862"><media id="id2304862_media" alt="A diagram of a waveform chart autoscaling.">
+          <image mime-type="image/png" src="../../media/Picture 40-9e7f.png" id="id2304862__onlineimage" height="249" width="341"/>
+        </media>
+        
+      <caption>Waveform Chart Autoscaling</caption></figure>
+      <para id="id2211431">As the program continues to run, the graph continues to build as per the values associated with the x-axis, labeled <emphasis effect="bold">Time</emphasis>, which correspond to the index value of the equations.</para>
+      <para id="id2295540">
+        <figure id="id2295544"><media id="id2295544_media" alt="A diagram of Accumulating values for the Waveform Chart.">
+            <image mime-type="image/png" src="../../media/Picture 41-cf65.png" id="id2295544__onlineimage" height="239" width="327"/>
+          </media>
+          
+        <caption>Accumulating Values for the Waveform Chart</caption></figure>
+      </para>
+      <para id="id2297260">As the program continues to run, the autoscaling property also applies to the x-axis. Noticed the updated x-axis. For this example, the x-axis will continue updating so as long as the program is running. This gives the appearance of a scrolling strip chart.</para>
+      <figure id="id2297275"><media id="id2297275_media" alt="A diagram showing a scrolling X-axis.">
+          <image mime-type="image/png" src="../../media/Picture 44-7b70.png" id="id2297275__onlineimage" height="239" width="327"/>
+        </media>
+        
+      <caption>Scrolling X-Axis</caption></figure>
+      <para id="id2218521">Stopping and restarting the G program retains the numeric history and continues to aggregate the values for display.</para>
+      <para id="id2218527">
+        <figure id="id2218531"><media id="id2218531_media" alt="A waveform chart containing a sine wave with an applitude of 1. In the middle of the wave, the bottom of the trough exists at y=0 instead of y=-1.">
+            <image mime-type="image/png" src="../../media/Picture 45-eef2.png" id="id2218531__onlineimage" height="238" width="329"/>
+          </media>
+          
+        <caption>Graph History Retained Between Runs</caption></figure>
+      </para>
+      <para id="id2296108">The Waveform Chart options can be easily updated by right clicking on the Waveform Chart and selecting the appropriate option to update from the pop-up menu.</para>
+      <para id="eip-104">Selecting <emphasis effect="bold">Properties</emphasis> from this pop-up menu brings up the Waveform Chart dialog window (<link target-id="id2303391"/>).</para><figure id="id2296117"><media id="id2296117_media" alt="A waveform chart with a pop-up menu present on top of the chart. The item Properties is highlighted blue on the menu.">
+          <image mime-type="image/png" src="../../media/Picture 46-2514.png" id="id2296117__onlineimage" height="306" width="324"/>
+        </media>
+        
+      <caption>Waveform Chart Pop-Up Menu</caption></figure>
+      <para id="id2303387">
+        <figure id="id2303391"><media id="id2303391_media" alt="A typical windows window, showing the chart properties of the waveform chart.">
+            <image mime-type="image/png" src="../../media/Picture 47-7625.png" id="id2303391__onlineimage" height="432" width="436"/>
+          </media>
+          
+        <caption>Waveform Chart Options Dialog Box</caption></figure>
+      </para>
+    </section>
+    <section id="id2274835">
+      <title>Waveform Graph</title>
+      <para id="id2274842">The <emphasis effect="bold">Waveform Graph</emphasis> allows numeric arrays to be displayed graphically in the Front Panel window.</para>
+      <para id="id2274967">Similar to the previous example, we will build a simple G program that will allow you to graph a sine wave using the equation:</para>
+      
+      <equation id="eip-562"><m:math>
+<m:msub>
+<m:mi>y</m:mi>
+<m:mi>i</m:mi>
+</m:msub>
+<m:mo>=</m:mo>
+<m:mo>sin</m:mo>
+<m:mo>(</m:mo>
+<m:mn>0.2</m:mn>
+<m:mo>x</m:mo>
+<m:mi>i</m:mi>
+<m:mo>)</m:mo>
+</m:math></equation><para id="id2274988">for i=0, 1, 2, … , 99.</para>
+      <para id="id2274993">
+        <figure id="id2295381"><media id="id2295381_media" alt="A waveform chart with two simultaneously occurring sine waves. There are also noisy waves overlaid on top of the smoth sine waves labeled in blue and red.">
+            <image mime-type="image/png" src="../../media/Picture 57-8553.png" id="id2295381__onlineimage" height="224" width="340"/>
+          </media>
+          
+        <caption>Waveform Graph</caption></figure>
+      </para>
+      <section id="id2295409">
+        <title>Single Plot</title>
+        <para id="id2296059">Start by building the following program shown in <link target-id="id2296073"/>.</para>
+        <figure id="id2296073"><media id="id2296073_media" alt="An icon consisting of a blue box containing '100'connected to a big box containing a five items, a blue box containing an 'N'in the upper left of the big box, and then a row of icons from left to right an orange box containing '0.2'over another blue box containing 'i'. These icons connect via line to a triangle containing 'x'which is connected to a sine wave icon.">
+            <image mime-type="image/png" src="../../media/Picture 7-7979.png" id="id2296073__onlineimage" height="76" width="154"/>
+          </media>
+          
+        <caption>For Loop Sine Wave</caption></figure>
+        <para id="id2211723">Right click on the Front Panel window, select <emphasis effect="bold">Waveform Graph</emphasis> from the <emphasis effect="bold">Modern &gt;&gt; Graph</emphasis> pop-up menu, and drop it on the Front Panel window.</para>
+        <figure id="id2211741"><media id="id2211741_media" alt="A row of icons located in the levels headers Modern, graph.">
+            <image mime-type="image/png" src="../../media/Picture 8-a444.png" id="id2211741__onlineimage" height="110" width="306"/>
+          </media>
+          
+        <caption>Select Waveform Graph</caption></figure>
+        <para id="id2274448">In the Block Diagram window you will see the <emphasis effect="bold">Waveform Graph</emphasis> terminal. Wire the <emphasis effect="bold">Sine</emphasis> function output to the <emphasis effect="bold">Waveform Graph</emphasis> terminal through the <emphasis effect="bold">For Loop</emphasis>.</para>
+        <figure id="id1464336"><media id="id1464336_media" alt="An icon consisting of a blue box containing '100'connected to a big box containing a five items, a blue box containing an 'N'in the upper left of the big box, and then a row of icons from left to right an orange box containing '0.2'over another blue box containing 'i'. These icons connect via line to a triangle containing 'x'which is connected to a sine wave icon. On the right of this big box an orange line connects to a 'waveform graph' icon.">
+            <image mime-type="image/png" src="../../media/Picture 50-2aff.png" id="id1464336__onlineimage" height="80" width="225"/>
+          </media>
+          
+        <caption>Waveform Graph Diagram</caption></figure>
+        <para id="id1464364">Run the program. The resulting graph is shown in <link target-id="id1464381"/>.</para>
+        <figure id="id1464381"><media id="id1464381_media" alt="A sine wave graph with an amplitude of 1.">
+            <image mime-type="image/png" src="../../media/Picture 51-0e74.png" id="id1464381__onlineimage" height="235" width="324"/>
+          </media>
+          
+        <caption>Sine Wave Graph</caption></figure>
+      </section>
+      <section id="id1464410">
+        <title>Multiplots</title>
+        <para id="id1464417">In this example a sine wave and a noisy sine wave will be plotted. Modify the previous example to add noise to the sine operation as shown in <link target-id="id1464433"/>.</para>
+        <figure id="id1464433"><media id="id1464433_media" alt="An icon consisting of a blue box containing '100'connected to a big box containing a five items, a blue box containing an 'N' in the upper left of the big box, and then a row of icons from left to right an orange box containing '0.2'over another blue box containing 'i'. These icons connect via line to a triangle containing 'x' which is connected to a sine wave icon. Below the Sine wave icon there is an orange box containing '0.5'. Lines go from theses to icons to a final icon. between these two lines there is an icon of dice, which also points to the final icon.">
+            <image mime-type="image/png" src="../../media/Picture 53-1a29.png" id="id1464433__onlineimage" height="90" width="201"/>
+          </media>
+          
+        <caption>Sine and Noisy Sine Waveforms</caption></figure>
+        <para id="id2277835">Add a <emphasis effect="bold">Build Array</emphasis> operator and wire the output of the <emphasis effect="bold">Sine</emphasis> function and the multi-add operator containing the sine value plus some random noise between -0.5 and 0.5 to the <emphasis effect="bold">Build Array</emphasis> operator. Wire the output of the <emphasis effect="bold">Build Array</emphasis> operator to the <emphasis effect="bold">Waveform Graph</emphasis> terminal.</para>
+        <figure id="id2277874"><media id="id2277874_media" alt="An icon consisting of a blue box containing '100'connected to a big box containing a five items, a blue box containing an 'N' in the upper left of the big box, and then a row of icons from left to right an orange box containing '0.2'over another blue box containing 'i'. These icons connect via line to a triangle containing 'x' which is connected to a sine wave icon. Below the Sine wave icon there is an orange box containing '0.5'. Lines go from theses to icons to a final icon in the big box. Between these two lines there is an icon of dice, which also points to the final icon in the big box.Two orange lines extend from the big box to another icon outside the box which connects via a line to a 'waveform graph' icon.">
+            <image mime-type="image/png" src="../../media/Picture 55-d97f.png" id="id2277874__onlineimage" height="90" width="303"/>
+          </media>
+          
+        <caption>Bundle Arrays for Multiplotting</caption></figure>
+        <para id="id2277901">You can continue adding 1D arrays to be multiplotted into a single <emphasis effect="bold">Waveform Graph</emphasis>.</para>
+        <para id="id2277911">Run the program. The multiplot result is shown in <link target-id="id2277932"/>.</para>
+        
+        <figure id="id2277932"><media id="id2277932_media" alt="A sine wave on a graph with a noisy red wave plotted on top of it.">
+            <image mime-type="image/png" src="../../media/Picture 56-0c73.png" id="id2277932__onlineimage" height="236" width="325"/>
+          </media>
+          
+        <caption>Multiplot</caption></figure>
+      </section>
+    </section>
+    <section id="id2303107">
+      <title>XY Graph</title>
+      <para id="id2303113">The <emphasis effect="bold">XY Graph</emphasis> plots x vs. y numeric values contained in arrays.</para>
+      <figure id="id2303127"><media id="id2303127_media" alt="An 'XY graph' that consist of a spiral plotted on the graph.">
+          <image mime-type="image/png" src="../../media/Picture 58-b81d.png" id="id2303127__onlineimage" height="263" width="273"/>
+        </media>
+        
+      <caption>XY Graph</caption></figure>
+      <para id="id2303154">The example shown in <link target-id="id2303176"/> generates the spiral shown in <link target-id="id2303127"/>.</para>
+      <figure id="id2303176"><media id="id2303176_media" alt="An array of icon labeled 'Spiral G Program'.">
+          <image mime-type="image/png" src="../../media/Picture 59-b1e4.png" id="id2303176__onlineimage" height="97" width="309"/>
+        </media>
+        
+      <caption>Spiral G Program</caption></figure>
+    </section>
+  </content>
+</document>

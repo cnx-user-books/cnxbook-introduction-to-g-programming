@@ -1,0 +1,372 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Data Types</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34086</md:content-id>
+  <md:title>Data Types</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>629adf64-77f0-4b78-ba5c-0fab5070954e</md:uuid>
+</metadata>
+
+<content>
+    
+    <table id="id1164285581246" summary="A Table with four main columns labeled from left to right, 'Data Type', 'Block Diagram terminal', 'Interactive User Interface' and 'Comments'. The second and third columns have the sub-columns 'input' and 'output'. The second and third columns consist primarily of screencapture images."><tgroup cols="5">
+        <colspec colnum="1" colname="c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <colspec colnum="5" colname="c5"/>
+        <tbody>
+          <row>
+            <entry>Data Type</entry>
+            <entrytbl namest="c2" nameend="c4" cols="4">
+              <colspec colnum="1" colname="c1"/>
+              <colspec colnum="2" colname="c2"/>
+              <colspec colnum="3" colname="c3"/>
+              <colspec colnum="4" colname="c4"/>
+              <tbody>
+                <row>
+                  <entry namest="c1" nameend="c2">
+                    <emphasis effect="bold">Block Diagram Terminal</emphasis>
+                  </entry>
+                  <entry namest="c3" nameend="c4">
+                    <emphasis effect="bold">Interactive User Interface</emphasis>
+                  </entry>
+                </row>
+                <row>
+                  <entry>Input</entry>
+                  <entry>Output</entry>
+                  <entry>Input</entry>
+                  <entry>Output</entry>
+                </row>
+              </tbody>
+            </entrytbl>
+            <entry>Comments</entry>
+          </row>
+          <row>
+            <entry>Extended</entry>
+            <entry>
+              <media id="id1164314109917" alt="An orange square attached to another orange square on the right via an orange line. The bottom of the square contains the letters 'ext'.">
+                <image mime-type="image/png" src="../../media/Picture 10-cd4c.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164309213351" alt="A field with up and down arrow buttons on the left. The field contains the number 1.2345">
+                <image mime-type="image/png" src="../../media/Picture 13-3bb3.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164293048148" alt="The field contains the number 1.2345">
+                <image mime-type="image/png" src="../../media/Picture 34-f574.png"/>
+              </media>
+            </entry>
+            <entry>80-bit floating pointnumeric</entry>
+          </row>
+          <row>
+            <entry>Double</entry>
+            <entry>
+              <media id="id1164295493566" alt="An orange square attached to another orange square on the right via an orange line. The bottom of the square contains the letters 'DBL'.">
+                <image mime-type="image/png" src="../../media/Picture 184.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164279213392" alt="A field with up and down arrow buttons on the left. The field contains the number 1.2345">
+                <image mime-type="image/png" src="../../media/Picture 44-3bb3.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164293019214" alt="The field contains the number 1.2345">
+                <image mime-type="image/png" src="../../media/Picture 45-f574.png"/>
+              </media>
+            </entry>
+            <entry>64-bit floating pointnumeric</entry>
+          </row>
+          <row>
+            <entry>Single</entry>
+            <entry>
+              <media id="id1164318224607" alt="An orange square attached to another orange square on the right via an orange line. The bottom of the square contains the letters 'SGL'.">
+                <image mime-type="image/png" src="../../media/Picture 215.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164286780275" alt="A field with up and down arrow buttons on the left. The field contains the number 1.2345">
+                <image mime-type="image/png" src="../../media/Picture 50-3bb3.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164320708231" alt="The field contains the number 1.2345">
+                <image mime-type="image/png" src="../../media/Picture 51-f574.png"/>
+              </media>
+            </entry>
+            <entry>32-bit floating pointnumeric</entry>
+          </row>
+          <row>
+            <entry>ComplexExtended</entry>
+            <entry>
+              <media id="id1164317258249" alt="An orange square attached to another orange square on the right via an orange line. The bottom of the square contains the letters 'CXT'.">
+                <image mime-type="image/png" src="../../media/Picture 216.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164280389490" alt="A field with up and down arrow buttons on the left. The field contains the number '1.2+3.4i'.">
+                <image mime-type="image/png" src="../../media/Picture 55-efed.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164308614918" alt="The field contains the number '1.2+3.4i'.">
+                <image mime-type="image/png" src="../../media/Picture 56-40cb.png"/>
+              </media>
+            </entry>
+            <entry>160-bit floating pointnumeric</entry>
+          </row>
+          <row>
+            <entry>ComplexDouble</entry>
+            <entry>
+              <media id="id1164295700869" alt="An orange square attached to another orange square on the right via an orange line. The bottom of the square contains the letters 'CDB'.">
+                <image mime-type="image/png" src="../../media/Picture 217.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164291913365" alt=" A field with up and down arrow buttons on the left. The field contains the number '1.2+3.4i'.">
+                <image mime-type="image/png" src="../../media/Picture 59-efed.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164295712854" alt="The field contains the number '1.2+3.4i'.">
+                <image mime-type="image/png" src="../../media/Picture 60-40cb.png"/>
+              </media>
+            </entry>
+            <entry>128-bit floating pointnumeric</entry>
+          </row>
+          <row>
+            <entry>ComplexSingle</entry>
+            <entry>
+              <media id="id1164284854613" alt="An orange square attached to another orange square on the right via an orange line. The bottom of the square contains the letters 'CSG'. ">
+                <image mime-type="image/png" src="../../media/Picture 218.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164313670417" alt="A field with up and down arrow buttons on the left. The field contains the number '1.2+3.4i'.">
+                <image mime-type="image/png" src="../../media/Picture 85-efed.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164293065332" alt="The field contains the number '1.2+3.4i'.">
+                <image mime-type="image/png" src="../../media/Picture 86-40cb.png"/>
+              </media>
+            </entry>
+            <entry>64-bit floating pointnumeric</entry>
+          </row>
+          <row>
+            <entry>Integer 64</entry>
+            <entry>
+              <media id="id1164286047873" alt="An blue square attached to another blue square on the right via a blue line. The bottom of the square contains the letters 'I64'.">
+                <image mime-type="image/png" src="../../media/Picture 219.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164314108178" alt="A field with up and down arrow buttons on the left. The field contains the number '-12345'.">
+                <image mime-type="image/png" src="../../media/Picture 91-fc1d.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164283713592" alt="The field contains the number '-12345'.">
+                <image mime-type="image/png" src="../../media/Picture 92-6ead.png"/>
+              </media>
+            </entry>
+            <entry>64-bit signed integernumeric</entry>
+          </row>
+          <row>
+            <entry>Integer 32</entry>
+            <entry>
+              <media id="id1164318119389" alt="An blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'I32'.">
+                <image mime-type="image/png" src="../../media/Picture 220.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164310434550" alt="A field with up and down arrow buttons on the left. The field contains the number '-12345'.">
+                <image mime-type="image/png" src="../../media/Picture 96-fc1d.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164303132528" alt="The field contains the number '-12345'.">
+                <image mime-type="image/png" src="../../media/Picture 99-6ead.png"/>
+              </media>
+            </entry>
+            <entry>32-bit signed integernumeric</entry>
+          </row>
+          <row>
+            <entry>Integer 16</entry>
+            <entry>
+              <media id="id1164317928406" alt="An blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'I16'.">
+                <image mime-type="image/png" src="../../media/Picture 221.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164292238700" alt="A field with up and down arrow buttons on the left. The field contains the number '-12345'.">
+                <image mime-type="image/png" src="../../media/Picture 102-fc1d.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164304567152" alt="A field with up and down arrow buttons on the left. The field contains the number '-12345'.">
+                <image mime-type="image/png" src="../../media/Picture 103-6ead.png"/>
+              </media>
+            </entry>
+            <entry>16-bit signed integernumeric</entry>
+          </row>
+          <row>
+            <entry>Integer 8</entry>
+            <entry>
+              <media id="id1164312617284" alt="A blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'I8'.">
+                <image mime-type="image/png" src="../../media/Picture 222.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164284888397" alt="A field with up and down arrow buttons on the left. The field contains the number '-123'.">
+                <image mime-type="image/png" src="../../media/Picture 109-b1ed.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164285269379" alt="The field contains the number '-123'.">
+                <image mime-type="image/png" src="../../media/Picture 110-df2a.png"/>
+              </media>
+            </entry>
+            <entry>8-bit signed integernumeric</entry>
+          </row>
+          <row>
+            <entry>UnsignedInteger 64</entry>
+            <entry>
+              <media id="id1164295384486" alt="A blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'U64'.">
+                <image mime-type="image/png" src="../../media/Picture 223.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164295577536" alt="A field with up and down arrow buttons on the left. The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 140.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164319613563" alt="The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 144.png"/>
+              </media>
+            </entry>
+            <entry>64-bt unsigned integer numeric</entry>
+          </row>
+          <row>
+            <entry>UnsignedInteger 32</entry>
+            <entry>
+              <media id="id1164286607356" alt="An blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'U32'">
+                <image mime-type="image/png" src="../../media/Picture 224.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164292148017" alt="A field with up and down arrow buttons on the left. The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 151-1ccf.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164304575986" alt="The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 152-bce6.png"/>
+              </media>
+            </entry>
+            <entry>32-bit unsigned integer numeric</entry>
+          </row>
+          <row>
+            <entry>UnsignedInteger 16</entry>
+            <entry>
+              <media id="id1164316833750" alt="An blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'U16'">
+                <image mime-type="image/png" src="../../media/Picture 225.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164302311764" alt="A field with up and down arrow buttons on the left. The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 155-1ccf.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164286635549" alt="The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 156-bce6.png"/>
+              </media>
+            </entry>
+            <entry>16-bit unsigned integer numeric</entry>
+          </row>
+          <row>
+            <entry>UnsignedInteger 8</entry>
+            <entry>
+              <media id="id1164302177133" alt="An blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'U8'">
+                <image mime-type="image/png" src="../../media/Picture 226.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164285939259" alt="A field with up and down arrow buttons on the left. The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 159.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164290218460" alt="The field contains the number '12345'.">
+                <image mime-type="image/png" src="../../media/Picture 160.png"/>
+              </media>
+            </entry>
+            <entry>8-bit unsigned integer numeric</entry>
+          </row>
+          <row>
+            <entry>Fixed Point</entry>
+            <entry>
+              <media id="id1164317652724" alt="An blue square attached to another blue square on the right via an blue line. The bottom of the square contains the letters 'FXP'.">
+                <image mime-type="image/png" src="../../media/Picture 227.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164302086774" alt="A field with up and down arrow buttons on the left. The field contains the number '1.2345'.">
+                <image mime-type="image/png" src="../../media/Picture 163.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164281339710" alt="The field contains the number '1.2345'.">
+                <image mime-type="image/png" src="../../media/Picture 164.png"/>
+              </media>
+            </entry>
+            <entry>Mantissa.fractional fixed point numeric representation</entry>
+          </row>
+          <row>
+            <entry>Boolean</entry>
+            <entry>
+              <media id="id1164303295304" alt="A green square with a horizontal oval attached to another green square which contains a green circle, on the right via an green line. The bottom of the square contains the letters 'TF'.">
+                <image mime-type="image/png" src="../../media/Picture 228.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164290185787" alt="An ovular button with a green triangle on the righ half of the oval.">
+                <image mime-type="image/png" src="../../media/Picture 169.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164320537884" alt="A Green circle on a gray field.">
+                <image mime-type="image/png" src="../../media/Picture 170.png"/>
+              </media>
+            </entry>
+            <entry>True or False.</entry>
+          </row>
+          <row>
+            <entry>String</entry>
+            <entry>
+              <media id="id1164281446826" alt="A pink square connected to another Pink square on the right via a pink squiggly line. The bottom of the square contains the letters 'abc'.">
+                <image mime-type="image/png" src="../../media/Picture 229.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164280553504" alt="A field containing the word 'String'.">
+                <image mime-type="image/png" src="../../media/Picture 177.png"/>
+              </media>
+            </entry>
+            <entry>
+              <media id="id1164313639497" alt="A field containing the word 'String'.">
+                <image mime-type="image/png" src="../../media/Picture 178.png"/>
+              </media>
+            </entry>
+            <entry>Text</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </content>
+</document>

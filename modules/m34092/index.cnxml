@@ -1,0 +1,113 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Interactive Programming</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34092</md:content-id>
+  <md:title>Interactive Programming</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>e5dca0f6-af86-4f7a-b6d3-dbce6915d689</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id17095295">The heart of interactive programming in G is the <emphasis effect="bold">while loop</emphasis>. Any input control within the <emphasis effect="bold">while loop</emphasis> can be modified from the Front Panel window at run time to provide seamless interaction with the G program.</para>
+    <figure id="id17092192"><media id="id17092192_media" alt="A small diagram containing a small blue box containing an 'i' in the lower left hand corner and a red button icon on the lower right corner. In the middle of the diagram is a small box containing the phrase 'Interactive G Program'.">
+        <image mime-type="image/png" src="../../media/Picture 103-4a57.png" id="id17092192__onlineimage" height="104" width="121"/>
+      </media>
+      
+    <caption>Creating Interactive Programs</caption></figure>
+    <para id="id17097634">In the Front Panel window, from the <emphasis effect="bold">Functions &gt;&gt; Modern &gt;&gt; Numeric</emphasis> select the vertical pointer slide. From the <emphasis effect="bold">Functions &gt;&gt; Modern &gt;&gt; Graph</emphasis> select <emphasis effect="bold">Waveform Chart</emphasis>.</para>
+    <para id="id17095914">
+      <figure id="id17095110"><media id="id17095110_media" alt="A diagram of a 'Vertical Pointer Slide and Waveform Chart'. There are two directory levels identified above two rows of three icons. The upper level is labeled  'Modern' and the level directly underneath that is labeled 'Numeric'. below 'Numeric' is a listing two rows of three icons.">
+          <image mime-type="image/png" src="../../media/Picture 87.png" id="id17095110__onlineimage" height="146" width="254"/>
+        </media>
+        
+      <caption>Vertical Pointer Slide and Waveform Chart</caption></figure>
+      <figure id="id16822722"><media id="id16822722_media" alt="A diagram of a 'Vertical Pointer Slide and Waveform Chart'. There are two directory levels identified above two rows of three icons. The upper level is labeled  'Modern' and the level directly underneath that is labeled 'Graph'. Below 'Graph' is a listing two rows of three icons.">
+          <image mime-type="image/png" src="../../media/Picture 88.png" id="id16822722__onlineimage" height="146" width="254"/>
+        </media>
+        
+      <caption>Vertical Pointer Slide and Waveform Chart</caption></figure>
+    </para>
+    <para id="id17097402">Re-label the vertical pointer slide as <emphasis effect="bold">Amplitude</emphasis> and the waveform chart as <emphasis effect="bold">Sine Wave</emphasis>. Re-arrange to GUI to look like the figure below.</para>
+    <figure id="id17095564"><media id="id17095564_media" alt="An empty graph.">
+        <image mime-type="image/png" src="../../media/Picture 89.png" id="id17095564__onlineimage" height="186" width="319"/>
+      </media>
+      
+    <caption>Slide &amp; Waveform Chart in Front Panel window</caption></figure>
+    <para id="id15577582">Right click on <emphasis effect="bold">Sine Wave</emphasis> and select <emphasis effect="bold">Properties</emphasis> from the pop-up menu.</para>
+    <figure id="id17096726"><media id="id17096726_media" alt="An empty graph with a menu on top of it. The item 'Properties' is highlighted.">
+        <image mime-type="image/png" src="../../media/Picture 90.png" id="id17096726__onlineimage" height="197" width="310"/>
+      </media>
+      
+    <caption>Selecting Chart Properties</caption></figure>
+    <para id="id17097280">Select the <emphasis effect="bold">Scales</emphasis> tab and change <emphasis effect="bold">Maximum</emphasis> to 1023. <emphasis effect="bold">Sine Wave</emphasis> will display 1024 samples.</para>
+    <figure id="id17097934"><media id="id17097934_media" alt="A screencap of a window with many tabs along the top of the window. The fourth tab 'scales' is selected. Then on this tab there are many fields with the lower right field surrounded by a red box and containing the number 1023 . This field is labeled Maximum.">
+        <image mime-type="image/png" src="../../media/Picture 91-fceb.png" id="id17097934__onlineimage" height="208" width="350"/>
+      </media>
+      
+    <caption>X-Axis Maximum</caption></figure>
+    <para id="id17096284">Click on the down arrow located to the right of <emphasis effect="bold">Time (X-Axis)</emphasis> and select <emphasis effect="bold">Amplitude (Y-Axis)</emphasis>.</para>
+    <figure id="id17095750"><media id="id17095750_media" alt="A screencap of a window with many tabs along the top of the window. The fourth tab 'scales' is selected and a drop down menu is selected with the menu item 'Time (X-Axis)' has a check mark next to it. The menu item 'Amplitude (Y-Axis)' is highlighted in blue. ">
+        <image mime-type="image/png" src="../../media/Picture 92-7f60.png" id="id17095750__onlineimage" height="105" width="311"/>
+      </media>
+      
+    <caption>Selecting Y-Axis</caption></figure>
+    <para id="id15873741">De-select <emphasis effect="bold">Autoscale</emphasis> and change the <emphasis effect="bold">Minimum</emphasis> and <emphasis effect="bold">Maximum</emphasis> values to <emphasis effect="bold">-10</emphasis> and <emphasis effect="bold">10</emphasis>. Click <emphasis effect="bold">OK</emphasis>.</para>
+    <para id="id17092218">
+      <figure id="id17096414"><media id="id17096414_media" alt="A screencap of a window with many tabs along the top of the window. The fourth tab 'scales' is selected. In the lower right of the tab is a red box surround a radio box labeled 'Autoscale' and two fields one labeled 'Minimum' containing the value '-10' and the other field is labeled 'Maximum' containing the value '10'.">
+          <image mime-type="image/png" src="../../media/Picture 94.png" id="id17096414__onlineimage" height="188" width="348"/>
+        </media>
+        
+      <caption>De-Selecting Autoscale</caption></figure>
+    </para>
+    <para id="id16121749">Rearrange <emphasis effect="bold">Amplitude</emphasis> and <emphasis effect="bold">Sine Wave</emphasis> terminals and finish the program as shown in <link target-id="id17102723"/>. </para>
+    <para id="id16802964">Scroll the mouse pointer over the <emphasis effect="bold">Loop Control</emphasis>…</para>
+    <figure id="id17102723"><media id="id17102723_media" alt="A screen cap of a diagram of an 'Interactive Sine Wave Diagram'. The diagram consists of several icons. From left to right the there is a orange box containing '0.02' and below that a blue box containing 'i'. Lines connect these boxes to a triangular box containing 'x. A line connects this to a wave icon which is connected to another triangular box containing 'x'. A line connects this triange to an icon labeled 'Sine Wave'. Below this row of icons there is an icon labeled 'Amplitude' that is connected to the second triangle. A red button icon is located in the bottom right corner.">
+        <image mime-type="image/png" src="../../media/graphics1-05b6.png" id="id17102723__onlineimage" height="122" width="204"/>
+      </media>
+      
+    <caption>Interactive Sine Wave Diagram</caption></figure>
+    <figure id="id16243998"><media id="id16243998_media" alt="A screen cap of a diagram of an 'Interactive Sine Wave Diagram'. The diagram consists of several icons. From left to right the there is a orange box containing '0.02' and below that a blue box containing 'i'. Lines connect these boxes to a triangular box containing 'x. A line connects this to a wave icon which is connected to another triangular box containing 'x'. A line connects this triange to an icon labeled 'Sine Wave'. Below this row of icons there is an icon labeled 'Amplitude' that is connected to the second triangle. A red button icon is located in the bottom right corner. This button icon has a mouse arrow over it and below the mouse is box containing 'Loop Condition'.">
+        <image mime-type="image/png" src="../../media/graphics2-1978.png" id="id16243998__onlineimage" height="122" width="204"/>
+      </media>
+      
+    <caption>Loop Condition</caption></figure>
+    <para id="id16802870">And right click on the <emphasis effect="bold">Loop Control</emphasis> and from the pop-up menu select <emphasis effect="bold">Create Control</emphasis>. </para>
+    <para id="id17096755">A <emphasis effect="bold">stop</emphasis> terminal is created.</para>
+    <figure id="id16772155"><media id="id16772155_media" alt="A screen cap of a diagram of an 'Interactive Sine Wave Diagram'. The diagram consists of several icons. From left to right the there is a orange box containing '0.02' and below that a blue box containing 'i'. Lines connect these boxes to a triangular box containing 'x. A line connects this to a wave icon which is connected to another triangular box containing 'x'. A line connects this triange to an icon labeled 'Sine Wave'. Below this row of icons there is an icon labeled 'Amplitude' that is connected to the second triangle. A red button icon is located in the bottom right corner. Over this button there is a menu with the menu item 'Create Control' highlighted in blue.">
+        <image mime-type="image/png" src="../../media/graphics3-67f1.png" id="id16772155__onlineimage" height="122" width="204"/>
+      </media>
+      
+    </figure>
+    <figure id="id16810695"><media id="id16810695_media" alt="A screen cap of a diagram of an 'Interactive Sine Wave Diagram'. The diagram consists of several icons. From left to right the there is a orange box containing '0.02' and below that a blue box containing 'i'. Lines connect these boxes to a triangular box containing 'x. A line connects this to a wave icon which is connected to another triangular box containing 'x'. A line connects this triange to an icon labeled 'Sine Wave'. Below this row of icons there is an icon labeled 'Amplitude' that is connected to the second triangle. A red button icon is located in the bottom right corner. To the left of this button is a 'stop' icon connected to it via a line. ">
+        <image mime-type="image/png" src="../../media/graphics4-ccb1.png" id="id16810695__onlineimage" height="122" width="204"/>
+      </media>
+      
+    <caption>Interactive G Program</caption></figure>
+    <para id="id16822331">With the corresponding <emphasis effect="bold">stop</emphasis> Boolean input control. Save the G program as <emphasis effect="bold">Interactivity.vi</emphasis>.</para>
+    <figure id="id17096358"><media id="id17096358_media" alt="An empty graph.">
+        <image mime-type="image/png" src="../../media/Picture 5-fe42.png" id="id17096358__onlineimage" height="248" width="427"/>
+      </media>
+      
+    <caption>Interactive Program</caption></figure>
+    <para id="id16801654">Run the G program.</para>
+    <figure id="id17102891"><media id="id17102891_media" alt="A graph with an straight line running along y=0.">
+        <image mime-type="image/png" src="../../media/Picture 102-215d.png" id="id17102891__onlineimage" height="248" width="428"/>
+      </media>
+      
+    <caption>Interactive Program</caption></figure>
+    <para id="id17121210">While the program is running, change the <emphasis effect="bold">Amplitude</emphasis> and watch the graph update to reflect the interactive changes.</para>
+    <figure id="id12013411"><media id="id12013411_media" alt="A graph with a sine wave with an amplitude of 6.93878">
+        <image mime-type="image/png" src="../../media/fig1.png" id="id12013411__onlineimage" height="249" width="430"/>
+      </media>
+      
+    <caption>Interactive Program</caption></figure>
+    <para id="id16809537">To end the G program, simply click on the <emphasis effect="bold">stop</emphasis> button.</para>
+    <figure id="id17092286"><media id="id17092286_media" alt="A graph with a sine wave with an amplitude of 6.93878. The stop button to the left of the wave is highlighted Red.">
+        <image mime-type="image/png" src="../../media/Picture 104.png" id="id17092286__onlineimage" height="248" width="431"/>
+      </media>
+      
+    <caption>Interactive Program</caption></figure>
+    <para id="id17094179">Congratulations. You have successfully completed and executed your first interactive G program.</para>
+  </content>
+</document>

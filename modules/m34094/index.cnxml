@@ -1,0 +1,153 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Multicore Programming</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34094</md:content-id>
+  <md:title>Multicore Programming</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>f1a92946-de16-4fd3-b63a-243fc437b86d</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id1171322748458">If you have written parallel programs in G and have a multicore computer, CONGRATULATIONS!!! You have been successfully developing interactive parallel programs that execute in multicore PC processors.</para>
+    <figure id="id1171336737011"><media id="id1171336737011_media" alt="This screencap contain a diagram with two parallel graphs of sin waves and below these two graph is a CPU usage and CPU Usage History.">
+        <image mime-type="image/png" src="../../media/Picture 118.png" id="id1171336737011__onlineimage" height="281" width="620"/>
+      </media>
+      
+    <caption>Interactive Multicore G Program</caption></figure>
+    <para id="id1171315496996">The following sections discuss some multicore programming techniques to improve the performance of G programs.</para>
+    <section id="id1171326194742">
+      <title>Data Parallelism</title>
+      <para id="id1171336314356">Matrix multiplication is a compute intensive operation that can leverage data parallelism. <link target-id="id1171305082611"/> shows a G program with 8 sequential frames to demonstrate the performance improvement via data parallelism.</para>
+      <figure id="id1171305082611"><media id="id1171305082611_media" alt="A complex diagram of a data parallelism.">
+          <image mime-type="image/png" src="../../media/Picture 5-6d05.png" id="id1171305082611__onlineimage" height="208" width="552"/>
+        </media>
+        
+      <caption>Data Parallelism</caption></figure>
+      
+      <para id="id1171326064235">The <emphasis effect="bold">Create Matrix</emphasis> function generates a square matrix based of size indicated by <emphasis effect="bold">Size</emphasis> containing random numbers between 0 and 1. The <emphasis effect="bold">Create Matrix</emphasis> function is shown in <link target-id="id1171331615131"/>.</para>
+      <figure id="id1171331615131"><media id="id1171331615131_media" alt="A diagram consisting of three box icons. From left to right you have a blue box labeled 'size'. The next element is two rectangles one large one underneath a smaller one. In the rectangles on the left of both are blue squares containing a 'N'and an 'i'. Blue lines point from the first icon to these blue squares. An orange line points from these rectangles to the third icon labeled 'matrix'.">
+          <image mime-type="image/png" src="../../media/Picture 52-be02.png" id="id1171331615131__onlineimage" height="86" width="231"/>
+        </media>
+        
+      <caption>Creating a Square Matrix</caption></figure>
+      <para id="id1171311824780">The <emphasis effect="bold">Split Matrix</emphasis> function determines the number of rows in the matrix and shifts right the resulting number of rows by one (integer divide by 2). This value is used to split the input matrix into the top half and bottom half matrices. The <emphasis effect="bold">Split Matrix</emphasis> function is shown in <link target-id="id1171306052680"/>.</para>
+      <figure id="id1171306052680"><media id="id1171306052680_media" alt="A diagram of a split matrix into top and bottom. The diagram consist of an icon labeled matrix. Two orange lines split off from the icon and go around a center icon to connect to two rectangles which then leads to two parallel icons labeled top and bottom.">
+          <image mime-type="image/png" src="../../media/Picture 60-caa7.png" id="id1171306052680__onlineimage" height="114" width="267"/>
+        </media>
+        
+      <caption>Split Matrix into Top &amp; Bottom</caption></figure>
+      <table id="id1171323079316" summary="table of comparing frames to the operation that occurs in each frame">
+<tgroup cols="2"><colspec colnum="1" colname="c1"/>
+          <colspec colnum="2" colname="c2"/>
+          <thead>
+            <row>
+              <entry>Sequence Frame</entry>
+              <entry>Operation Description</entry>
+            </row>
+</thead>
+<tbody>
+            <row>
+              <entry>First Frame</entry>
+              <entry>Generates two square matrices initialized with random numbers</entry>
+            </row>
+            <row>
+              <entry>Second Frame</entry>
+              <entry>Records start time for single core matrix multiply</entry>
+            </row>
+            <row>
+              <entry>Third Frame</entry>
+              <entry>Performs single core matrix multiply</entry>
+            </row>
+            <row>
+              <entry>Fourth Frame</entry>
+              <entry>Records stop time of single core matrix multiply</entry>
+            </row>
+            <row>
+              <entry>Fifth Frame</entry>
+              <entry>Splits the matrix into top and bottom matrices</entry>
+            </row>
+            <row>
+              <entry>Sixth Frame</entry>
+              <entry>Records start time for multicore matrix multiply</entry>
+            </row>
+            <row>
+              <entry>Seventh Frame</entry>
+              <entry>Performs multicore matrix multiply</entry>
+            </row>
+            <row>
+              <entry>Eighth Frame</entry>
+              <entry>Records stop time of multicore matrix multiply</entry>
+            </row>
+          </tbody>
+        
+</tgroup>
+</table>
+      <para id="id1171316424217">The rest of the calculations determine the execution time in milliseconds of the single core and multicore matrix multiply operations and the performance improvement of using data parallelism in a multicore computer.</para>
+      
+      <para id="id1171313713284">The program was executed in a dual core 1.83 GHz laptop. The results are shown in <link target-id="id1171326379994"/>. By leveraging data parallelism, the same operation has nearly a <emphasis effect="bold">2x</emphasis> performance improvement. Similar performance benefits can be obtained with higher multicore processors</para>
+      <figure id="id1171326379994"><media id="id1171326379994_media" alt="A diagram of Data Parallelism Performance Improvement. The diagram consists of four fields from left to right they are labeled: Matrix size with a value of 1000. Next a field 'AxB' with a value of 1161. Below this field is another field called 'parallel AxB' with a value of 598. The final field is labeled 'Performance Improvement' with a value of 1.94147.">
+          <image mime-type="image/png" src="../../media/Picture 149.png" id="id1171326379994__onlineimage" height="115" width="257"/>
+        </media>
+        
+      <caption>Data Parallelism Performance Improvement</caption></figure>
+    </section>
+    <section id="id1171326206911">
+      <title>Task Pipelining</title>
+      <para id="id1171301081278">A variety of applications require tasks to be programmed sequentially and continually iterate on these tasks. Most notably are telecommunications applications require simultaneous transmit and receive. In the following example, a simple telecommunications example illustrates how these sequential tasks can be pipelined to leverage multicore environments.</para>
+      <para id="id1171323350926">Consider the following simple modulation - demodulation example where a noisy signal is modulated transmitted and demodulated. A typical diagram is shown in <link target-id="id1171313333910"/>.</para>
+      <figure id="id1171313333910"><media id="id1171313333910_media" alt="A diagram of sequential tasks. It consists of four icons in a row. The last icon is is surrounded in a orange box. Underneath this row is a stop button surrounded in great with a red button next to it. On the left corner there is an blue square containing an 'i'.">
+          <image mime-type="image/png" src="../../media/Picture 151-c892.png" id="id1171313333910__onlineimage" height="100" width="200"/>
+        </media>
+        
+      <caption>Sequential Tasks</caption></figure>
+      <para id="id1171305287924">Adding a <emphasis effect="bold">shift register</emphasis> to the loop allows tasks to be pipelined and be executed in parallel in separate cores should they be available. Task pipelining is shown in <link target-id="id1171307361787"/>.</para>
+      <figure id="id1171307361787"><media id="id1171307361787_media" alt="A diagram of 'Pipelined Task'. There are two paths of icons. The upper row of icons has two squares with a orange line connected them and then another orange line connects to the right side of the box. The bottom row begins with a orange line connected to the left side of the box and then extends to a gray box icon which is then connected via another orange line to graph icon that is in an orange box.">
+          <image mime-type="image/png" src="../../media/Picture 152-22f2.png" id="id1171307361787__onlineimage" height="107" width="183"/>
+        </media>
+        
+      <caption>Pipelined Tasks</caption></figure>
+      <para id="id1171299278398">The program below times the sequential task and the pipelined tasks to establish its performance improvement when executed in multicore computers.</para>
+      <figure id="id1171302539507"><media id="id1171302539507_media" alt="A diagram of a 'Task Pipelining Program Example'. The diagram is formed on a sort of film frame. There are also two rows. The upper from left to right is a box icon connected via an orange line to a box  with an 'N' with a '1000'in the upper left corner and an 'i' in the lower left. In the middle of this box are two horizontally oriented box icons. An orange line continues to the right to another box with the same setup as the previous, except the box icons are oriented vertically. The orange line continues through the upper box and ends to the right. The second row is below the other and consists of three clock icons linked by blue lines and then on the far right side there are arrows all pointing to three icons labeled from top to bottom 'pipelined', 'improvement', and 'sequential'.">
+          <image mime-type="image/png" src="../../media/Picture 150.png" id="id1171302539507__onlineimage" height="177" width="557"/>
+        </media>
+        
+      <caption>Task Pipelining Program Example</caption></figure>
+      <para id="id1171335129860"><link target-id="id1171338458439"/> shows the results of running the above G program in a dual core 1.8 GHz laptop. Pipelining shows nearly <emphasis effect="bold">2x</emphasis> performance improvement.</para>
+      <figure id="id1171338458439"><media id="id1171338458439_media" alt="A diagram of Performance Improvement due to Pipelining. There are three fields in this diagram. From left to right the fields are 'Sequential' with a value of 5953. Under that field is the another field labeled 'Pipelined' with a value of 3156. To the right of these two fields is the third and final field labeled 'improvement'with a value of 1.88625.">
+          <image mime-type="image/png" src="../../media/Picture 153.png" id="id1171338458439__onlineimage" height="101" width="159"/>
+        </media>
+        
+      <caption>Pipelining Performance Improvement</caption></figure>
+    </section>
+    <section id="id1171307489034">
+      <title>Pipelining Using Feedback Nodes</title>
+      <para id="id1171300511452"><emphasis effect="bold">Feedback Nodes</emphasis> provide a storage mechanism between loop iterations. They are programmatically identical to the <emphasis effect="bold">Shift Registers</emphasis>. <emphasis effect="bold">Feedback Nodes</emphasis> consist of an <emphasis effect="bold">Initializer Terminal</emphasis> and the <emphasis effect="bold">Feedback Node</emphasis> itself (see <link target-id="id1171318125905"/>).</para>
+      <figure id="id1171318125905"><media id="id1171318125905_media" alt="A diagram of a feedback node. The diagram is arranged vertical with items top to bottom the phrase 'Feedback Node' with a orange line connecting it to an icon of an arrow above and icon of a black dot. An orange line connects that to the phrase 'Initializer Terminal'.">
+          <image mime-type="image/png" src="../../media/Picture 154.png" id="id1171318125905__onlineimage" height="81" width="88"/>
+        </media>
+        
+      <caption>Feedback Node</caption></figure>
+      <para id="id1171304309785">To add a <emphasis effect="bold">Feedback Node</emphasis>, right click on the Block Diagram window and select <emphasis effect="bold">Feedback Node</emphasis> from the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Structures</emphasis> pop-up menu. The direction of the <emphasis effect="bold">Feedback Node</emphasis> can be changed by right clicking on the node and selecting <emphasis effect="bold">Change Direction</emphasis>.</para>
+      <para id="id1171333212750">
+        <figure id="id1171301165390"><media id="id1171301165390_media" alt="A diagram of menu listing over an arrow icon.">
+            <image mime-type="image/png" src="../../media/Picture 155-929e.png" id="id1171301165390__onlineimage" height="106" width="194"/>
+          </media>
+          
+        <caption>Feedback Node Direction</caption></figure>
+      </para>
+      <para id="id1171314283239">The diagram shown in <link target-id="id6542806"/> is programmatically identical to the diagram in <link target-id="id1171307361787"/>.</para>
+      <figure id="id6542806"><media id="id6542806_media" alt="A diagram of 'Pipelining with Feedback Node'. The diagram is oriented horizontally, and from left to right the diagram consist of a box icon connected via an orange line to another box icon connected via a orange arrow to an arrow above a dot icon. The icon is also connected to the right via an orange line to a box icon which is connected to a graph icon. In the bottom left of the diagram is a blue square with an 'i' in is and on the bottom right is a 'stop' button icon.">
+          <image mime-type="image/png" src="../../media/Picture 156-71bb.png" id="id6542806__onlineimage" height="103" width="244"/>
+        </media>
+        
+      <caption>Pipelining with Feedback Node</caption></figure>
+      <para id="id1171308804665">Similarly, the diagram in <link target-id="id1171319421790"/> is programmatically identical to that in <link target-id="id1171302539507"/>.</para>
+      <figure id="id1171319421790"><media id="id1171319421790_media" alt="A diagram of a 'Task Pipelining Program Example'. The diagram is formed on a sort of film frame. There are also two rows. The upper from left to right is a box icon connected via an orange line to a box  with an 'N' with a '1000'in the upper left corner and an 'i' in the lower left. In the middle of this box are two horizontally oriented box icons. An orange line continues to the right to another box with the same setup as the previous, except between the two icons there is an orange arrow over a dot icon. The orange line continues through the boxes and icon and ends to the right. The second row is below the other and consists of three clock icons linked by blue lines and then on the far right side there are arrows all pointing to three icons labeled from top to bottom 'pipelined', 'improvement', and 'sequential'.">
+          <image mime-type="image/png" src="../../media/Picture 157.png" id="id1171319421790__onlineimage" height="177" width="604"/>
+        </media>
+        
+      <caption>Pipelining Tasks with Feedback Nodes</caption></figure>
+    </section>
+  </content>
+</document>

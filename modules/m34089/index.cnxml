@@ -1,0 +1,597 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Data Flow Control</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34089</md:content-id>
+  <md:title>Data Flow Control</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>6a166d4e-f99b-4564-884d-61945552ef79</md:uuid>
+</metadata>
+
+<content>
+    
+    <section id="id8887991">
+      <title>Case Structure</title>
+      <para id="id1358124">The case structure allows data to flow based on a integer, Boolean or string matching condition. The case executed is selected based on the data wired to the <emphasis effect="bold">Case Selector</emphasis>.</para>
+      <figure id="id1746443"><media id="id1746443_media" alt="A screen capture of a 'Case Structure' icon. The 'Case Selector' is labeled on the left and the 'Selector Label' is on the right.">
+          <image mime-type="image/png" src="../../media/Picture 264.png" id="id1746443__onlineimage" height="59" width="213"/>
+        </media>
+        
+      <caption>Case Structure</caption></figure>
+      <section id="id6598728">
+        <title>Boolean Selection</title>
+        <para id="id8357669">In the Front Panel window, select a Boolean control and an output string.</para>
+        <figure id="id7496418"><media id="id7496418_media" alt="A case selection user interface screen cap. There is 'Boolean' button and a 'Case' field.">
+            <image mime-type="image/png" src="../../media/Picture 265.png" id="id7496418__onlineimage" height="60" width="173"/>
+          </media>
+          
+        <caption>Case Selection User Interface</caption></figure>
+        <para id="id6855467">Arrange the diagram to look as in <link target-id="id1733718"/>.</para>
+        <figure id="id1733718"><media id="id1733718_media" alt="A row of three icons. From left to right the icons are a boolean icon, a box icon with the word 'true' at the top, and the third icon is a case icon.">
+            <image mime-type="image/png" src="../../media/Picture 266.png" id="id1733718__onlineimage" height="61" width="226"/>
+          </media>
+          
+        <caption>Case Selection G Diagram</caption></figure>
+        <para id="id7380742">In the <emphasis effect="bold">True</emphasis> case, add a string constant containing <emphasis effect="bold">True Case</emphasis>.</para>
+        <figure id="id6884278"><media id="id6884278_media" alt="A row of three icons. From left to right the icons are a boolean icon, a box icon with the word 'true' at the top and a pink box in the middle containing 'true case', and the third icon is a case icon.">
+            <image mime-type="image/png" src="../../media/Picture 267.png" id="id6884278__onlineimage" height="61" width="226"/>
+          </media>
+          
+        <caption>True Case Diagram</caption></figure>
+        <para id="id8496022">To select the <emphasis effect="bold">False</emphasis> case, click on the selector label down arrow and select <emphasis effect="bold">False</emphasis> from the pop-up menu. You can also cycle through the cases by clicking the next (right) or previous (left) arrows.</para>
+        <figure id="id3449206"><media id="id3449206_media" alt="A row of three icons. From left to right the icons are a boolean icon, a box icon with the word 'true' at the top and a pick box containing 'true case'. There is also a menu on top of this second icon with 'false' highlighted in blue and a check mark next to 'true'. The third icon is a case icon.">
+            <image mime-type="image/png" src="../../media/Picture 268.png" id="id3449206__onlineimage" height="60" width="224"/>
+          </media>
+          
+        <caption>Selecting False Case</caption></figure>
+        <para id="id8524687">In the <emphasis effect="bold">False</emphasis> case, add a string constant containing <emphasis effect="bold">False Case</emphasis>.</para>
+        <figure id="id8046868"><media id="id8046868_media" alt="A row of three icons. From left to right the icons are a boolean icon, a box icon with the word 'false' at the top and a pick box containing 'false case'. The third icon is a case icon.">
+            <image mime-type="image/png" src="../../media/Picture 269.png" id="id8046868__onlineimage" height="60" width="224"/>
+          </media>
+          
+        <caption>False Case Diagram</caption></figure>
+        <para id="id8696225">Wire the string constant in the <emphasis effect="bold">case structure</emphasis> to the output string terminal.</para>
+        <figure id="id1067036"><media id="id1067036_media" alt="A row of three icons. From left to right the icons are a boolean icon, a box icon with the word 'false' at the top and a pick box containing 'false case'. A pink line connects the second icon to the third icon which is a case icon.">
+            <image mime-type="image/png" src="../../media/Picture 270.png" id="id1067036__onlineimage" height="60" width="224"/>
+          </media>
+          
+        <caption>Wiring Case Structures</caption></figure>
+        <para id="id8489584">Select the <emphasis effect="bold">True</emphasis> case and wire the string constant to the <emphasis effect="bold">case structure tunnel</emphasis>. Complete the diagram as shown in <link target-id="id6822865"/>.</para>
+        <figure id="id6822865"><media id="id6822865_media" alt="A row of three icons. From left to right the icons are a boolean icon connect via a green line to a box icon with the word 'true' at the top and a pick box containing 'true case'. A pink line connects the second icon to the third icon which is a case icon.">
+            <image mime-type="image/png" src="../../media/Picture 271.png" id="id6822865__onlineimage" height="60" width="224"/>
+          </media>
+          
+        <caption>Completed Case Diagram</caption></figure>
+        <para id="id8345271">It is important to note that all instances in a <emphasis effect="bold">case structure</emphasis> must be wired to enable data to flow from the <emphasis effect="bold">case structure</emphasis>.</para>
+        <para id="id8086845">In the Front Panel window, toggle the Boolean input control and run the program.</para>
+        <figure id="id7268466"><media id="id7268466_media" alt="A field with a Boolean button and a case field containing 'Flase Case'.">
+            <image mime-type="image/png" src="../../media/Picture 272.png" id="id7268466__onlineimage" height="54" width="174"/>
+          </media>
+          
+        <caption>False Selection</caption></figure>
+        <figure id="id8813432"><media id="id8813432_media" alt="A field with a Boolean button and a case field containing 'True Case'.">
+            <image mime-type="image/png" src="../../media/Picture 274.png" id="id8813432__onlineimage" height="53" width="175"/>
+          </media>
+          
+        <caption>True Selection</caption></figure>
+      </section>
+      <section id="id8104088">
+        <title>Multicase Selection</title>
+        <para id="id7319416">Select an Integer 32 numeric input and an Integer 32 numeric output and label them <emphasis effect="bold">Selector</emphasis> and <emphasis effect="bold">Case</emphasis> respectively.</para>
+        
+        
+        <figure id="id8828764"><media id="id8828764_media" alt="A form containing the field 'sector' and the field 'case'. Each field contains 0.">
+            <image mime-type="image/png" src="../../media/Picture 275.png" id="id8828764__onlineimage" height="56" width="182"/>
+          </media>
+          
+        <caption>Multicase GUI</caption></figure>
+        <para id="id8610779">In the Block Diagram window, create a <emphasis effect="bold">case structure</emphasis>, select the <emphasis effect="bold">False</emphasis> case and arrange the terminals as shown in <link target-id="id6707632"/>.</para>
+        <figure id="id6707632"><media id="id6707632_media" alt="There are three icons. From left to right the icon are a 'sector' icon, a box with 'false' on top and the third icon is a 'case' icon.">
+            <image mime-type="image/png" src="../../media/Picture 276.png" id="id6707632__onlineimage" height="60" width="227"/>
+          </media>
+          
+        <caption>Multicase</caption></figure>
+        <para id="id7221400">Wire the <emphasis effect="bold">Selector</emphasis> numeric control to the <emphasis effect="bold">case selector</emphasis> on the case structure. The selector label reflects the diagram update.</para>
+        <figure id="id8343008"><media id="id8343008_media" alt="There are three icons. From left to right the icons are a 'sector' icon connected via a blue line to a box with '0, Default' on top and the third icon is a 'case' icon.">
+            <image mime-type="image/png" src="../../media/Picture 277.png" id="id8343008__onlineimage" height="60" width="227"/>
+          </media>
+          
+        <caption>Multicase Selector</caption></figure>
+        <para id="id6781060">In the <emphasis effect="bold">0, Default</emphasis> case, add a numeric constant and leave its value as 0.</para>
+        <figure id="id932146"><media id="id932146_media" alt="There are three icons. From left to right the icons are a 'sector' icon connected via a blue line to a box with '0, Default' on top and their is a '0' in the middle. This box is connected to the third icon which is a 'case' icon.">
+            <image mime-type="image/png" src="../../media/Picture 278.png" id="id932146__onlineimage" height="60" width="227"/>
+          </media>
+          
+        <caption>Default Case</caption></figure>
+        <para id="id8442733">Using the <emphasis effect="bold">selector label</emphasis>, select case 1. Add a numeric constant, enter <emphasis effect="bold">1</emphasis> and wire it to the case tunnel. The resulting diagram is shown in <link target-id="id7281306"/>.</para>
+        <figure id="id7281306"><media id="id7281306_media" alt="There are three icons. From left to right the icons are a 'sector' icon connected via a blue line to a box with '1' on top and their is a '1' in the middle. This box is connected to the third icon which is a 'case' icon.">
+            <image mime-type="image/png" src="../../media/Picture 279.png" id="id7281306__onlineimage" height="60" width="227"/>
+          </media>
+          
+        <caption>Case 1</caption></figure>
+        
+        <para id="id7011323">Right click anywhere in the <emphasis effect="bold">case structure</emphasis> and select <emphasis effect="bold">Add Case After</emphasis> from the pop-up menu.</para>
+        <figure id="id5910400"><media id="id5910400_media" alt="A row of icons with a menu overlaid. From left to right there is an icon labeled 'sector' connected to a large box via a blue line. The item 'Add Case After' is highlighted in blue on the menu.">
+            <image mime-type="image/png" src="../../media/Picture 280.png" id="id5910400__onlineimage" height="73" width="253"/>
+          </media>
+          
+        <caption>Adding Cases</caption></figure>
+        <para id="id5557522">Case 2 is added after case 1. Add a numeric constant, enter <emphasis effect="bold">2</emphasis> and wire it to the case structure tunnel.</para>
+        <figure id="id6705479"><media id="id6705479_media" alt="There are three icons. From left to right the icons are a 'sector' icon connected via a blue line to a box with '2' on top and their is a '2' in the middle. This box is connected to the third icon which is a 'case' icon.">
+            <image mime-type="image/png" src="../../media/Picture 281.png" id="id6705479__onlineimage" height="60" width="227"/>
+          </media>
+          
+        <caption>Case 2</caption></figure>
+        <para id="id7497320"><link target-id="id8537000"/> shows the results of running this simple case selection programs for <emphasis effect="bold">Selector</emphasis> set to 0, 1, 2 and 3 respectively.</para>
+        <figure id="id8537000"><media id="id8537000_media" alt="There are four forms with the fields 'Sector' and 'Case' on each. Clockwise from top left the values in 'sector' 'case' pairs are '0,0', '1,1', '2,2' and '3,0'.">
+            <image mime-type="image/png" src="../../media/Picture 282.png" id="id8537000__onlineimage" height="88" width="275"/>
+          </media>
+          
+        <caption>Multicase Selection Program</caption></figure>
+      </section>
+    </section>
+    <section id="id6805649">
+      <title>For Loop</title>
+      <para id="id8042363">The <emphasis effect="bold">For Loop</emphasis> structure repeatedly executes the diagram within the structure. The <emphasis effect="bold">Loop Count</emphasis> specifies the number of times the loop contents must be executed and the <emphasis effect="bold">Loop Iteration</emphasis> indicates which iteration is currently being executed.</para>
+      <figure id="id8486225"><media id="id8486225_media" alt="An icon containing a blue square with an 'N' in the top left corner that is labeled 'Loop Count'. Another blue square containing 'i' is near the bottom left of the box and is labeled 'Loop Iteration'.">
+          <image mime-type="image/png" src="../../media/Picture 284.png" id="id8486225__onlineimage" height="72" width="161"/>
+        </media>
+        
+      <caption>For Loop Structure</caption></figure>
+      <para id="id7183374">The <emphasis effect="bold">Loop Count</emphasis> and <emphasis effect="bold">Loop Iteration</emphasis> are of Integer 32 data types. If the <emphasis effect="bold">Loop Count</emphasis> is set to <emphasis effect="bold">N</emphasis>, then the <emphasis effect="bold">Loop Iteration</emphasis> value range is from <emphasis effect="bold">0</emphasis> to <emphasis effect="bold">N-1</emphasis>. This is illustrated in <link target-id="id7282521"/> and <link target-id="id2963451"/>.</para>
+      <para id="id8061517">
+        <figure id="id7282521"><media id="id7282521_media" alt="A blue box labeled 'Loop Count' connects to a box with a blue box containing 'N' at the top left and a blue box containing 'i' at the bottom left. The 'i' box is connected within the big box to an icon labeled 'Iteration'.">
+            <image mime-type="image/png" src="../../media/Picture 285.png" id="id7282521__onlineimage" height="77" width="140"/>
+          </media>
+          
+        <caption>Loop Count</caption></figure>
+      </para>
+      <figure id="id2963451"><media id="id2963451_media" alt="A form with the field 'loop count' with a value of '100' and the field 'iteration' with a value of '99'.">
+          <image mime-type="image/png" src="../../media/Picture 286.png" id="id2963451__onlineimage" height="47" width="157"/>
+        </media>
+        
+      <caption>Final Loop Iteration</caption></figure>
+      <section id="id5826772">
+        <title>Shift Registers</title>
+        <para id="id8705805"><emphasis effect="bold">Shift Registers</emphasis> allow the preservation of intermediate results between sequences of iterations.</para>
+        <para id="id8355530">
+          <figure id="id8104029"><media id="id8104029_media" alt="A large box containg a blue box 'N' and a blue box 'i'. A pair of two down arrows are labeled 'shift registers'. An up arrow is opposite the down arrows.">
+              <image mime-type="image/png" src="../../media/Picture 287.png" id="id8104029__onlineimage" height="75" width="143"/>
+            </media>
+            
+          <caption>Shift Registers</caption></figure>
+          <figure id="id7954775"><media id="id7954775_media" alt="A large box containg a blue box 'N' and a blue box 'i'. A pair of two down arrows are labeled from top to bottom 'i-1' and 'i-2' and collectively they are labeled 'result at iteration'. An up arrow is opposite the down arrows and is labeled 'i' and 'Result at iteration'.">
+              <image mime-type="image/png" src="../../media/Picture 297.png" id="id7954775__onlineimage" height="81" width="184"/>
+            </media>
+            
+          <caption>Shift Registers</caption></figure>
+        </para>
+        <para id="id553555">To add a <emphasis effect="bold">Shift Register</emphasis>, right click on the <emphasis effect="bold">For Loop</emphasis> structure and select <emphasis effect="bold">Add Shift Register</emphasis> from the pop-up menu.</para>
+        <figure id="id8723310"><media id="id8723310_media" alt="A large box with an blue box 'N' at the upper left corner and an 'i' in a blue box at the lower left. A menu exists on the right with the item 'Add Shift Register' is highlighted in blue.">
+            <image mime-type="image/png" src="../../media/Picture 288.png" id="id8723310__onlineimage" height="75" width="171"/>
+          </media>
+          
+        <caption>Adding Shift Registers</caption></figure>
+        <para id="id6741958">To add elements to the <emphasis effect="bold">shift register</emphasis>, right click on the <emphasis effect="bold">shift register</emphasis> and select <emphasis effect="bold">Add Element</emphasis> from the pop-up menu.</para>
+        <para id="id8357374">
+          <figure id="id1050584"><media id="id1050584_media" alt="A box with a menu overlaid. The item 'Add Element' is highlighted in blue.">
+              <image mime-type="image/png" src="../../media/Picture 290.png" id="id1050584__onlineimage" height="83" width="101"/>
+            </media>
+            
+          <caption>Adding Shift Register Elements</caption></figure>
+          <figure id="id8520980"><media id="id8520980_media" alt="A box with a blue box 'N' in the upper left corner and a blue box 'i' towards the lower left. A pair of down arrows exists on the far left side and an up arrow exist on the right side opposite the down arrows.">
+              <image mime-type="image/png" src="../../media/Picture 293.png" id="id8520980__onlineimage" height="79" width="91"/>
+            </media>
+            
+          <caption>Adding Shift Register Elements</caption></figure>
+        </para>
+        <para id="id8500878">To illustrate the use of the <emphasis effect="bold">shift registers</emphasis>, the following example computes the Fibonacci number Fib(n).</para>
+        
+        <equation id="eip-262"><m:math>
+<m:mrow>
+<m:mtext>Fib</m:mtext>
+<m:mo>(</m:mo>
+<m:mrow>
+<m:mi>n</m:mi>
+</m:mrow>
+<m:mo>)</m:mo>
+</m:mrow>
+<m:mo>=</m:mo>
+<m:mo>{</m:mo>
+<m:mtable>
+<m:mtr>
+<m:mtd columnalign="left">
+<m:mn>0</m:mn>
+<m:mo>,</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd columnalign="left">
+<m:mn>1</m:mn>
+<m:mo>,</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+</m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd columnalign="left">
+<m:mtext>Fib</m:mtext>
+<m:mo>(</m:mo>
+<m:mi>n</m:mi>
+<m:mo>-</m:mo>
+<m:mn>1</m:mn>
+<m:mo>)</m:mo>
+<m:mo>+</m:mo>
+<m:mtext>Fib</m:mtext>
+<m:mo>(</m:mo>
+<m:mi>n</m:mi>
+<m:mo>-</m:mo>
+<m:mn>2</m:mn>
+<m:mo>)</m:mo>
+<m:mo>,</m:mo>
+</m:mtd>
+<m:mtd columnalign="left">
+<m:mi>n</m:mi>
+<m:mo>&gt;</m:mo>
+<m:mn>1</m:mn>
+</m:mtd>
+</m:mtr>
+</m:mtable>
+</m:math></equation><para id="id8539876">In the Front Panel window, select an integer 32 numeric input and output controls and labeled them <emphasis effect="bold">n</emphasis> and <emphasis effect="bold">Fib(n)</emphasis> respectively. Arrange the diagram as shown in <link target-id="id8606287"/>.</para>
+        <para id="id7974402"><figure id="id8606287"><subfigure id="eip-id1167402058864">
+            <media id="id8606287_media" alt="A form with two fields labeled 'n' and 'Fib(n)' from left to right. Both fields contain the value '0'.">
+              <image mime-type="image/png" src="../../media/Picture 300.png" id="id8606287__onlineimage" height="53" width="163"/>
+            </media>
+            
+</subfigure>
+          <subfigure id="eip-id1167400872298">
+            <media id="id6809963_media" alt="Form left two right there is an icone labeled 'n', a box with a blue box 'N' in the upper left corner and a blue box 'i' towards the lower left. A pair of down arrows exists on the far left side and an up arrow exist on the right side opposite the down arrows. Our the far right is another icon labeled 'Fib(n)'.">
+              <image mime-type="image/png" src="../../media/Picture 301.png" id="id6809963__onlineimage" height="90" width="190"/>
+            </media>
+           
+</subfigure>
+          
+<caption>Shift Register Example</caption></figure>
+        </para>
+        <para id="id8025635">Add a <emphasis effect="bold">0</emphasis> and <emphasis effect="bold">1</emphasis> numeric constants to initialize the elements of the shift register and wire them to the <emphasis effect="bold">i-1</emphasis> and <emphasis effect="bold">i-2</emphasis> elements respectively. Add the <emphasis effect="bold">add</emphasis> operator in the for loop and complete the program wiring as shown in <link target-id="id7242601"/>.</para>
+        <figure id="id7242601"><media id="id7242601_media" alt="This image consists of several icons connected by lines. From left to right there is an icon in a blue box and below that are two other small blue boxes containing '0' and '1'. All of these boxes are connected via a blue line  to items in a larger box. They are connected to an 'N', and two down arrows respectively. The two down arrows are connected to a triangle pointing to the righ containing a '+'. Below This is an 'i'. The triangle is connected via a line to an up arrow which is connected to an icon outside the big box labeled 'Fib(n)'.">
+            <image mime-type="image/png" src="../../media/Picture 304.png" id="id7242601__onlineimage" height="92" width="197"/>
+          </media>
+          
+        <caption>Fibonacci G Program</caption></figure>
+        <para id="id1356618">For <emphasis effect="bold">n</emphasis> = 0, the for loop iterates 0 times and passes 0 to <emphasis effect="bold">Fib(n)</emphasis>, therefore Fib(0)=0. For <emphasis effect="bold">n</emphasis> = 1, the for loop the values in <emphasis effect="bold">i-1</emphasis> and <emphasis effect="bold">i-2</emphasis> shift register elements are added (0+1) and saved in the <emphasis effect="bold">i</emphasis> shift register element (1). Since the loop iterates once only, the resulting value is passed to <emphasis effect="bold">Fib(n)</emphasis>, therefore Fib(1)=1. For <emphasis effect="bold">n</emphasis> = 2, the first iteration produces the value of 1. Prior to the next and final iteration, the values are shifted in the register as follows:</para>
+        <para id="id8546230">The value in the <emphasis effect="bold">i-2</emphasis> shift register element is discarded</para>
+        <para id="id7052694">The value in the <emphasis effect="bold">i-1</emphasis> shift register element is shifted to the <emphasis effect="bold">i-2</emphasis> shift register element</para>
+        <para id="id1349239">The value in the <emphasis effect="bold">i</emphasis> shift register element is shifted to the <emphasis effect="bold">i-1</emphasis> shift register element</para>
+        <para id="id8536308">To start the 2<sup>nd</sup> and final iteration, the <emphasis effect="bold">i-1</emphasis> shift register element contains 1 and the <emphasis effect="bold">i-2</emphasis> shift register element contains 0. These are added to produce 1, which is passed to <emphasis effect="bold">Fib(n)</emphasis> and, therefore, Fib(2)=1. This process is repeated for values of <emphasis effect="bold">n</emphasis> &gt; 2.</para>
+        
+        <para id="id842322">Save this program as <emphasis effect="bold">Fibonacci.vi</emphasis>. <link target-id="id6983210"/> shows the result of Fib(8).</para>
+        <figure id="id6983210"><media id="id6983210_media" alt="A form with two fields 'n' and 'Fib(n)' with values '8' and '21' respectively. ">
+            <image mime-type="image/png" src="../../media/Picture 305.png" id="id6983210__onlineimage" height="49" width="161"/>
+          </media>
+          
+        <caption>Fib(8) = 21</caption></figure>
+      </section>
+      <section id="id8549138">
+        <title>Auto-Indexing</title>
+        <para id="id6597654">Auto-indexing allows input array elements to be operated on and output array elements to be aggregated automatically in a for loop. It is not required to wire the <emphasis effect="bold">Loop Counter</emphasis>. The for loop automatically reduces the array dimensionality by one.</para>
+        <figure id="id7319500"><media id="id7319500_media" alt="Three icons in a row. From left to right there is an icon labeled 'Input Array' connected to a large box with an 'N' in the upper left and connects to an orange square which is labeled 'Auto-Indexed Tunnel'. This square is connected via an orange line to a sine wave icon and then to another orange square and finally to another icon labeled 'Output Array'.">
+            <image mime-type="image/png" src="../../media/Picture 306.png" id="id7319500__onlineimage" height="78" width="228"/>
+          </media>
+          
+        <caption>For Loop Auto-Indexing</caption></figure>
+      </section>
+      <section id="id7295112">
+        <title>Disabling Auto-Indexing</title>
+        <para id="id6517557">It is sometimes necessary to disable auto-indexing. In this example, the <emphasis effect="bold">For Loop</emphasis> is used to scan the elements of the array taking advantage of the auto-indexing feature. However, the result is a single number. Wiring the result through the <emphasis effect="bold">For Loop</emphasis> with auto-indexing enabled results in a broken data type wire.</para>
+        <figure id="id5417122"><media id="id5417122_media" alt="A screen capture of 'Broken Auto-Indexing'. From left to right there is an 'Array' icon above a blue square containing '0'. These are connected to a large box containing a blue box containing an 'N', a little square, a blue down arrow and a blue box containing 'i'. The icons outside the big box are connected to the little square and down arrow in the big box via a blue line. Another line connects these icons to two blue dots which then connect to a triangle containing '&gt;'. Lines connect the triangel and two dots to a larger triangle  which is connected to a small square and an up arrow along the far right side of the box. To the right of the box is a red 'x'and to the right of that is an icon labeled 'Maximum'.">
+            <image mime-type="image/png" src="../../media/Picture 307.png" id="id5417122__onlineimage" height="98" width="241"/>
+          </media>
+          
+        <caption>Broken Auto-Indexing</caption></figure>
+        <para id="id7293955">To disable auto-indexing, right click on the target <emphasis effect="bold">Auto-Indexed Tunnel</emphasis> and select <emphasis effect="bold">Disable Indexing</emphasis> from the pop-up menu.</para>
+        <figure id="id8356690"><media id="id8356690_media" alt="A screen capture of 'Broken Auto-Indexing'. From left to right there is an 'Array' icon above a blue square containing '0'. These are connected to a large box containing a blue box containing an 'N', a little square, a blue down arrow and a blue box containing 'i'. The icons outside the big box are connected to the little square and down arrow in the big box via a blue line. Another line connects these icons to two blue dots which then connect to a triangle containing '&gt;'. Lines connect the triangel and two dots to a larger triangle  which is connected to a small square and an up arrow along the far right side of the box. To the right of the box is a red 'x'and to the right of that is an icon labeled 'Maximum'. A menu is ovberlaid on top of this diagram with the item 'Disable Indexing' highlighted in blue.">
+            <image mime-type="image/png" src="../../media/Picture 308.png" id="id8356690__onlineimage" height="91" width="230"/>
+          </media>
+          
+        <caption>Disabling Auto-Indexing</caption></figure>
+        <para id="id7602676">The final diagram with the <emphasis effect="bold">Auto-Indexed Tunnel</emphasis> disabled is shown in <link target-id="id1078902"/>.</para>
+        
+        <figure id="id1078902"><media id="id1078902_media" alt="A screen capture of 'Broken Auto-Indexing'. From left to right there is an 'Array' icon above a blue square containing '0'. These are connected to a large box containing a blue box containing an 'N', a little square, a blue down arrow and a blue box containing 'i'. The icons outside the big box are connected to the little square and down arrow in the big box via a blue line. Another line connects these icons to two blue dots which then connect to a triangle containing '&gt;'. Lines connect the triangel and two dots to a larger triangle  which is connected to a small square and an up arrow along the far right side of the box. To the right of that is an icon labeled 'Maximum'.">
+            <image mime-type="image/png" src="../../media/Picture 309.png" id="id1078902__onlineimage" height="92" width="226"/>
+          </media>
+          
+        <caption>Disabled Auto-Indexing</caption></figure>
+      </section>
+    </section>
+    <section id="id6156688">
+      <title>While Loop</title>
+      <para id="id7318404">The <emphasis effect="bold">While Loop</emphasis> conditionally iterates executing the statements within the structure. The <emphasis effect="bold">Loop Condition</emphasis> establishes whether the loop iterates or terminates. The <emphasis effect="bold">Loop Iteration</emphasis> is a zero-based iteration execution reference similar to the For Loop.</para>
+      <figure id="id5828419"><media id="id5828419_media" alt="There is a box containing a blue box 'i' on the lower left and a green square red circle on the lower right. The 'i' is labeled 'Loop Iteration'. The other icon is labeled 'Loop Condition'.">
+          <image mime-type="image/png" src="../../media/Picture 310.png" id="id5828419__onlineimage" height="84" width="202"/>
+        </media>
+        
+      <caption>While Loop Structure</caption></figure>
+      <section id="id8559948">
+        <title>Loop Condition</title>
+        <section id="id1089452">
+          <title>Stop if True</title>
+          <para id="id8236548">The default <emphasis effect="bold">loop condition</emphasis> is to continue if the Boolean condition is <emphasis effect="bold">False</emphasis> (or stop if <emphasis effect="bold">True</emphasis>). The <emphasis effect="bold">while loop</emphasis> in  <link target-id="id2100976"/> will iterate while <emphasis effect="bold">Iterations</emphasis> is less than <emphasis effect="bold">Loop Iteration</emphasis> is <emphasis effect="bold">False</emphasis> or, equivalently, will stop iterating when <emphasis effect="bold">Iterations</emphasis> is less than the value in <emphasis effect="bold">Loop Iteration.</emphasis></para>
+          <figure id="id2100976"><media id="id2100976_media" alt="Three elements comprise this diagram. From left to right there is an icon labeled 'Iterations' connected via a line to a large box containing an 'i' in a blue box and a triangle containing '&lt;' which is connected to a green square red circle. The 'i' is connected via a line to an icon outside the large box labeled 'count'.">
+              <image mime-type="image/png" src="../../media/Picture 311.png" id="id2100976__onlineimage" height="80" width="219"/>
+            </media>
+            
+          <caption>Stop If True</caption></figure>
+        </section>
+        <section id="id8679660">
+          <title>Continue if True</title>
+          <para id="id8679404">At times it is more convenient to let the <emphasis effect="bold">while </emphasis>loop iterate while the condition is True. To change the <emphasis effect="bold">loop condition</emphasis>, right click on the <emphasis effect="bold">loop condition</emphasis> icon and select <emphasis effect="bold">Continue if True</emphasis> from the pop-up menu.</para>
+          <figure id="id8590718"><media id="id8590718_media" alt="Three elements comprise this diagram. From left to right there is an icon labeled 'Iterations' connected via a line to a large box containing an 'i' in a blue box and a triangle containing '&lt;' which is connected to a green square red circle. The 'i' is connected via a line to an icon outside the large box labeled 'count'. There is a menu overlaid on top of the diagram and the menu item 'Continue if True' is highlighted, while the item 'Stop if True' has a check mark next to it.">
+              <image mime-type="image/png" src="../../media/Picture 312.png" id="id8590718__onlineimage" height="80" width="246"/>
+            </media>
+            
+          <caption>Changing Loop Condition</caption></figure>
+          <para id="id7504776"/>
+          <para id="id7499904"><link target-id="id1382690"/> shows the <emphasis effect="bold">Loop Condition</emphasis> set to <emphasis effect="bold">Continue if True</emphasis>.</para>
+          <figure id="id1382690"><media id="id1382690_media" alt="A diagram consisting three icons. From left to right the icons are a blue square labeled 'Iterations'. There is large box to the right containing a blue square 'i', a triangle containin a sideways 'w', a green square containing a circular arrow. On the other side of the large box is an icon labeled 'Count'.">
+              <image mime-type="image/png" src="../../media/Picture 313.png" id="id1382690__onlineimage" height="80" width="221"/>
+            </media>
+            
+          <caption>Continue If True</caption></figure>
+        </section>
+      </section>
+      <section id="id6831628">
+        <title>Shift Registers</title>
+        <para id="id1068253">Programmatically, while loop <emphasis effect="bold">shift registers</emphasis> are identical to for loop <emphasis effect="bold">shift registers</emphasis>. Refer to <link target-id="id5826772"/> for the discussion. However, an example is provided to illustrate the use of shift registers in while loops.</para>
+        <figure id="id7518886"><media id="id7518886_media" alt="A box with two black down arrow boxes on the far right of the box, blue box 'i' on the lower left of the box, and up arrow on the upper right of the box and a green square with a circular arrow in the lower right of the box.">
+            <image mime-type="image/png" src="../../media/Picture 314.png" id="id7518886__onlineimage" height="79" width="108"/>
+          </media>
+          
+        <caption>While Loop Shift Registers</caption></figure>
+        <para id="id8342892">In the following example, Euler’s number <emphasis effect="bold">e</emphasis> is computed to the specified accuracy using the infinite series</para>
+        <equation id="eip-785"><m:math>
+<m:mi>e</m:mi>
+<m:mo>=</m:mo>
+<m:munderover>
+<m:mrow>
+<m:mi>∑</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mi>∞</m:mi>
+</m:mrow>
+</m:munderover>
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>+</m:mo>
+<m:munderover>
+<m:mrow>
+<m:mi>∑</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:mrow>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>=</m:mo>
+<m:mi>∞</m:mi>
+</m:mrow>
+</m:munderover>
+
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mrow>
+<m:mi>n</m:mi>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+
+<m:mo>=</m:mo>
+<m:mn>1</m:mn>
+<m:mo>+</m:mo>
+
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mrow>
+<m:mn>1</m:mn>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>+</m:mo>
+
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mrow>
+<m:mn>2</m:mn>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+<m:mo>+</m:mo>
+
+<m:mfrac>
+<m:mn>1</m:mn>
+<m:mrow>
+<m:mn>3</m:mn>
+<m:mo>!</m:mo>
+</m:mrow>
+</m:mfrac>
+
+<m:mo>+</m:mo>
+<m:mo>…</m:mo>
+<m:mo>=</m:mo>
+<m:mn>2.7182818284</m:mn>
+</m:math></equation>
+        <para id="id7429435">Notice that two shift registers keep track of the factorial and the sum. Also notice the dot in the multiplication. This is because the <emphasis effect="bold">loop iteration</emphasis> is an integer 32 data type and the input from one of the shift registers is double precision numeric. The dot represents that the integer 32 data type has been coerced into a double precision number.</para>
+        <figure id="id8335130"><media id="id8335130_media" alt="A complex diagram of 'Computing e'. It consists of an icon on the right labeled 'Accuracy' connected to a large box diagram with many triangles and squares. There is also a square icon on the left labeled 'e'.">
+            <image mime-type="image/png" src="../../media/Picture 315.png" id="id8335130__onlineimage" height="110" width="279"/>
+          </media>
+          
+        <caption>Computing e</caption></figure>
+        <para id="id8026706">Save the program as <emphasis effect="bold">e.vi</emphasis>. The result of running this program is shown in <link target-id="id8554568"/>.</para>
+        <para id="id8606134">
+          <figure id="id8554568"><media id="id8554568_media" alt="A form with two fields labeled 'Accuracy' and 'e'. The values of the fields are '1E-5' and '2.71828'respectively.">
+              <image mime-type="image/png" src="../../media/Picture 316.png" id="id8554568__onlineimage" height="51" width="166"/>
+            </media>
+            
+          <caption>Computed e to 5 Digits</caption></figure>
+        </para>
+      </section>
+      <section id="id5322126">
+        <title>Enabling Auto-Indexing</title>
+        <para id="id2236510">By default, while loops are auto-indexed disabled. In order for while loops to process and generate arrays, the loop tunnel must be enabled to auto-indexed arrays.</para>
+        <figure id="id7987875"><media id="id7987875_media" alt="A big square box contain a blue square 'i' and a blue square '999' connected via lines to a triange containing a '&lt;'. This triangle is connected to a green square containing a circular arrow. Above these icons is a dice icon which connects to an orange box on the edge of the big box. To the right there is a red 'x' and then an orange box around an 'array' icon. ">
+            <image mime-type="image/png" src="../../media/Picture 317.png" id="id7987875__onlineimage" height="84" width="174"/>
+          </media>
+          
+        <caption>Disabled Auto-Indexing</caption></figure>
+        <para id="id8555032">To enable auto-indexing, right click on the <emphasis effect="bold">loop tunnel</emphasis> and select <emphasis effect="bold">Enable Indexing</emphasis> from the pop-up menu.</para>
+        <figure id="id6749518"><media id="id6749518_media" alt="A big square box contain a blue square 'i' and a blue square '999' connected via lines to a triange containing a '&lt;'. This triangle is connected to a green square containing a circular arrow. Above these icons is a dice icon which connects to an orange box on the edge of the big box. To the right there is a red 'x' and then an orange box around an 'array' icon. On top of this diagram, a menu is overlaid with the item 'Enable Indexing' highlighted in blue.">
+            <image mime-type="image/png" src="../../media/Picture 318.png" id="id6749518__onlineimage" height="80" width="203"/>
+          </media>
+          
+        <caption>Enabling Auto-Indexing</caption></figure>
+        <para id="id6627870">In this example the while loop appropriately generates a 1,000 element numeric array with random numbers.</para>
+        <figure id="id3441461"><media id="id3441461_media" alt="A big square box contain a blue square 'i' and a blue square '999' connected via lines to a triange containing a '&lt;'. This triangle is connected to a green square containing a circular arrow. Above these icons is a dice icon which connects to a hollow box on the edge of the big box. To the right there is an orange box around an 'array' icon.">
+            <image mime-type="image/png" src="../../media/Picture 319.png" id="id3441461__onlineimage" height="84" width="174"/>
+          </media>
+          
+        <caption>Auto-Indexing Enabled</caption></figure>
+      </section>
+    </section>
+    <section id="id8544838">
+      <title>Sequence</title>
+      <para id="id747282">Although G was designed to easily develop interactive, parallel programs, it is sometimes necessary to execute diagrams in sequential order. The <emphasis effect="bold">sequence structure</emphasis> allows G diagrams to execute sequentially.</para>
+      <para id="id1356792">The following examples time in milliseconds (ms) the execution of a G diagram. The sequence of events is get a start time stamp, execute the diagram, get stop time stamp and take the difference between the stop and start times to determine the execution time.</para>
+      <para id="id8502615">
+        <figure id="id8706446"><media id="id8706446_media" alt="A diagram that looks like two frames of film. The left frame is labeled 'Execute First' and the right frame is labeled 'Execute Next'.">
+            <image mime-type="image/png" src="../../media/Picture 320.png" id="id8706446__onlineimage" height="81" width="148"/>
+          </media>
+          
+        <caption>Sequence Structure</caption></figure>
+      </para>
+      
+      <section id="id8453805">
+        <title>Flat Sequence</title>
+        <para id="id6057806"><emphasis effect="bold">Flat </emphasis>Sequences always execute left to right. A <emphasis effect="bold">Flat Sequence</emphasis> structure starts with a single frame and allows a user to visualize the diagram sequences.</para>
+        <figure id="id8834201"><media id="id8834201_media" alt="An empty film frame.">
+            <image mime-type="image/png" src="../../media/Picture 321.png" id="id8834201__onlineimage" height="81" width="96"/>
+          </media>
+          
+        <caption>Sequence Frame</caption></figure>
+        <para id="id7236902">To add frames to a sequence, right click on the sequence structure and select either <emphasis effect="bold">Add Frame After</emphasis> or <emphasis effect="bold">Add Frame Before</emphasis> from the pop-up menu according to the program’s needs.</para>
+        <figure id="id3449381"><media id="id3449381_media" alt="An empty film frame overlaid by a menu with the item 'Add Frame After' highlighted in blue.">
+            <image mime-type="image/png" src="../../media/Picture 322.png" id="id3449381__onlineimage" height="88" width="133"/>
+          </media>
+          
+        <caption>Adding Sequence Frames</caption></figure>
+        <para id="id7179053">Add two more frames to the sequence structure to get a three frame sequence as shown in <link target-id="id1359195"/>.</para>
+        <figure id="id1359195"><media id="id1359195_media" alt="A row of three empty film frames.">
+            <image mime-type="image/png" src="../../media/Picture 323.png" id="id1359195__onlineimage" height="81" width="236"/>
+          </media>
+          
+        <caption>Three Frame Sequence</caption></figure>
+        <para id="id6157886">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Timing</emphasis> menu select <emphasis effect="bold">Tick Count (ms)</emphasis> function.</para>
+        <figure id="id8541010"><media id="id8541010_media" alt="A row of three icons is nested in the second level of a directory. The levels are labeled 'Programming' and 'Timing' underneath that. The icons are labeled from left to right 'Tick Count (ms)', 'Wait(ms)' and 'Wait Until Ne...'.">
+            <image mime-type="image/png" src="../../media/Picture 324.png" id="id8541010__onlineimage" height="100" width="250"/>
+          </media>
+          
+        <caption>Tick Count Function</caption></figure>
+        <para id="id8303553">Drop the <emphasis effect="bold">Tick Count (ms)</emphasis> function in the first (left most) frame of this sequence. Make a copy of the <emphasis effect="bold">Tick Count</emphasis> function and place it on the third (right most) frame as shown in <link target-id="id7180540"/>.</para>
+        <figure id="id7180540"><media id="id7180540_media" alt="A diagram of three film frames with the left and right most frames contain clock icons.">
+            <image mime-type="image/png" src="../../media/Picture 325.png" id="id7180540__onlineimage" height="81" width="194"/>
+          </media>
+          
+        <caption>Start and Stop Tick Counts</caption></figure>
+        <para id="id3446357">Add a <emphasis effect="bold">For Loop</emphasis> that iterates 5,000 times to the second frame. Add a <emphasis effect="bold">subtract</emphasis> operator, an unsigned integer 32 output and complete the program as shown in <link target-id="id6812581"/>. The execution of this program shows the time in milliseconds it took for the 2<sup>nd</sup> sequential frame to execute.</para>
+        <figure id="id6812581"><media id="id6812581_media" alt="A diagram of three film frames with the left and right most frames contain clock icons. In the middle fram there is an icon with a blue square on the left containing '5000' which is connected to a square containing a blue square 'N' in the upper left and a blue square 'i' in the lower left and dice on the middle. A line runs for the first clock to a triangle containing a '-' on the right of the film frames and then the triangle connects to a square icon.">
+            <image mime-type="image/png" src="../../media/Picture 326.png" id="id6812581__onlineimage" height="86" width="273"/>
+          </media>
+          
+        <caption>Timing G Program</caption></figure>
+      </section>
+      <section id="id8061705">
+        <title>Stacked Sequence</title>
+        <para id="id7079142">A <emphasis effect="bold">Stacked Sequence</emphasis> provides a more compact representation of program sequences. It is programmatically identical to the <emphasis effect="bold">Flat Sequence</emphasis> with the exception that a <emphasis effect="bold">Sequence Local</emphasis> enables data to flow to subsequent frames. Additionally, as frames are added, a <emphasis effect="bold">Sequence Selector</emphasis> provides access to the desired frame (see <link target-id="id7985617"/>).</para>
+        <figure id="id7985617"><media id="id7985617_media" alt="A film frame with '0[0..1]' with arrows on either side pointing to the right and a down error.">
+            <image mime-type="image/png" src="../../media/Picture 327.png" id="id7985617__onlineimage" height="86" width="107"/>
+          </media>
+          
+        <caption>Stacked Sequence</caption></figure>
+        
+        <para id="id6130076">For this timing example, start with a <emphasis effect="bold">Stacked Sequence</emphasis> and add 3 more frames. The sequence frames are labeled 0, 1, 2 and 3 and will execute in that order.</para>
+        <figure id="id8269089"><media id="id8269089_media" alt="A film frame with '3[0..3]' with arrows on either side pointing to the right and a down error.">
+            <image mime-type="image/png" src="../../media/Picture 328.png" id="id8269089__onlineimage" height="86" width="107"/>
+          </media>
+          
+        <caption>Four Frame Stacked Sequence</caption></figure>
+        <para id="id8554800">Go to the first frame (frame 0) and add a <emphasis effect="bold">Tick Count (ms)</emphasis> function. Right click on the sequence structure and select <emphasis effect="bold">Add Sequence Local</emphasis> from the pop-up menu.</para>
+        <para id="id7689294">
+          <figure id="id7212520"><media id="id7212520_media" alt="A film frame with '3[0..3]' with arrows on either side pointing to the right and a down error. A clock icon is contained in the middle of the frame.">
+              <image mime-type="image/png" src="../../media/Picture 329.png" id="id7212520__onlineimage" height="86" width="107"/>
+            </media>
+            
+          <caption>Adding Sequence Locals</caption></figure>
+          <figure id="id8561920"><media id="id8561920_media" alt="A film frame with '3[0..3]' with arrows on either side pointing to the right and a down error. A menu is overlaid on top of this diagram with the item 'Add Sequence Local' is highlighted in blue.">
+              <image mime-type="image/png" src="../../media/Picture 332.png" id="id8561920__onlineimage" height="86" width="122"/>
+            </media>
+            
+          <caption>Adding Sequence Locals</caption></figure>
+        </para>
+        <para id="id8833717">The <emphasis effect="bold">Sequence Local</emphasis> is shown as an undefined tunnel. Wire the <emphasis effect="bold">Tick Count (ms)</emphasis> function to the <emphasis effect="bold">Sequence Local</emphasis> to define the tunnel data type and data flow. Data can now flow from frame 0 to the other frames as needed.</para>
+        <para id="id8420023">
+          <figure id="id1347960"><media id="id1347960_media" alt="A film frame with '3[0..3]' with arrows on either side pointing to the right and a down error. There is a clock icon in the middle of the frame with a hollow square on the lower left. ">
+              <image mime-type="image/png" src="../../media/Picture 333.png" id="id1347960__onlineimage" height="86" width="107"/>
+            </media>
+            
+          <caption>Sequence Local</caption></figure>
+          <figure id="id3440104"><media id="id3440104_media" alt="A film frame with '3[0..3]' with arrows on either side pointing to the right and a down error. There is a clock icon in the middle of the frame connected to a square containing a blue arrow on the lower left via a line. ">
+              <image mime-type="image/png" src="../../media/Picture 334.png" id="id3440104__onlineimage" height="86" width="107"/>
+            </media>
+            
+          <caption>Sequence Local</caption></figure>
+        </para>
+        <para id="id7174682">Go to the next frame sequence (frame 1) and enter the program to be timed.</para>
+        <figure id="id6900067"><media id="id6900067_media" alt="A film frame with '1[0..3]' with arrows pointing either direction and a down arrow at the top of the frame. Inside the frame there is an icon with a blue square on the left containing '5000' which is connected to a square containing a blue square 'N' in the upper left and a blue square 'i' in the lower left and dice on the middle. There is also a square arrow pointing to the right.">
+            <image mime-type="image/png" src="../../media/Picture 339.png" id="id6900067__onlineimage" height="86" width="107"/>
+          </media>
+          
+        <caption>Frame to Time</caption></figure>
+        <para id="id7298956">Go to the third frame of the sequence (frame 2), add a <emphasis effect="bold">Tick Count (ms)</emphasis> function, add another <emphasis effect="bold">Sequence Local</emphasis> and wire the <emphasis effect="bold">Tick Count (ms)</emphasis> to the new <emphasis effect="bold">Sequence Local</emphasis>. The wired sequence frame is shown in <link target-id="id7289277"/>.</para>
+        <figure id="id7289277"><media id="id7289277_media" alt="A film frame with '2[0..3]' with arrows pointing either direction and a down arrow at the top of the frame. There is a clock icon in the middle of the frame with an arrow pointing left and another pointing right on the left wall of the frame.">
+            <image mime-type="image/png" src="../../media/Picture 340.png" id="id7289277__onlineimage" height="86" width="107"/>
+          </media>
+          
+        <caption>Stop Time Stamp</caption></figure>
+        <para id="id5766068">Go to the last frame (frame 3) and add a <emphasis effect="bold">Subtract</emphasis> function. Wire the <emphasis effect="bold">Sequence Locals</emphasis> from frame 2 and frame 0 to the <emphasis effect="bold">Subtract</emphasis> function as shown in <link target-id="id8554104"/>. To complete the diagram, wire the output of the <emphasis effect="bold">Subtract</emphasis> function to the unsigned integer 32 output.</para>
+        <figure id="id8554104"><media id="id8554104_media" alt="A film frame with '3[0..3]' with arrows pointing either direction and a down arrow at the top of the frame. Contained within the frame from left to right there are two blue square arrows pointing right with a blue line connecting to a triangle box containing '-' connected to a blue square on the left edge of the frame wall. A line connects this box to a blue box on the outside of the frame.">
+            <image mime-type="image/png" src="../../media/Picture 341.png" id="id8554104__onlineimage" height="86" width="159"/>
+          </media>
+          
+        <caption>Stacked Timing G Program</caption></figure>
+        <para id="id8582641">It is important to note that the programs in <link target-id="id6812581"/> and <link target-id="id8554104"/>  are programmatically identical.</para>
+      </section>
+    </section>
+  </content>
+</document>

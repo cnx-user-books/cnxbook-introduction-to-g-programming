@@ -1,0 +1,746 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML">
+  <title>Introduction to G Programming</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34085</md:content-id>
+  <md:title>Introduction to G Programming</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>f96f09e9-aa11-4328-bc1a-028801f29d08</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id1168821769857">G is a high level, data-flow graphical programming language designed to develop applications that are</para>
+    <list id="id1168795411351" list-type="bulleted">
+      <item>Interactive</item>
+      <item>Execute in Parallel</item>
+      <item>Multicore</item>
+    </list>
+    <para id="id1168800039296">The program is a block diagram edited in the Block Diagram programming window.</para>
+    <figure id="id1168816336356"><media id="id1168816336356_media" alt="A flow chart showing connections and movement between items like graphs, dice, arrows containing a plus-sign, and other objects in a G-block.">
+        <image mime-type="image/png" src="../../media/Picture 82.png" id="id1168816336356__onlineimage" height="179" width="226"/>
+      </media>
+      
+    <caption>G Block Diagram</caption></figure>
+    <para id="id1168791127066">The program input data and results are manipulated and displayed in the Front Panel window.</para>
+    <figure id="id1168789864791"><media id="id1168789864791_media" alt="A screen capture of the G user interface with a sinusoidal graph plotted on a horizontal axis, labeled time, and a vertical axis, amplitude.">
+        <image mime-type="image/png" src="../../media/Picture 83.png" id="id1168789864791__onlineimage" height="184" width="381"/>
+      </media>
+      
+    <caption>G User Interface</caption></figure>
+    <section id="id1168823871323">
+      <title>Hello Graphical World</title>
+      <para id="id1168800144310">The first program is to display the text “Hello graphical interactive parallel multicore world” in the Front Panel window.</para>
+      <para id="id1168820698280">Right click on the Block Diagram window and select <emphasis effect="bold">String Constant</emphasis> from the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; String</emphasis> menu.</para>
+      <para id="id1168821956986">Drag and drop the <emphasis effect="bold">String Constant</emphasis> onto the Block Diagram window as show in <link target-id="id1168798129436"/>.</para>
+      <figure id="id1168798129436"><media id="id1168798129436_media" alt="A screen capture of a window titled functions, with buttons to search and view, a hierarchical list beginning with Programming, then String, and two objects, labeled string constant and empty string.">
+          <image mime-type="image/png" src="../../media/Picture 3-3365.png" id="id1168798129436__onlineimage" height="175" width="252"/>
+        </media>
+        
+      <caption>String Constant</caption></figure>
+      <para id="id1168823217486">Type in “Hello graphical interactive parallel multicore world.” in the <emphasis effect="bold">String Constant</emphasis>.</para>
+      <figure id="id1168824783884"><media id="id1168824783884_media" alt="A string constant that reads, Hello graphical interactive parallel multicore world.">
+          <image mime-type="image/png" src="../../media/Picture 4.png" id="id1168824783884__onlineimage" height="33" width="140"/>
+        </media>
+        
+      <caption>"Hello…world" String Constant</caption></figure>
+      <para id="id1168797654288">Right click in the Front Panel window and select a <emphasis effect="bold">String Indicator</emphasis> from the <emphasis effect="bold">Controls &gt;&gt; Modern &gt;&gt; String &amp; Path</emphasis> menu.</para>
+      <figure id="id1168791397999"><media id="id1168791397999_media" alt="A screen capture of a window titled controls, with buttons to search and view, a hierarchical list beginning with Modern, then String and Path, and two objects, labeled string control and string indicator.">
+		<image mime-type="image/png" src="../../media/Picture 5-d697.png" id="id1168791397999__onlineimage" height="181" width="294"/>
+	</media>
+	
+<caption>Select String Indicator</caption></figure>
+      <para id="id1168822178626">Drop it into the Front Panel window.</para>
+      <figure id="id1168816167724"><media id="id1168816167724_media" alt="A beveled rectangle inside a gridded box labeled string.">
+		<image mime-type="image/png" src="../../media/Picture 6-ee77.png" id="id1168816167724__onlineimage" height="55" width="163"/>
+	</media>
+	
+<caption>String Indicator</caption></figure>
+      <para id="id1168792633910">Return to the programming window. Notice the string terminal corresponding to the <emphasis effect="bold">string indicator</emphasis> in the Front Panel window. As you approach the string constant from the right, the wiring terminal is highlighted and the pointer turns to wire spooler.</para>
+      <figure id="id1168790540405"><media id="id1168790540405_media" alt="A pink box containing the caption, hello graphical interactive parallel multicore world. To the right of the pink box is another pink box labeled string, containing a shaded grey rectangle containing the letters a, b, c. The boxes are not connected, but an object that resembles a spool of wire is connected to the box on the left.">
+          <image mime-type="image/png" src="../../media/Picture 7-1c99.png" id="id1168790540405__onlineimage" height="52" width="220"/>
+        </media>
+        
+      <caption>Wiring the G Diagram</caption></figure>
+      <para id="id1168789857529">Click the <emphasis effect="bold">“Hello graphical interactive parallel multicore world”</emphasis> terminal and then click on the <emphasis effect="bold">String Indicator</emphasis> triangular terminal to wire the terminals.</para>
+      <figure id="id1168789944436"><media id="id1168789944436_media" alt="A pink box containing the caption, hello graphical interactive parallel multicore world. To the right of the pink box is another pink box labeled string, containing a shaded grey rectangle containing the letters a, b, c. The boxes are connected by a zig-zag pink line.">
+          <image mime-type="image/png" src="../../media/Picture 8-7035.png" id="id1168789944436__onlineimage" height="52" width="224"/>
+        </media>
+        
+      <caption>Wired G Block Diagram</caption></figure>
+      <para id="id1168797651299">Save your program as <emphasis effect="bold">Hello, World.vi</emphasis>. Return to the Front Panel window. Click the run button (➯). You have successfully completed and executed your first G program.</para>
+      <figure id="id1168821306807"><media id="id1168821306807_media" alt="A grey grid labeled String containing a grey rectangle with a caption that reads, hello graphical interactive parallel multicore world.">
+          <image mime-type="image/png" src="../../media/Picture 11.png" id="id1168821306807__onlineimage" height="55" width="165"/>
+        </media>
+        
+      <caption>Hello, World G Program Executed</caption></figure>
+    </section>
+    <section id="id1168807089377">
+      <title>Arithmetic Expressions</title>
+      <para id="id1168793028626">The next program converts degrees from Fahrenheit to Celsius using the formula</para>
+      <para id="id1168817202066"><m:math><m:semantics><m:mrow><m:mstyle fontsize="12pt"><m:mrow><m:mrow><m:mrow><m:mi>C</m:mi><m:mo stretchy="false">=</m:mo><m:mfrac><m:mn>5</m:mn><m:mn>9</m:mn></m:mfrac></m:mrow><m:mo stretchy="false">(</m:mo><m:mrow><m:mi>F</m:mi><m:mo stretchy="false">−</m:mo><m:mtext>32</m:mtext></m:mrow><m:mo stretchy="false">)</m:mo></m:mrow></m:mrow></m:mstyle><m:mrow/></m:mrow><m:annotation encoding="StarMath 5.0"> size 12{C= {  {5}  over  {9} }  \( F - "32" \) } {}</m:annotation></m:semantics></m:math>.</para>
+      <para id="id1168801156952">In the Block Diagram window, select the subtract, multiply and divide from the <emphasis effect="bold">Functions &gt;&gt; Mathematics &gt;&gt; Numeric</emphasis> menu</para>
+      <para id="id1168798072958">
+        <figure id="id1168792707869"><media id="id1168792707869_media" alt="A screen capture of a window containing a hierarchical list, beginning with Mathematics, and below it, numeric. Below the list are four objects, which are yellow triangles containing operators, and they are labeled add, subtract, multiply, and divide.">
+            <image mime-type="image/png" src="../../media/Picture 14.png" id="id1168792707869__onlineimage" height="109" width="256"/>
+          </media>
+          
+        <caption>Numeric Operations</caption></figure>
+      </para>
+      <para id="id1168810743571">Wire the <emphasis effect="bold">subtract</emphasis>, <emphasis effect="bold">multiply</emphasis> and <emphasis effect="bold">divide</emphasis> functions as shown in <link target-id="id1168822811362"/>.</para>
+      <figure id="id1168822811362"><media id="id1168822811362_media" alt="A diagram connecting three yellow triangles containing operations together. Subtract is connected to Multiply, and multiply is connected to divide.">
+          <image mime-type="image/png" src="../../media/Picture 15.png" id="id1168822811362__onlineimage" height="44" width="149"/>
+        </media>
+        
+      <caption>Subtract, Multiply and Divide</caption></figure>
+      <para id="id1168819950521">Right click on the upper left terminal of the <emphasis effect="bold">subtract</emphasis> function and select <emphasis effect="bold">Create &gt;&gt; Control</emphasis> from the pop-up menu.</para>
+      <figure id="id1168800387983"><media id="id1168800387983_media" alt="A screen capture of the pop-up menu out of the subtract triangle, with the option Create, then Control selected.">
+          <image mime-type="image/png" src="../../media/Picture 16.png" id="id1168800387983__onlineimage" height="196" width="255"/>
+        </media>
+        
+      <caption>Create Control</caption></figure>
+      <para id="id1168790382568">Re-label <emphasis effect="bold">x</emphasis> as <emphasis effect="bold">Fahrenheit</emphasis> and wire the terminal as shown in <link target-id="id1168802212391"/>.</para>
+      <figure id="id1168802212391"><media id="id1168802212391_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to subtract, which is connected to multiply, which is connected to divide.">
+          <image mime-type="image/jpg" src="../../media/fig1.jpg" id="id1168802212391__onlineimage"/>
+        </media>
+        
+      <caption>Fahrenheit Input Control</caption></figure>
+      <para id="id1168806759036">Right click on the lower left terminal of the subtract function and select <emphasis effect="bold">Create &gt;&gt; Constant</emphasis> and type <emphasis effect="bold">32.0</emphasis>.</para>
+      <para id="id1168822076604">
+        <figure id="id1168822977832"><media id="id1168822977832_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to subtract, which is connected to multiply, which is connected to divide. Also connected to subtract is an orange box containing the number 32.">
+            <image mime-type="image/png" src="../../media/Picture 20.png" id="id1168822977832__onlineimage" height="91" width="232"/>
+          </media>
+          
+        <caption>Fahrenheit Numeric Constant</caption></figure>
+      </para>
+      <para id="id1168795414902">Repeat the process to generate numeric constants for the multiply and divide function with <emphasis effect="bold">5.0</emphasis> and <emphasis effect="bold">9.0</emphasis> respectively.</para>
+      <figure id="id1168823845972"><media id="id1168823845972_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to subtract, which is connected to multiply, which is connected to divide. Also connected to subtract is an orange box containing the number 32. Also connected to multiply is an orange box containing the number 5. Also connected to divide is an orange box containing the number 9.">
+          <image mime-type="image/png" src="../../media/Picture 21.png" id="id1168823845972__onlineimage" height="94" width="232"/>
+        </media>
+        
+      <caption>Fahrenheit Numeric Constants</caption></figure>
+      
+      
+      <para id="id1168794131048">To complete the program, right click on the right terminal of the divide function and select <emphasis effect="bold">Create &gt;&gt; Indicator</emphasis>. Re-label <emphasis effect="bold">x/y</emphasis> as <emphasis effect="bold">Celsius</emphasis>. The final diagram is shown in <link target-id="id1168796543610"/>.</para>
+      <figure id="id1168796543610"><media id="id1168796543610_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to subtract, which is connected to multiply, which is connected to divide. Also connected to subtract is an orange box containing the number 32. Also connected to multiply is an orange box containing the number 5. Also connected to divide is an orange box containing the number 9. Divide is then connected at the end to an orange box labeled celsius, containing the value 1.23.">
+          <image mime-type="image/png" src="../../media/Picture 22.png" id="id1168796543610__onlineimage" height="82" width="240"/>
+        </media>
+        
+      <caption>Fahrenheit to Celsius G Diagram</caption></figure>
+      <para id="id1168798080756">Switch to the Front Panel window to run the program. Save the program as <emphasis effect="bold">Celsius.vi</emphasis>. Try various Fahrenheit values to see the corresponding Celsius values. You have successfully finished a Fahrenheit to Celsius calculator.</para>
+      <figure id="id1168816319491"><media id="id1168816319491_media" alt="A grey grid containing two boxes. The first is labeled Fahrenheit, and contains the value 100, with up-down arrows to the left of it allowing the user to adjust the value. The second is labeled celsius, and contains the value 37.7778.">
+          <image mime-type="image/png" src="../../media/Picture 23.png" id="id1168816319491__onlineimage" height="48" width="184"/>
+        </media>
+      </figure>
+    </section>
+    <section id="id1168786452276">
+      <title>Functions</title>
+      <para id="id1168797660093">Click on empty space and drag to select the entire diagram.</para>
+      <figure id="id1168800377290"><media id="id1168800377290_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to subtract, which is connected to multiply, which is connected to divide. Also connected to subtract is an orange box containing the number 32. Also connected to multiply is an orange box containing the number 5. Also connected to divide is an orange box containing the number 9. Divide is then connected at the end to an orange box labeled celsius, containing the value 1.23. The entire diagram has a dashed box around it.">
+          <image mime-type="image/png" src="../../media/Picture 84.png" id="id1168800377290__onlineimage" height="89" width="257"/>
+        </media>
+        
+      <caption>Select G Block Diagram</caption></figure>
+      <para id="id1168797748023">The selected diagram is highlighted as shown in <link target-id="id1168806734453"/></para>
+      <figure id="id1168806734453"><media id="id1168806734453_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to subtract, which is connected to multiply, which is connected to divide. Also connected to subtract is an orange box containing the number 32. Also connected to multiply is an orange box containing the number 5. Also connected to divide is an orange box containing the number 9. Divide is then connected at the end to an orange box labeled celsius, containing the value 1.23. The entire diagram is closely wrapped in a dashed border.">
+          <image mime-type="image/png" src="../../media/Picture 85-644d.png" id="id1168806734453__onlineimage" height="81" width="255"/>
+        </media>
+        
+      <caption>Selected G Block Diagram</caption></figure>
+      <para id="id1168790969669">From the <emphasis effect="bold">Edit</emphasis> menu select <emphasis effect="bold">Create SubVI</emphasis> to create a G function. The resulting diagram is shown in <link target-id="id1168790383941"/>.</para>
+      <figure id="id1168790383941"><media id="id1168790383941_media" alt="A screen capture of a drop-down Edit window with the option, Create SubVI selected.">
+          <image mime-type="image/jpg" src="../../media/fig2.jpg" id="id1168790383941__onlineimage" height="159" width="115"/>
+        </media>
+        
+      <caption>Creating a Function</caption></figure>
+      <para id="id1168801025492">From the <emphasis effect="bold">File</emphasis> menu select <emphasis effect="bold">Save All</emphasis> and save the <emphasis effect="bold">Untitled</emphasis> function as <emphasis effect="bold">Fahrenheit to Celsius.vi</emphasis>.</para>
+      <figure id="id1168818471829"><media id="id1168818471829_media" alt="An orange box labeled Fahrenheit, with the orange outside line labeled DBL, and containing the value 1.23, is connected to a function, which is connected to an orange box labeled celsius, containing the value 1.23.">
+          <image mime-type="image/png" src="../../media/Picture 28.png" id="id1168818471829__onlineimage" height="56" width="181"/>
+        </media>
+        
+      <caption>Diagram with Function</caption></figure>
+      <para id="id1168822192101">Open the <emphasis effect="bold">Fahrenheit to Celsius.vi</emphasis> by double clicking on the icon. Right click on the icon editor (upper right corner) and select <emphasis effect="bold">Edit Icon…</emphasis></para>
+      <para id="id1168800239403">
+        <figure id="id1168799868587"><media id="id1168799868587_media" alt="A drop-down menu from the function, with the option, edit icon… selected.">
+            <image mime-type="image/png" src="../../media/Picture 54.png" id="id1168799868587__onlineimage" height="101" width="168"/>
+          </media>
+          
+        <caption>Edit Icon</caption></figure>
+      </para>
+      <para id="id1168806668040">This pops-up the <emphasis effect="bold">Icon Editor</emphasis>. Edit the function’s icon.</para>
+      <figure id="id1168816320054"><media id="id1168816320054_media" alt="The icon editor screen. There is a large white box with the large text, Fahr to Celsius. To the left is a palette with options to draw with different colors, fills, and shapes. To the right are smaller boxes replicating the large box, labeled, B and W, 16 colors, and 256 colors.">
+          <image mime-type="image/png" src="../../media/Picture 30.png" id="id1168816320054__onlineimage" height="209" width="379"/>
+        </media>
+        
+      <caption>Icon Editor</caption></figure>
+      <para id="id1168821441728">After editing the icon, the function’s icon is shown in the upper right corner of the Front Panel window. Save the function, plug in various input values and run the function. Save the function.</para>
+      <figure id="id1168823760512"><media id="id1168823760512_media" alt="A screenshot of a window titled, Fahrenheit to Celsius, with standard window options, and containing the input and output values for fahrenheit and celsius.">
+          <image mime-type="image/png" src="../../media/Picture 33.png" id="id1168823760512__onlineimage" height="171" width="281"/>
+        </media>
+        
+      <caption>Edited Icon</caption></figure>
+      
+      <para id="id1168790609636">Close the <emphasis effect="bold">Fahrenheit to Celsius </emphasis>function and return to the <emphasis effect="bold">Celsius </emphasis>Block Diagram windows. The <emphasis effect="bold">Celsius</emphasis> diagram reflects the updated <emphasis effect="bold">Fahrenheit to Celsius</emphasis> icon</para>
+      <figure id="id1168823531601"><media id="id1168823531601_media" alt="An orange box labeled fahrenheit, with the orange outside line labeled DBL, and containing the number 1.23, is connected to a box labeled Fahr to Celsius, which is connected to an orange box labeled celsius, with the orange outside line labeled DBL, and containing the number 1.23.">
+          <image mime-type="image/png" src="../../media/Picture 32.png" id="id1168823531601__onlineimage" height="65" width="257"/>
+        </media>
+        
+      <caption>Function Calling</caption></figure>
+    </section>
+    <section id="id1168791395408">
+      <title>Case Selection</title>
+      <para id="id1168806604625">This program determines if a year is a leap year or not. A leap year is divisible by 4 but not by 100, except when it is divisible by 400. A number <emphasis effect="bold">x</emphasis> is divisible by a number <emphasis effect="bold">y</emphasis> if the remainder of <emphasis effect="bold">x/y</emphasis> is identical to zero, i.e. <emphasis effect="italics">Rem(x/y)=0</emphasis> is <emphasis effect="italics">true</emphasis> therefore</para>
+      <equation id="eip-140"><m:math>
+<m:mtext>Leap Year</m:mtext>
+<m:mo>=</m:mo>
+<m:mo>{</m:mo>
+<m:mo>Rem</m:mo>
+<m:mo>(</m:mo>
+<m:mtext>Year</m:mtext>
+<m:mo>/</m:mo>
+<m:mn>4</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mspace width="5pt"/>
+<m:mtext mathvariant="bold">And Not</m:mtext>
+<m:mo>(</m:mo>
+<m:mo>Rem</m:mo>
+<m:mo>(</m:mo>
+<m:mtext>Year</m:mtext>
+<m:mo>/</m:mo>
+<m:mn>100</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+<m:mo>)</m:mo>
+<m:mo>}</m:mo>
+<m:mspace width="5pt"/>
+<m:mtext mathvariant="bold">Or</m:mtext>
+<m:mspace width="5pt"/>
+<m:mo>Rem</m:mo>
+<m:mo>(</m:mo>
+<m:mtext>Year</m:mtext>
+<m:mo>/</m:mo>
+<m:mn>400</m:mn>
+<m:mo>)</m:mo>
+<m:mo>=</m:mo>
+<m:mn>0</m:mn>
+</m:math>
+      </equation>
+      <para id="id1168802324640">where <emphasis effect="italics">And</emphasis>, <emphasis effect="italics">Or</emphasis> and <emphasis effect="italics">Not</emphasis> are Boolean operators.</para>
+      <para id="id1168793049594">For example:</para>
+      <para id="id1168793104741">1900 is not a leap year because it is divisible by 100</para>
+      <para id="id1168802098188">1970 is not a leap year because it is not divisible by 4</para>
+      <para id="id1168790466856">1980 is a leap year because it is divisible by 4 but not by 100</para>
+      <para id="id1168796763189">2000 is a leap year because it is divisible by 400</para>
+      <para id="id1168788810590">Start a new G program and right click on the Block Diagram window. Go to the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Numeric</emphasis> menu in the Block Diagram window.</para>
+      <figure id="id1168823067493"><media id="id1168823067493_media" alt="A screen capture of a hierarchical list, beginning with Programming, and continuing with Numeric. Below the list are six shapes containing operations.">
+          <image mime-type="image/png" src="../../media/Picture 62.png" id="id1168823067493__onlineimage" height="128" width="169"/>
+        </media>
+        
+      <caption>Quotient &amp; Remainder Function</caption></figure>
+      
+      
+      <para id="id1168822079100">Select three copies of the <emphasis effect="bold">Quotient &amp; Remainder</emphasis> function and three numeric constants. Type in 4, 100 and 400 for the numeric constants and wire these constants to the lower input terminal (corresponding to the dividend) of the <emphasis effect="bold">Quotient &amp; Remainder</emphasis> function.</para>
+      <figure id="id1168791341006"><media id="id1168791341006_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder.">
+          <image mime-type="image/png" src="../../media/Picture 63.png" id="id1168791341006__onlineimage" height="126" width="82"/>
+        </media>
+        
+      <caption>Leap Year Numeric Constants</caption></figure>
+      <para id="id1168819540292">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Comparison</emphasis> menu, select 2 copies of the <emphasis effect="bold">Equal to Zero</emphasis> function and one copy of the <emphasis effect="bold">Not Equal to Zero</emphasis> function.</para>
+      <figure id="id1168790542888"><media id="id1168790542888_media" alt="A screen capture of a hierarchical list, beginning with Programming, and continuing with Numeric. Below the list are four yellow triangles containing operations, named equal, not equal, equal to 0, not equal to 0.">
+          <image mime-type="image/png" src="../../media/Picture 64.png" id="id1168790542888__onlineimage" height="128" width="141"/>
+        </media>
+        
+      <caption>Comparison Functions</caption></figure>
+      <para id="id1168822079341">Organize the comparison operations as show in the diagram.</para>
+      <figure id="id1168790007513"><media id="id1168790007513_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator.">
+          <image mime-type="image/png" src="../../media/Picture 65.png" id="id1168790007513__onlineimage" height="132" width="135"/>
+        </media>
+        
+      </figure>
+      <para id="id1168818379381">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Boolean</emphasis> menu select the <emphasis effect="bold">AND</emphasis> and <emphasis effect="bold">OR</emphasis> operators</para>
+      <figure id="id1168822791132"><media id="id1168822791132_media" alt="A screen capture of a hierarchical list, beginning with programming, and continuing with  structures. Below the list are four objects, labeled, for loop, while loop, timed structure, case structure.">
+          <image mime-type="image/png" src="../../media/Picture 66.png" id="id1168822791132__onlineimage" height="100" width="132"/>
+        </media>
+        
+      <caption>Boolean Operators</caption></figure>
+      <para id="id1168822927725">Place the Boolean operators as shown in <link target-id="id1168799159629"/>.</para>
+      <figure id="id1168799159629"><media id="id1168799159629_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator.">
+          <image mime-type="image/png" src="../../media/Picture 67.png" id="id1168799159629__onlineimage" height="131" width="232"/>
+        </media>
+        
+      <caption>Q&amp;R, Comparison &amp; Boolean Functions</caption></figure>
+      <para id="id1168790969222">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Structures</emphasis> menu, click on the <emphasis effect="bold">Case Structure</emphasis>.</para>
+      <figure id="id1168817431236"><media id="id1168817431236_media" alt="A screen capture of a hierarchical list, beginning with programming, and continuing with  structures. Below the list are four objects, labeled, for loop, while loop, timed structure, case structure.">
+          <image mime-type="image/png" src="../../media/Picture 68.png" id="id1168817431236__onlineimage" height="107" width="306"/>
+        </media>
+        
+      <caption>Case Structure</caption></figure>
+      <para id="id1168819887277">Click and drag on the Block Diagram window to create the <emphasis effect="bold">Case Structure</emphasis>.</para>
+      <figure id="id1168803402586"><media id="id1168803402586_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large dashed rectangle.">
+          <image mime-type="image/png" src="../../media/Picture 69.png" id="id1168803402586__onlineimage" height="118" width="292"/>
+        </media>
+        
+      <caption>Creating a Case Structure</caption></figure>
+      
+      <para id="id1168823717802">The <emphasis effect="bold">True</emphasis> diagram option is indicated at the top of the case structure.</para>
+      <figure id="id1168806843342"><media id="id1168806843342_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled True.">
+          <image mime-type="image/png" src="../../media/Picture 70.png" id="id1168806843342__onlineimage" height="129" width="293"/>
+        </media>
+        
+      <caption>Created Case Structure</caption></figure>
+      <para id="id1168798968944">Drop a string constant and type “Is a Leap Year”.</para>
+      <figure id="id1168793831304"><media id="id1168793831304_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled True. Inside the box is a pink rectangle containing the text, Is a Leap Year.">
+          <image mime-type="image/png" src="../../media/Picture 72.png" id="id1168793831304__onlineimage" height="130" width="297"/>
+        </media>
+        
+      <caption>True Case Editing</caption></figure>
+      <para id="id1168821738409">Click on the down arrowhead next to the <emphasis effect="bold">True</emphasis> label and select the <emphasis effect="bold">False</emphasis> option.</para>
+      <figure id="id1168803223914"><media id="id1168803223914_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled True. The menu has been selected, and the option to select false is highlighted. Inside the box is a pink rectangle containing the text, Is a Leap Year.">
+          <image mime-type="image/png" src="../../media/Picture 73.png" id="id1168803223914__onlineimage" height="117" width="306"/>
+        </media>
+        
+      <caption>Selecting the False Case</caption></figure>
+      <para id="id1168796812096">Drop another string constant and type “Is not a Leap Year”.</para>
+      <figure id="id1168798056631"><media id="id1168798056631_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled False. Inside the box is a pink rectangle containing the text, Is a Leap Year.">
+          <image mime-type="image/png" src="../../media/Picture 74.png" id="id1168798056631__onlineimage" height="117" width="302"/>
+        </media>
+        
+      <caption>False Case Editing</caption></figure>
+      
+      <para id="id1168790140503">Go to the Front Panel window and place a numeric input and an output string. Re-label the numeric input to <emphasis effect="bold">Year</emphasis> and the output string to <emphasis effect="bold">Message</emphasis>.</para>
+      <figure id="id1168824793896"><media id="id1168824793896_media" alt="A screen capture of a window with a grey grid enclosing two input or output boxes, labeled year, and message.">
+          <image mime-type="image/png" src="../../media/Picture 75.png" id="id1168824793896__onlineimage" height="54" width="247"/>
+        </media>
+        
+      <caption>Leap Year GUI</caption></figure>
+      <para id="id1168791323110">Right click on <emphasis effect="bold">Year</emphasis> and select <emphasis effect="bold">Representation &gt;&gt; I32</emphasis> from the numeric pop-up menu.</para>
+      <figure id="id1168823802944"><media id="id1168823802944_media" alt="A screen capture of a window with a grey grid enclosing two input or output boxes, labeled year, and message. A pop-out menu from the year box is visible, with the selection, representation, then word, then an object labeled I32 highlighted.">
+          <image mime-type="image/png" src="../../media/Picture 76.png" id="id1168823802944__onlineimage" height="188" width="275"/>
+        </media>
+        
+      <caption>32-Bit Integer Numeric</caption></figure>
+      <para id="id1168801121278">Arrange the <emphasis effect="bold">Year</emphasis> and <emphasis effect="bold">Message</emphasis> terminals in the Block Diagram window as shown in the figure.</para>
+      <figure id="id1168819760721"><media id="id1168819760721_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled False. Inside the box is a pink rectangle containing the text, Is a Leap Year. To the far left of the diagrams is an object titled year, and to the far right is an object titled message.">
+          <image mime-type="image/png" src="../../media/Picture 77.png" id="id1168819760721__onlineimage" height="121" width="361"/>
+        </media>
+        
+      <caption>Unwired Leap Year Diagram</caption></figure>
+      <para id="id1168794087144">Wire the <emphasis effect="bold">OR</emphasis> operator is to the “?” in the case structure and the string constant “Is not a Leap Year” is wired to <emphasis effect="bold">Message</emphasis>.</para>
+      <figure id="id1168810539992"><media id="id1168810539992_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled False. Inside the box is a pink rectangle containing the text, Is a Leap Year. To the far left of the diagrams is an object titled year, and to the far right is an object titled message. There are blue lines connecting year to each quotient and remainder operator, green lines connecting the operators together, then converging on a connector from the or operator to the large rectangle. Finally, there is a pink line connecting the large rectangle to an icon labeled, message.">
+          <image mime-type="image/png" src="../../media/Picture 78.png" id="id1168810539992__onlineimage" height="107" width="338"/>
+        </media>
+        
+      <caption>Leap Year False Case</caption></figure>
+      <para id="id1168803686985">Select the <emphasis effect="bold">True</emphasis> option and Wire the “Is a Leap Year” string constant to the output terminal of the <emphasis effect="bold">Case Structure</emphasis>.</para>
+      <figure id="id1168810828592"><media id="id1168810828592_media" alt="A three-part diagram connecting numbers to operations. The first is the number 4 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. The second is the number 100 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, not equal to 0. The third is the number 400 inside a blue box that is connected with a line segment to an operation named quotient and remainder. To the right of the object is the operator, equal to 0. In between the first and second parts is the, and, operator. In between the second and third parts is the, or, operator. To the right of these diagrams is a large rectangle, containing a drop-down menu labeled True. Inside the box is a pink rectangle containing the text, Is a Leap Year. To the far left of the diagrams is an object titled year, and to the far right is an object titled message. There are blue lines connecting year to each quotient and remainder operator, green lines connecting the operators together, then converging on a connector from the or operator to the large rectangle. Finally, there is a pink line connecting the large rectangle to an icon labeled, message.">
+          <image mime-type="image/png" src="../../media/Picture 79.png" id="id1168810828592__onlineimage" height="112" width="330"/>
+        </media>
+        
+      <caption>Leap Year True Case</caption></figure>
+      <para id="id1168799246098">Save the program as <emphasis effect="bold">Leap Year.vi</emphasis>, enter <emphasis effect="bold">Year</emphasis> values and run the program to determine whether the value of <emphasis effect="bold">Year</emphasis> is that of a leap year or not.</para>
+      <figure id="id1168812627488"><media id="id1168812627488_media" alt="A screen capture of a grey grid containing an input and output box. The input box is labeled, year, and contains the value 2000. The output box is labeled, Message, and contains the text, is a leap year.">
+          <image mime-type="image/png" src="../../media/Picture 81.png" id="id1168812627488__onlineimage" height="61" width="222"/>
+        </media>
+        
+      <caption>Leap Year Program</caption></figure>
+    </section>
+    <section id="id1168818862070">
+      <title>Arrays</title>
+      <para id="id1168821508958">Right click on the Front Panel window and select <emphasis effect="bold">Array</emphasis> from the <emphasis effect="bold">Controls &gt;&gt; Modern &gt;&gt; Arrays, Matrix &amp; Cluster</emphasis> menu, and drop an array onto the Front Panel window. The array structure consists of an <emphasis effect="bold">index</emphasis> or <emphasis effect="bold">element offset</emphasis> (left portion of the structure) and the array elements (right portion of the structure). When the array structure is placed on the Front Panel window, the data type of the array is undefined as indicated by the grayed out portion of the array.</para>
+      <figure id="id1168795482010"><media id="id1168795482010_media" alt="A two-part screenshot. The left side is a grey grid containing one white box, containing the value 0, and one larger grey box, labeled Array. The right side is a window titled, controls, containing a hierarchical list, beginning with Modern, and continuing with Array, matrix, and cluster. Below the list are two objects, labeled Array and Cluster.">
+          <image mime-type="image/png" src="../../media/Picture 36-d9a6.png" id="id1168795482010__onlineimage" height="144" width="307"/>
+        </media>
+        
+      <caption>Arrays</caption></figure>
+      <para id="id1168799131574">To define the array data type, drag and drop a data type onto the array structure. For instance, to create an input array of numbers, place <emphasis effect="bold">Numeric Control</emphasis> into the array structure.</para>
+      <para id="id1168810605368">
+        <figure id="id1168797686228"><media id="id1168797686228_media" alt="A two-part screenshot. The left side is a grey grid containing one white box, containing the value 0, and one larger grey box, labeled Array. Inside the grey box are dashed rectangles of different heights and widths. The right side is a window titled, controls, containing a hierarchical list, beginning with Modern, and continuing with Array, matrix, and cluster. Below the list are two objects, labeled Array and Cluster.">
+            <image mime-type="image/png" src="../../media/Picture 34-6cbe.png" id="id1168797686228__onlineimage" height="136" width="317"/>
+          </media>
+          
+        <caption>Creating a Numeric Array</caption></figure>
+      </para>
+      <para id="id1168790662793">At this point, the numeric array is an <emphasis effect="bold">Empty</emphasis> or <emphasis effect="bold">Null</emphasis> array because no elements of the array have been defined. This is indicated by the grayed out numeric control within the array structure.</para>
+      <figure id="id1168823807028"><media id="id1168823807028_media" alt="A screen capture of a grey grid containing an input and output box. Both boxes contain values of 0, and the box is titled, Numeric Input Array.">
+          <image mime-type="image/png" src="../../media/Picture 35.png" id="id1168823807028__onlineimage" height="71" width="157"/>
+        </media>
+        
+      <caption>Empty Numeric Array</caption></figure>
+      <para id="id1168795991352">Define elements of an input array by selecting the offset and entering its value. For instance, at offset = 4, enter the value 0.0. This defines <emphasis effect="bold">Numeric Input Array</emphasis> as <emphasis effect="bold">{0, 0, 0, 0, 0}</emphasis>.</para>
+      <figure id="id1168817465966"><media id="id1168817465966_media" alt="A screen capture of a grey grid containing an input and output box. The box is titled, Numeric Input Array. The input box contains the value, 4, and the output box contains the value, 0.">
+          <image mime-type="image/png" src="../../media/Picture 37.png" id="id1168817465966__onlineimage" height="69" width="157"/>
+        </media>
+        
+      <caption>Defining Numeric Array Elements</caption></figure>
+      <para id="id1168788824201">An output array is created similarly to an input array with the exception that an output data type needs to be dropped into the array structure.</para>
+      <figure id="id1168810952758"><media id="id1168810952758_media" alt="A screen capture of a grey grid containing four boxes. The left two boxes are titled, Numeric Input Array. The right two boxes are titled, Numeric Output Array. All four boxes contain the value, 0.">
+          <image mime-type="image/png" src="../../media/Picture 38.png" id="id1168810952758__onlineimage" height="72" width="295"/>
+        </media>
+        
+      <caption>Creating Output Numeric Arrays</caption></figure>
+    </section>
+    <section id="id1168810827305">
+      <title>For Loop</title>
+      <para id="id1168817527606">This program converts an array of Fahrenheit values to Celsius. Create numeric input and output arrays and label them <emphasis effect="bold">Fahrenheit</emphasis> and <emphasis effect="bold">Celsius</emphasis> respectively. In the <emphasis effect="bold">Fahrenheit</emphasis> array enter the values 0, 20, 40, 60, 80, 100, 120, 140, 160, 180 and 200 at offsets 0 through 10 as shown in <link target-id="id1168790706990"/>.</para>
+      <figure id="id1168790706990"><media id="id1168790706990_media" alt="A screen capture of a grey grid containing four boxes. The left two boxes are titled, Fahrenheit, and the right two boxes are titled, Celsius. The leftmost box under fahrenheit contains the value, 10, and the right box under fahrenheit contains the value, 200. Both boxes under celsius contain the value, 0.">
+          <image mime-type="image/png" src="../../media/Picture 2.png" id="id1168790706990__onlineimage" height="72" width="274"/>
+        </media>
+        
+      <caption>Numeric Input and Output Arrays</caption></figure>
+      <para id="id1168821056846">Right click in the Block Diagram window, navigate to <emphasis effect="bold">Programming &gt;&gt; Structures</emphasis> and click on<emphasis effect="bold"> For Loop</emphasis>.</para>
+      <figure id="id1168791442011"><media id="id1168791442011_media" alt="A screen cap of a window containing a directory hierarchy 'Programming' above 'Structures'. Contained in 'Structures' are two icons. On the left of the window there is an orange icon labeled 'Fahrenheit'.">
+          <image mime-type="image/png" src="../../media/Picture 9-d855.png" id="id1168791442011__onlineimage" height="147" width="249"/>
+        </media>
+        
+      <caption>For Loop Structure</caption></figure>
+      <para id="id1168790444842">Click and drag to create the <emphasis effect="bold">For Loop</emphasis> as shown in <link target-id="id1168789112633"/> and <link target-id="id1168823818196"/>.</para>
+      <figure id="id1168789112633"><media id="id1168789112633_media" alt="A dashed square is in the middle of this image. There is a smal dashed square containing an 'N'in the lower right corner of the square. On the left side of the square is an icon labeled 'Fahrenheit' and on the right side there is a similar icon labeled Celsius.">
+          <image mime-type="image/png" src="../../media/Picture 10-04a3.png" id="id1168789112633__onlineimage" height="114" width="214"/>
+        </media>
+        
+      <caption>Creating For Loops</caption></figure>
+      <figure id="id1168823818196"><media id="id1168823818196_media" alt="A dashed square is in the middle of this image. There is a smal dashed square containing an 'N'in the lower right corner of the square. On the left side of the square is an icon labeled 'Fahrenheit' and on the right side there is a similar icon labeled 'Celsius'.">
+          <image mime-type="image/png" src="../../media/Picture 12-acd1.png" id="id1168823818196__onlineimage" height="101" width="214"/>
+        </media>
+        
+      <caption>For Loop</caption></figure>
+      <para id="id1168789252790">Right click inside the <emphasis effect="bold">For Loop</emphasis> and select <emphasis effect="bold">Select a VI…</emphasis> from the pop-up menu. <emphasis effect="bold"/>Find the <emphasis effect="bold">Fahrenheit to Celsius.vi</emphasis> and click <emphasis effect="bold">OK</emphasis>. Drop the function inside the <emphasis effect="bold">For Loop</emphasis>.</para>
+      <para id="id1168800206659">
+        <figure id="id1168793701064"><media id="id1168793701064_media" alt="From left to right there is an orange square labeled 'Fahrenheit' and then a big box with a blue box 'N' on the upper left corner and a blue box 'i' on the lower left corner. In the middle of the big box there is a small box containing 'Fahr to Celsius'. On the right side of the big box there is another icon labeled 'celsius'.">
+            <image mime-type="image/jpg" src="../../media/fig 3.jpg" id="id1168793701064__onlineimage" height="96" width="223"/>
+          </media>
+          
+        <caption>Function in Diagram</caption></figure>
+      </para>
+      <para id="id1168790548422">To complete the program, wire the <emphasis effect="bold">Fahrenheit</emphasis> input array to the input terminal of the <emphasis effect="bold">Fahrenheit to Celsius</emphasis> function and wire the output terminal of the <emphasis effect="bold">Fahrenheit to Celsius</emphasis> function to the <emphasis effect="bold">Celsius</emphasis> output array.</para>
+      <figure id="id1168791302902"><media id="id1168791302902_media" alt="From left to right there is an orange square labeled 'Fahrenheit' and then a big box with a blue box 'N' on the upper left corner and a blue box 'i' on the lower left corner. In the middle of the big box there is a small box containing 'Fahr to Celsius'. On the right side of the big box there is another icon labeled 'celsius'. An orange line runs from the right edge of the left icon through the center of the big box and connects to the left side of the right icon.">
+          <image mime-type="image/png" src="../../media/Picture 17.png" id="id1168791302902__onlineimage" height="95" width="210"/>
+        </media>
+        
+      <caption>Wired Function in Diagram</caption></figure>
+      <para id="id1168819517745">This program uses the <emphasis effect="bold">For Loop</emphasis> to select each element in the <emphasis effect="bold">Fahrenheit</emphasis> input array, converts that value to Celsius and saves the results in the <emphasis effect="bold">Celsius</emphasis> output array. Save the program as <emphasis effect="bold">Fahrenheit to Celsius For Loop.vi</emphasis> and run the program.</para>
+      <figure id="id1168821672456"><media id="id1168821672456_media" alt="Two parallel forms. On the left there is form labeled 'Fahrenheit' with the values '7' and '140'. On the right is another form labeled 'Celsius' with the values '7' and '60'.">
+          <image mime-type="image/png" src="../../media/Picture 24.png" id="id1168821672456__onlineimage" height="72" width="260"/>
+        </media>
+        
+      <caption>Fahrenheit to Celsius Arrays</caption></figure>
+      <para id="id1168795394942">The <emphasis effect="bold">Celsius</emphasis> output array contains: <emphasis effect="bold">Celsius</emphasis> = {-17.7778, -6.6667, 4.44444, 15.5556, 26.6667, 37.7778, 48.8889, 60, 71.1111, 82.2222, 93.3333}</para>
+    </section>
+    <section id="id1168797623847">
+      <title>While Loop</title>
+      <para id="id1168795494449">The next program will generate Fahrenheit values and convert them to Celsius until a condition is met to stop the iterations in a <emphasis effect="bold">While Loop</emphasis>. In the Block Diagram window, select the <emphasis effect="bold">While Loop</emphasis> structure by clicking on it from the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Structures</emphasis> menu. </para>
+      <para id="id1168790646005">Click and drag to create the <emphasis effect="bold">While Loop</emphasis> structure.</para>
+      <para id="id1168795952346">
+        <figure id="id1168823822547"><media id="id1168823822547_media" alt="Four icons contained in the directory hierarchy under 'Programming' and 'Structures'.">
+            <image mime-type="image/png" src="../../media/Picture 29.png" id="id1168823822547__onlineimage" height="148" width="180"/>
+          </media>
+          
+        <caption>While Loop Structure</caption></figure>
+      </para>
+      <figure id="id1168819982957"><media id="id1168819982957_media" alt="An empty dashed square with another small square on the bottom right corner. ">
+          <image mime-type="image/png" src="../../media/Picture 31.png" id="id1168819982957__onlineimage" height="160" width="171"/>
+        </media>
+        
+      <caption>Creating a While Loop</caption></figure>
+      <figure id="id1168800993513"><media id="id1168800993513_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle.">
+          <image mime-type="image/png" src="../../media/Picture 40-67ef.png" id="id1168800993513__onlineimage" height="161" width="184"/>
+        </media>
+        
+      <caption>While Loop</caption></figure>
+      <para id="id1168796758065">In the Front Panel window, create two numeric output arrays. Label them <emphasis effect="bold">Fahrenheit</emphasis> and <emphasis effect="bold">Celsius</emphasis>.</para>
+      <para id="id1168793133918">
+        <figure id="id1168806956748"><media id="id1168806956748_media" alt="A form with two rows. The upper row is labeled 'fahrenheit' and the lower row is labeled 'celsius'.">
+            <image mime-type="image/png" src="../../media/Picture 41-f559.png" id="id1168806956748__onlineimage" height="126" width="158"/>
+          </media>
+          
+        <caption>Numeric Output Arrays</caption></figure>
+      </para>
+      <para id="id1168800265247">Re-arrange the diagram as in <link target-id="id1168810558479"/>.</para>
+      <figure id="id1168810558479"><media id="id1168810558479_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'.">
+          <image mime-type="image/png" src="../../media/Picture 42.png" id="id1168810558479__onlineimage" height="149" width="243"/>
+        </media>
+        
+      <caption>While Loop Diagram</caption></figure>
+      <para id="id1168793858390">From the <emphasis effect="bold">Functions</emphasis> menu, select <emphasis effect="bold">Multiply</emphasis> function and a couple of numeric constants. Type in <emphasis effect="bold">20.0</emphasis> and <emphasis effect="bold">300.0</emphasis> for the numeric constants. Select the <emphasis effect="bold">Fahrenheit to Celsius.vi</emphasis> and drop it inside the <emphasis effect="bold">While Loop</emphasis>. Re-arrange the diagram to look like <link target-id="id1168790765004"/>.</para>
+      <figure id="id1168790765004"><media id="id1168790765004_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'.">
+          <image mime-type="image/png" src="../../media/Picture 43.png" id="id1168790765004__onlineimage" height="171" width="259"/>
+        </media>
+        
+      <caption>Generating Fahrenheit Values</caption></figure>
+      <para id="id1168818703919">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Comparison</emphasis> menu select the <emphasis effect="bold">Greater or Equal</emphasis> operator.</para>
+      <para id="id1168799057678">
+        <figure id="id1168795500013"><media id="id1168795500013_media" alt="There are four icons contained within the directory hierarchy under 'Programming' and 'Comparison'.">
+            <image mime-type="image/png" src="../../media/Picture 44-c381.png" id="id1168795500013__onlineimage" height="164" width="192"/>
+          </media>
+          
+        <caption>Greater or Equal Function</caption></figure>
+      </para>
+      <para id="id1168793895826">Wire the <emphasis effect="bold">While Loop</emphasis> components as shown in <link target-id="id1168789764967"/>.</para>
+      <figure id="id1168789764967"><media id="id1168789764967_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'.">
+          <image mime-type="image/png" src="../../media/Picture 45-11aa.png" id="id1168789764967__onlineimage" height="148" width="269"/>
+        </media>
+        
+      <caption>Generating Fahrenheit Values &amp; Stop Condition</caption></figure>
+      <para id="id1168818420996">Wire the output of the <emphasis effect="bold">Multiply</emphasis> operation to the <emphasis effect="bold">Fahrenheit</emphasis> and the output of the <emphasis effect="bold">Fahrenheit to Celsius</emphasis> function to the <emphasis effect="bold">Celsius</emphasis> numeric output arrays. The connections between the <emphasis effect="bold">While Loop</emphasis> and the <emphasis effect="bold">Fahrenheit</emphasis> and <emphasis effect="bold">Celsius</emphasis> arrays are broken (see <link target-id="id1168824731627"/>).</para>
+      <figure id="id1168824731627"><media id="id1168824731627_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. The lines that connect the gray box to the right side icons are broken with red x's.">
+          <image mime-type="image/png" src="../../media/Picture 46-7ef7.png" id="id1168824731627__onlineimage" height="149" width="278"/>
+        </media>
+        
+      <caption>Broken Wires</caption></figure>
+      <para id="id1168800346920">To repair the broken connections, roll over the mouse pointer to the <emphasis effect="bold">Loop Tunnel</emphasis>.</para>
+      <para id="id1168796767130">
+        <figure id="id1168819792052"><media id="id1168819792052_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. The lines that connect the gray box to the right side icons are broken with red x's. There is a mouse arrow hovering over over the right side of the gray square causing the labeled 'loop tunnel' to appear over the diagrm.">
+            <image mime-type="image/png" src="../../media/Picture 47-5ab5.png" id="id1168819792052__onlineimage" height="148" width="282"/>
+          </media>
+          
+        <caption>Loop Tunnel</caption></figure>
+      </para>
+      <para id="id1168820555043">Right click on the <emphasis effect="bold">Loop Tunnel</emphasis> and select <emphasis effect="bold">Enable Indexing</emphasis> from the pop-up menu.</para>
+      <figure id="id1168821990360"><media id="id1168821990360_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. The lines that connect the gray box to the right side icons are broken with red x's. There is a menu overlaid on the diagram with the item 'Enable Indexing'.">
+          <image mime-type="image/png" src="../../media/Picture 50-cd5d.png" id="id1168821990360__onlineimage" height="161" width="341"/>
+        </media>
+        
+      <caption>Enable Loop Indexing</caption></figure>
+      <para id="id1168822986065">This enables values to accumulate and store the results into an array.</para>
+      <para id="id1168786486656">Repeat for the <emphasis effect="bold">Celsius</emphasis> array.</para>
+      <figure id="id1168794147023"><media id="id1168794147023_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. The line that connects the gray box to the bottom right icons is broken with a red x.">
+          <image mime-type="image/png" src="../../media/Picture 51-f4f8.png" id="id1168794147023__onlineimage" height="150" width="279"/>
+        </media>
+        
+      <caption>Broken Wire Repaired</caption></figure>
+      <para id="id1168822027108">Each iteration of the <emphasis effect="bold">While Loop</emphasis> in this program generates an <emphasis effect="bold">i </emphasis><emphasis effect="bold">×</emphasis><emphasis effect="bold"> 20</emphasis> Fahrenheit value and converts it to Celsius. The <emphasis effect="bold">While Loop</emphasis> stops iterating when the generated Fahrenheit value is greater than or equal to 300. The resulting arrays are stored in the <emphasis effect="bold">Fahrenheit</emphasis> and <emphasis effect="bold">Celsius</emphasis> numeric output arrays.</para>
+      
+      <para id="id1168816169307">Save the program as <emphasis effect="bold">Fahrenheit to Celsius While Loop.vi</emphasis> and run it. The program generates the following results:</para>
+      <figure id="id1168800398450"><media id="id1168800398450_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. ">
+          <image mime-type="image/png" src="../../media/Picture 52-af28.png" id="id1168800398450__onlineimage" height="146" width="269"/>
+        </media>
+        
+      <caption>Fahrenheit to Celsius While Loop</caption></figure>
+      <para id="id1168792685975"><emphasis effect="bold">Fahrenheit</emphasis> = {0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 240, 260, 280, 300}</para>
+      <para id="id1168789040094"><emphasis effect="bold">Celsius</emphasis> = {-17.7778, -6.6667, 4.44444, 15.5556, 26.6667, 37.7778, 48.8889, 60, 71.1111, 82.2222, 93.3333, 104.444, 115.556, 126.667, 137.778, 148.889}</para>
+      <figure id="id1168806749916"><media id="id1168806749916_media" alt="A form containing two rows. The upper level is labeled 'fahrenheit' with two fields on this level labeled containing '15' and '300'. The lower level is labeled 'celsius' and the fields contain the values '15' and '148.889'.">
+          <image mime-type="image/png" src="../../media/Picture 53-16ef.png" id="id1168806749916__onlineimage" height="125" width="170"/>
+        </media>
+        
+      <caption>Fahrenheit and Celsius Arrays</caption></figure>
+    </section>
+    <section id="id1168798147136">
+      <title>Graphs</title>
+      <para id="id1168810666487">Using the previous G program example, we will now visualize the results by adding a graph to the Front Panel windows. Right click on the Front Panel window. Select <emphasis effect="bold">XY Graph</emphasis> from the <emphasis effect="bold">Controls &gt;&gt; Modern &gt;&gt; Graph</emphasis> menu.</para>
+      <figure id="id1168797673205"><media id="id1168797673205_media" alt="Three icons are contained in the directory hierarchy under 'Modern' and 'Graph'.">
+          <image mime-type="image/png" src="../../media/Picture 55-3c89.png" id="id1168797673205__onlineimage" height="104" width="259"/>
+        </media>
+        
+      <caption>XY Graph Selection</caption></figure>
+      <para id="id1168802324754">Drop the <emphasis effect="bold">XY Graph</emphasis> in the Front Panel window. Double click on the x and y axis labels and rename <emphasis effect="bold">Time</emphasis> to <emphasis effect="bold">Fahrenheit</emphasis> and <emphasis effect="bold">Amplitude</emphasis> to <emphasis effect="bold">Celsius</emphasis>.</para>
+      
+      <figure id="id1168791052987"><media id="id1168791052987_media" alt="An empty graph with the x axis labeled 'fahrenheit' and the y axis labeled 'celsius'. To the left of the graph there is a couple of forms. The upper for is labeled 'fahrenheit' with the values '0' and '0'. The lower form is labeled 'celsius' with the values '0'and '0'.">
+          <image mime-type="image/png" src="../../media/Picture 56-da48.png" id="id1168791052987__onlineimage" height="231" width="420"/>
+        </media>
+        
+      <caption>XY Graph in Front Panel window</caption></figure>
+      <para id="id1168798851866">The Block Diagram window contains the <emphasis effect="bold">XY Graph</emphasis> terminal.</para>
+      <figure id="id1168821962056"><media id="id1168821962056_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. To the right of this there is one final icon labeled 'XY graph'.">
+          <image mime-type="image/png" src="../../media/Picture 57-91ff.png" id="id1168821962056__onlineimage" height="149" width="316"/>
+        </media>
+        
+      <caption>XY Graph Terminal in Diagram</caption></figure>
+      <para id="id1168795407312">Select <emphasis effect="bold">Bundle</emphasis> from the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; Cluster, Class &amp; Variant</emphasis> menu</para>
+      <figure id="id1168818702291"><media id="id1168818702291_media" alt="Four icons contained within the directory hierarchy under 'Programming' and 'Cluster, Class, and Variant'.">
+          <image mime-type="image/png" src="../../media/Picture 58-9ec4.png" id="id1168818702291__onlineimage" height="106" width="327"/>
+        </media>
+        
+      <caption>Bundle Operator</caption></figure>
+      <para id="id1168821660627">Drop it on the diagram as shown in <link target-id="id1168790280160"/>.</para>
+      <para id="id1168805463458">
+        <figure id="id1168790280160"><media id="id1168790280160_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. In between these two black boxed arrow diagram. To the right of this there is one final icon labeled 'XY graph'.">
+            <image mime-type="image/png" src="../../media/Picture 59-e31d.png" id="id1168790280160__onlineimage" height="165" width="309"/>
+          </media>
+          
+        <caption>Bundle for XY Graph</caption></figure>
+      </para>
+      <para id="id1168791423674">Wire the <emphasis effect="bold">Fahrenheit</emphasis> and <emphasis effect="bold">Celsius</emphasis> results to the input <emphasis effect="bold">Bundle</emphasis> terminals and the output <emphasis effect="bold">Bundle</emphasis> terminal to the <emphasis effect="bold">XY Graph</emphasis>.</para>
+      <para id="id1168795505278">Save the program and run it. The resulting graph is shown in the figure below.</para>
+      <figure id="id1168823541830"><media id="id1168823541830_media" alt="A gray square containing a blue boxed 'i' in the lower left corner and a green boxed red circle. There are also several icons inside the box including a orange boxed '20' and a triangle box containing an 'x' and another containing a sideways 'w'. There is also an orange boxed '300' and a box containing 'fahr to celsius'. Lines connect all of these icons together. There are On the right of this box there are two icons. The upper icon is labeled 'fahrenheit' and the bottom icon is labeled 'celsius'. In between these two black boxed arrow diagram with a pink line conntected to the right where there is one final icon labeled 'XY graph'.">
+          <image mime-type="image/png" src="../../media/Picture 60-d958.png" id="id1168823541830__onlineimage" height="166" width="302"/>
+        </media>
+        
+      <caption>Wired XY Graph</caption></figure>
+      <para id="id1168797655258">
+        <figure id="id1168823659036"><media id="id1168823659036_media" alt="An empty graph with the x axis labeled 'fahrenheit' and the y axis labeled 'celsius'. To the left of the graph there is a couple of forms. The upper for is labeled 'fahrenheit' with the values '0' and '0'. The lower form is labeled 'celsius' with the values '0'and '-17.7778'.">
+            <image mime-type="image/png" src="../../media/Picture 61.png" id="id1168823659036__onlineimage" height="273" width="507"/>
+          </media>
+          
+        <caption>XY Graph Result</caption></figure>
+      </para>
+    </section>
+    <section id="id1168795401224">
+      <title>Interactivity</title>
+      <para id="id1168794230848">This G program shows how G allows programmers to develop interactive programs. Create the following G program and wire it as shown in the figure below.</para>
+      <figure id="id1168789959940"><media id="id1168789959940_media" alt="A gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon which is connected to another triangular box containing  a 'x'. In the bottom right corner there is a green box containing a red circle.">
+          <image mime-type="image/png" src="../../media/Picture 86-f679.png" id="id1168789959940__onlineimage" height="127" width="241"/>
+        </media>
+        
+      <caption>Creating Interactive Programs</caption></figure>
+      <para id="id1168792773863">In the Front Panel window, from the <emphasis effect="bold">Functions &gt;&gt; Modern &gt;&gt; Numeric</emphasis> select the vertical pointer slide. From the <emphasis effect="bold">Functions &gt;&gt; Modern &gt;&gt; Graph</emphasis> select <emphasis effect="bold">Waveform Chart</emphasis>.</para>
+      <para id="id1168824999071">
+        <figure id="id1168806934000"><subfigure id="eip-id8655799">
+<media id="id1168806934000_media" alt="Six icons contained within the directory hierarchy under 'modern' and 'numeric'.">
+            <image mime-type="image/png" src="../../media/Picture 87.png" id="id1168806934000__onlineimage" height="159" width="278"/>
+          </media>
+          </subfigure>
+<subfigure id="eip-id1169282135860">
+<media id="id11688001882935_media" alt="Six icons contained within the directory hierarchy under 'modern' and 'graph'.">
+            <image mime-type="image/png" src="../../media/Picture 88.png" id="id11688001882395__onlineimage" height="159" width="278"/>
+          </media>
+</subfigure>
+        <caption>Vertical Pointer Slide and Waveform Chart</caption></figure>
+        
+      </para>
+      
+      <para id="id1168795482866">Re-label the vertical pointer slide as <emphasis effect="bold">Amplitude</emphasis> and the waveform chart as <emphasis effect="bold">Sine Wave</emphasis>. Re-arrange to GUI to look like the figure below.</para>
+      <figure id="id1168794231798"><media id="id1168794231798_media" alt="An empty waveform chart with the x axis labeled 'Time' and the y axis is labeled 'Amplitude'.">
+          <image mime-type="image/png" src="../../media/Picture 89.png" id="id1168794231798__onlineimage" height="236" width="403"/>
+        </media>
+        
+      <caption>Slide &amp; Waveform Chart in Front Panel window</caption></figure>
+      <para id="id1168797907207">Right click on <emphasis effect="bold">Sine Wave</emphasis> and select <emphasis effect="bold">Properties</emphasis> from the pop-up menu.</para>
+      <figure id="id1168790523778"><media id="id1168790523778_media" alt="An empty waveform chart with the x axis labeled 'Time' and the y axis is labeled 'Amplitude'. There is a menu overlaid the graph with the item 'Properties'.">
+          <image mime-type="image/png" src="../../media/Picture 90.png" id="id1168790523778__onlineimage" height="231" width="365"/>
+        </media>
+        
+      <caption>Selecting Chart Properties</caption></figure>
+      <para id="id1168799159439">Select the <emphasis effect="bold">Scales</emphasis> tab and change <emphasis effect="bold">Maximum</emphasis> to 1023. <emphasis effect="bold">Sine Wave</emphasis> will display 1024 samples.</para>
+      <para id="id1168797866652">
+        <figure id="id1168822701295"><media id="id1168822701295_media" alt="A windows window with the tab 'Scales' selected. There is a red square around the field  labeled 'Maximum' with the value '1023'.">
+            <image mime-type="image/png" src="../../media/Picture 91-fceb.png" id="id1168822701295__onlineimage" height="208" width="350"/>
+          </media>
+          
+        <caption>X-Axis Maximum</caption></figure>
+      </para>
+      <para id="id1168790541689">Click on the down arrow located to the right of <emphasis effect="bold">Time (X-Axis)</emphasis> and select <emphasis effect="bold">Amplitude (Y-Axis)</emphasis>.</para>
+      <figure id="id1168798788897"><media id="id1168798788897_media" alt="A windows window with the tab 'Scales' selected. A drop down menu with the item 'Time (X-Axis)' marked with a check mark and the item 'Amplitude (Y-Axis)' highlighted in blue.">
+          <image mime-type="image/png" src="../../media/Picture 92-7f60.png" id="id1168798788897__onlineimage" height="105" width="311"/>
+        </media>
+        
+      <caption>Selecting Y-Axis</caption></figure>
+      <para id="id1168818312119">De-select <emphasis effect="bold">Autoscale</emphasis> and change the <emphasis effect="bold">Minimum</emphasis> and <emphasis effect="bold">Maximum</emphasis> values to <emphasis effect="bold">-10</emphasis> and <emphasis effect="bold">10</emphasis>. Click <emphasis effect="bold">OK</emphasis>.</para>
+      <figure id="id1168818862845">
+        <media id="id1168818862845_media" alt="">
+          <image mime-type="image/png" src="../../media/Picture 94.png" id="id1168818862845__onlineimage" height="188" width="348"/>
+        </media>
+        <caption>De-Selecting Autoscale</caption>
+      </figure>
+      <para id="id1168800030675">In the Block Diagram window, re-arrange the <emphasis effect="bold">Amplitude</emphasis> and <emphasis effect="bold">Sine Wave</emphasis> terminals and finish the program as shown in <link target-id=" id1168797900544"/>.</para>
+      <para id="id1168791266781">
+        <figure id="id1168797900544"><media id="id1168797900544_media" alt="A gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon and below this icon is another icon labeled 'Amplitude'. These two icons are connected to another triangular box containing  a 'x'. To the right of the triangle is a 'Sine wave' icon. In the bottom right corner there is a green box containing a red circle.">
+            <image mime-type="image/png" src="../../media/Picture 95.png" id="id1168797900544__onlineimage" height="128" width="257"/>
+          </media>
+          
+        <caption>Interactive Sine Wave Diagram</caption></figure>
+      </para>
+      <para id="id1168792630092">Scroll the mouse pointer over the <emphasis effect="bold">Loop Control</emphasis>…</para>
+      <figure id="id1168789901842"><media id="id1168789901842_media" alt="A gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon and below this icon is another icon labeled 'Amplitude'. These two icons are connected to another triangular box containing  a 'x'. To the right of the triangle is a 'Sine wave' icon. In the bottom right corner there is a green box containing a red circle with a mouse arrow on top it, and the label 'Loop Condition' is overlaid.">
+          <image mime-type="image/png" src="../../media/Picture 96-19e6.png" id="id1168789901842__onlineimage" height="126" width="257"/>
+        </media>
+        
+      <caption>Loop Condition</caption></figure>
+      <para id="id1168792647294">And right click on the <emphasis effect="bold">Loop Control</emphasis> and from the pop-up menu select <emphasis effect="bold">Create Control</emphasis>.</para>
+      <figure id="id1168819482028"><media id="id1168819482028_media" alt="A gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon and below this icon is another icon labeled 'Amplitude'. These two icons are connected to another triangular box containing  a 'x'. To the right of the triangle is a 'Sine wave' icon. In the bottom right corner there is a green box containing a red circle overlaid with a menu. The item 'Create Control' is highlighted in blue.">
+          <image mime-type="image/png" src="../../media/Picture 99-e837.png" id="id1168819482028__onlineimage" height="157" width="283"/>
+        </media>
+        
+      <caption>Create Loop Control</caption></figure>
+      <para id="id1168797033103">A <emphasis effect="bold">stop</emphasis> terminal is created…</para>
+      <figure id="id1168806812002"><media id="id1168806812002_media" alt="A gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon and below this icon is another icon labeled 'Amplitude'. These two icons are connected to another triangular box containing  a 'x'. To the right of the triangle is a 'Sine wave' icon. In the bottom right corner there is a'stop' icon connected to a green box containing a red circle.">
+          <image mime-type="image/png" src="../../media/Picture 100.png" id="id1168806812002__onlineimage" height="134" width="250"/>
+        </media>
+        
+      <caption>Interactive G Program</caption></figure>
+      <para id="id1168801252313">With the corresponding <emphasis effect="bold">stop</emphasis> Boolean input control. Save the G program as <emphasis effect="bold">Interactivity.vi</emphasis>.</para>
+      <figure id="id1168821555316"><media id="id1168821555316_media" alt="An empty graph witht he x axis labeled 'Time' and the y axis labeled 'Amplitude'.">
+          <image mime-type="image/jpg" src="../../media/fig4.jpg" id="id1168821555316__onlineimage" height="248" width="427"/>
+        </media>
+        
+      <caption>Interactive Program</caption></figure>
+      <para id="id1168793707656">Run the G program.</para>
+      <figure id="id1168818851265">
+        <media id="id1168818851265_media" alt="">
+          <image mime-type="image/png" src="../../media/Picture 102-215d.png" id="id1168818851265__onlineimage" height="248" width="428"/>
+        </media>
+        <caption>Interactive Program</caption>
+      </figure>
+      <para id="id1168788085003">While the program is running, change the <emphasis effect="bold">Amplitude</emphasis> and watch the graph update to reflect the interactive changes.</para>
+      <para id="id1168810763588">
+        <figure id="id1168805458369"><media id="id1168805458369_media" alt="An empty graph witht he x axis labeled 'Time' and the y axis labeled 'Amplitude'. There is a sine wave with an amplitude of 6.93878.">
+            <image mime-type="image/png" src="../../media/Picture 103-6152.png" id="id1168805458369__onlineimage" height="249" width="430"/>
+          </media>
+          
+        <caption>Interactive Program</caption></figure>
+      </para>
+      <para id="id1168802221610">To end the G program, simply click on the <emphasis effect="bold">stop</emphasis> button. </para>
+      <para id="id1168790279628">Congratulations. You have successfully completed and executed your first interactive G program.</para>
+      <figure id="id1168789854496"><media id="id1168789854496_media" alt="An empty graph witht he x axis labeled 'Time' and the y axis labeled 'Amplitude'. There is a sine wave with an amplitude of 6.93878. The stop button on the bottom left of the graph is highlighted with a red box.">
+          <image mime-type="image/png" src="../../media/Picture 104.png" id="id1168789854496__onlineimage" height="248" width="431"/>
+        </media>
+        
+      <caption>Interactive Program</caption></figure>
+    </section>
+    <section id="id1168802313970">
+      <title>Parallel Programming</title>
+      <para id="id1168817430984">Save a copy of <emphasis effect="bold">Interactivity.vi</emphasis> as <emphasis effect="bold">Parallel Programming.vi</emphasis>. Select the while loop as shown in <link target-id="id1168790740594"/>.</para>
+      <figure id="id1168790740594"><media id="id1168790740594_media" alt="A gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon and below this icon is another icon labeled 'Amplitude'. These two icons are connected to another triangular box containing  a 'x'. To the right of the triangle is a 'Sine wave' icon. In the bottom right corner there is a'stop' icon connected to a green box containing a red circle.">
+          <image mime-type="image/png" src="../../media/Picture 105.png" id="id1168790740594__onlineimage" height="134" width="252"/>
+        </media>
+        
+      <caption>Select Diagram for Parallel Programming</caption></figure>
+      <para id="id1168822711335">From the menu select <emphasis effect="bold">Edit &gt;&gt; Copy</emphasis>.</para>
+      <figure id="id1168796521436"><media id="id1168796521436_media" alt="A typical edit menu in window. The item 'copy' is highlighted in blue.">
+          <image mime-type="image/png" src="../../media/Picture 109-a4cb.png" id="id1168796521436__onlineimage" height="104" width="238"/>
+        </media>
+        
+      <caption>Copy Selected Diagram</caption></figure>
+      <para id="id1168817426299">Create a copy of the while loop and its contents by selecting <emphasis effect="bold">Edit &gt;&gt; Paste</emphasis>. Organize the diagram as shown in the figure below.</para>
+      <figure id="id1168822919631"><media id="id1168822919631_media" alt="There are two identical diagrams. The only difference between the two are the labels. The one on the left is labeled 'Sine Wave' whereas the other is labeled 'Sine Wave 2'. The diagrams consists of a gray box containing several icons. From left to righ the icons are a orange boxed '0.02' above a blue boxed 'i' both of which are connected to a triangular box containing a 'x'. This is connected to a sine wave icon and below this icon is another icon labeled 'Amplitude'. These two icons are connected to another triangular box containing  a 'x'. To the right of the triangle is a 'Sine wave' icon. In the bottom right corner there is a'stop' icon connected to a green box containing a red circle.">
+          <image mime-type="image/png" src="../../media/Picture 110-3023.png" id="id1168822919631__onlineimage" height="132" width="488"/>
+        </media>
+        
+      <caption>Paste Diagram</caption></figure>
+      <para id="id1168803223450">Go the Front Panel window and organize the input and output controls as shown in the figure below.</para>
+      <para id="id1168790362345">
+        <figure id="id1168818512335"><media id="id1168818512335_media" alt="Two parallel empty graphs.">
+            <image mime-type="image/png" src="../../media/Picture 111.png" id="id1168818512335__onlineimage" height="174" width="614"/>
+          </media>
+          
+        <caption>Parallel G Program</caption></figure>
+      </para>
+      <para id="id1168822963897">Congratulations!!! You have just completed your first parallel interactive program using G. Save the program, run it and interact with it. To end this program click on <emphasis effect="bold">stop</emphasis> and <emphasis effect="bold">stop 2</emphasis>.</para>
+      <figure id="id1168818414101"><media id="id1168818414101_media" alt="Two parallel graphs. The one on the left has a sine wave with an amplitude of about 7 and the one on the right has a sine wave with an amplitude of about 2.5.">
+          <image mime-type="image/png" src="../../media/Picture 112.png" id="id1168818414101__onlineimage" height="174" width="612"/>
+        </media>
+        
+      <caption>Parallel Interactive G Program</caption></figure>
+    </section>
+    <section id="id1168802457322">
+      <title>Multicore Programming</title>
+      <para id="id1168790566548">Save a copy of <emphasis effect="bold">Parallel Programming.vi</emphasis> as <emphasis effect="bold">Multicore Programming.vi</emphasis>. If you have a multicore computer, CONGRATULATIONS!!! You have just completed your first multicore G program.</para>
+      <figure id="id1168802094288"><media id="id1168802094288_media" alt="Two parallel graphs. The one on the left has a sine wave with an amplitude of about 8 and the one on the right has a sine wave with an amplitude of about 5. Overlaid on top of these graphs is another graph showing CPU Usage and CPU usage history.">
+          <image mime-type="image/png" src="../../media/graphics1-d559.png" id="id1168802094288__onlineimage" height="233" width="602"/>
+        </media>
+        
+      <caption>Interactive Multicore G Program</caption></figure>
+    </section>
+    <section id="id1168819559835">
+      <title>Polymorphism</title>
+      <para id="id1168802272052">This program shows the polymorphic properties of G. Create the G program shown below.</para>
+      <para id="id1168800224510">Notice that the <emphasis effect="bold">Subtract</emphasis> and <emphasis effect="bold">Multiply</emphasis> operations allow arrays to be wired in the G program.</para>
+      <figure id="id1168790550572"><media id="id1168790550572_media" alt="A diagram of a 'polymorphic G Diagram'. From left to right there is a blue boxed '16'connected via blue line to a large gray box containin a blue boxed 'N' in the upper left corner, an orange boxed '20'in the center and a blue boxed 'i'. The last two icon are connected via line to a triangular box containing a 'x'. A line connects this triangle to a box on the right wall of the big box which is then connected to a orange circle. Above the orange circle is an line leading to an icon labeled 'Fahrenheit'. Below the circle are three orange boxed numbers, from top to bottom '32', '5', '9'. The '32' and the circle are connected via lines to a triangular box containing a '-'. The '5' and '9' are connect via lines to a triangular box containing a '÷'. Both triangles connect to another triangle containing a 'x' and a line connects that triangle to a final icon labeled 'celsius'.">
+          <image mime-type="image/png" src="../../media/Picture 120.png" id="id1168790550572__onlineimage" height="132" width="297"/>
+        </media>
+        
+      <caption>Polymorphic G Diagram</caption></figure>
+    </section>
+  </content>
+</document>

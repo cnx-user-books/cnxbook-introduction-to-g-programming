@@ -1,0 +1,107 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Arrays and Clusters</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34088</md:content-id>
+  <md:title>Arrays and Clusters</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>48fd2e7b-ff7c-46e3-a36f-be488cb2873c</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id10163320">To create an array in G, right click on the Front Panel window and select <emphasis effect="bold">Array</emphasis> from the <emphasis effect="bold">Controls &gt;&gt; Modern &gt;&gt; Arrays, Matrix &amp; Cluster</emphasis> menu, and drop the array structure onto the Front Panel window to create an array.</para>
+    <figure id="id4251043"><media id="id4251043_media" alt="An array structure. The top level listing of the array is labeled Modern and underneath that level is Array, Matrix &amp; Cluster. This level is identified by two icons in a gray shaded rectangle. The icon on the left is labeled Array and the icon on the right is labeled Cluster.">
+        <image mime-type="image/png" src="../../media/Picture 36-d589.png" id="id4251043__onlineimage" height="99" width="186"/>
+      </media>
+      
+    <caption>Array Structure</caption></figure>
+    <para id="id7442015">The array structure consists of an <emphasis effect="bold">index</emphasis> or <emphasis effect="bold">element offset</emphasis> (highlighted left portion of the array structure) and the array elements (right portion of the structure). When the array structure is placed on the Front Panel window, the data type of the array is undefined as indicated by the grayed out portion of the array.</para>
+    <figure id="id6598994"><media id="id6598994_media" alt="A screen capture showing up and down arrow buttons to the left of field containing the number 0. The arrow buttons and the field containing the number 1 are contained within a red square box labeled index. These elements are the upper left of a square labeled Elements.">
+        <image mime-type="image/png" src="../../media/Picture 249.png" id="id6598994__onlineimage" height="99" width="169"/>
+      </media>
+      
+    <caption>Index and Elements of an Array</caption></figure>
+    <para id="id14058622">To define the array data type, drag and drop any data type, such as numeric, Boolean, string or cluster structure, onto the <emphasis effect="bold">elements</emphasis> portion of the array structure.</para>
+    <figure id="id17043496"><media id="id17043496_media" alt="An array field screen capture.">
+        <image mime-type="image/png" src="../../media/Picture 250.png" id="id17043496__onlineimage" height="99" width="128"/>
+      </media>
+      
+    <caption>Creating Arrays</caption></figure>
+    <para id="id11089896">At this point, the newly defined array is an <emphasis effect="bold">Empty</emphasis> or <emphasis effect="bold">Null</emphasis><emphasis effect="bold">Array</emphasis> because no elements of the array have been defined. This is indicated by the grayed out data type within the <emphasis effect="bold">elements</emphasis> array structure.</para>
+    <figure id="id11575599"><media id="id11575599_media" alt="A form labeled 'Array' with two fields. each field contains the value '0'.">
+        <image mime-type="image/png" src="../../media/Picture 252.png" id="id11575599__onlineimage" height="67" width="142"/>
+      </media>
+      
+    <caption>Empty Arrays</caption></figure>
+    <para id="id13316331">To define elements of an input array, select the element’s <emphasis effect="bold">index</emphasis> and enter the appropriate value.  <link target-id="id10971096"/> defines a numeric array with one element at <emphasis effect="bold">index</emphasis> 0.</para>
+    <figure id="id10971096"><media id="id10971096_media" alt="A form labeled 'Array' with two fields. The left field contains the value '0' and the right field contains '1.2345'.">
+        <image mime-type="image/png" src="../../media/Picture 254.png" id="id10971096__onlineimage" height="68" width="144"/>
+      </media>
+      
+    <caption>Defining Array Elements</caption></figure>
+    <para id="id10121044">G arrays are zero-based. The last element index of an <emphasis effect="bold">N</emphasis> element array is <emphasis effect="bold">N-1</emphasis>. <link target-id="id10413370"/> and <link target-id="id3955136"/> are those of a 10 element array.</para>
+    <figure id="id10413370"><media id="id10413370_media" alt="A form labeled 'Array' with two fields. The left field contains the value '9' and the right field contains '9.1011'.">
+        <image mime-type="image/png" src="../../media/Picture 255.png" id="id10413370__onlineimage" height="63" width="146"/>
+      </media>
+      
+    <caption>Last Array Element</caption></figure>
+    <figure id="id3955136"><media id="id3955136_media" alt="A form labeled 'Array' with two fields. The left field contains the value '10' and the right field contains '0'.">
+        <image mime-type="image/png" src="../../media/Picture 257.png" id="id3955136__onlineimage" height="63" width="145"/>
+      </media>
+      
+    <caption>Undefined Nth Element</caption></figure>
+    <para id="id18492360">An output array is created similarly to an input array with the exception that an output data type needs to be dropped into the array structure.</para>
+    <figure id="id6539193"><media id="id6539193_media" alt="A form with two sets of two fields. The left form is labeled 'Numeric Input Array' with the values '0' and '0'. The right form is labeled 'Numeric Output Array' with both values being '0'.">
+		<image mime-type="image/png" src="../../media/Picture 38.png" id="id6539193__onlineimage" height="72" width="295"/>
+	</media>
+	<caption>Input and Output Arrays</caption></figure>
+    <section id="id10604884">
+      <title>Multidimensional Arrays</title>
+      <para id="id13318140">To create multidimensional arrays, click on the array’s <emphasis effect="bold">index</emphasis> and select <emphasis effect="bold">Add Dimension</emphasis> from the menu.</para>
+      <para id="id3913802"><link target-id="id4119765"/> shows a 2-dimensional array.</para>
+      <figure id="id6625240"><media id="id6625240_media" alt="An array form overlaid with a menu. The item 'Add Dimension' is highlighted in blue.">
+          <image mime-type="image/png" src="../../media/Picture 258.png" id="id6625240__onlineimage" height="107" width="177"/>
+        </media>
+        
+      <caption>Creating Multidimensional Arrays</caption></figure>
+      <figure id="id4119765"><media id="id4119765_media" alt="An array form with three fields. The values are '9', '9.1' and '1'.">
+          <image mime-type="image/png" src="../../media/Picture 259.png" id="id4119765__onlineimage" height="81" width="135"/>
+        </media>
+        
+      <caption>Multidimensional Array</caption></figure>
+    </section>
+    <section id="id6945231">
+      <title>Array Operators</title>
+      <figure id="id9361442"><media id="id9361442_media" alt="A 4x7 table of icons contained under the direcotry levels 'Programming' and 'Array'.">
+          <image mime-type="image/png" src="../../media/Picture 260.png" id="id9361442__onlineimage" height="261" width="602"/>
+        </media>
+        
+      <caption>Array Operators</caption></figure>
+    </section>
+    <section id="id13948803">
+      <title>Clusters</title>
+      <para id="id9598075">Clusters allow users to create compound data types by aggregating various and different data types into a single unit.</para>
+      <para id="id9161678">
+        <figure id="id10832995"><media id="id10832995_media" alt="An empty cluster field.">
+            <image mime-type="image/png" src="../../media/Picture 261.png" id="id10832995__onlineimage" height="90" width="115"/>
+          </media>
+          
+        <caption>Empty Cluster</caption></figure>
+      </para>
+      <para id="id10834695">Select the various data types and drag them onto the <emphasis effect="bold">cluster</emphasis> structure. <link target-id="id7909174"/> shows an <emphasis effect="bold">Error Cluster</emphasis> consisting of a Boolean <emphasis effect="bold">Error</emphasis>, a numeric <emphasis effect="bold">ID</emphasis> and a string <emphasis effect="bold">Message</emphasis> data types.</para>
+      <figure id="id7909174"><media id="id7909174_media" alt="An error cluster field with a green circle labeled 'Error'  and a field labeled 'ID' containing '2', and the last field is labeled 'Message' with the value 'Out of range'.">
+          <image mime-type="image/png" src="../../media/Picture 262.png" id="id7909174__onlineimage" height="102" width="166"/>
+        </media>
+        
+      <caption>Cluster Example</caption></figure>
+    </section>
+    <section id="id11680969">
+      <title>Cluster Operators</title>
+      <figure id="id10418506"><media id="id10418506_media" alt="A 3x6 table of icons contained within the directory levels 'Programming'  and  'Cluster, Class, and Variant'.">
+          <image mime-type="image/png" src="../../media/Picture 263.png" id="id10418506__onlineimage" height="215" width="540"/>
+        </media>
+        
+      <caption>Cluster Operators</caption></figure>
+    </section>
+  </content>
+</document>

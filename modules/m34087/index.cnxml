@@ -1,0 +1,98 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Operators</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34087</md:content-id>
+  <md:title>Operators</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>5a5e1556-4840-4aa8-b583-b3c66f8c1ad1</md:uuid>
+</metadata>
+
+<content>
+<section id="fs-id5099472"><title>Numeric</title><figure id="id16657871"><media id="id16657871_media" alt="A 5x7 table of icons. The table is found under the directory levels 'Programming' and 'Numeric'. ">
+        <image mime-type="image/png" src="../../media/Picture 230.png" id="id16657871__onlineimage" height="316" width="601"/>
+      </media>
+      
+    <caption>Numeric Operators</caption></figure>
+    <figure id="id4911398"><media id="id4911398_media" alt="A row of 7 icons contained in the directory heirarchy under 'Programming', 'Numeric', and 'Complex'.">
+        <image mime-type="image/png" src="../../media/Picture 231.png" id="id4911398__onlineimage" height="116" width="601"/>
+      </media>
+      
+    <caption>Complex Numeric Operations</caption></figure>
+    <figure id="id14007395"><media id="id14007395_media" alt="A 2x7 table of icons contained in the directory hierarchy 'Programming', 'Numeric', and 'Data Manipulation'.">
+        <image mime-type="image/png" src="../../media/Picture 232.png" id="id14007395__onlineimage" height="171" width="601"/>
+      </media>
+      
+    <caption>Numeric Data Manipulation Operators</caption></figure>
+      <figure id="id17878302"><media id="id17878302_media" alt="A 4x7 table of icons contained in the directory hierarchy 'Programming', 'Numeric', and 'Conversion'.">
+          <image mime-type="image/png" src="../../media/Picture 233.png" id="id17878302__onlineimage" height="248" width="532"/>
+        </media>
+        
+      <caption>Numeric Conversion Operators</caption></figure>
+    
+</section>
+    <section id="id13849653">
+      <title>Boolean</title>
+      <figure id="id3808372"><media id="id3808372_media" alt="A 3x6 table of icons contained in the directory hierarchy 'Programming' and 'Boolean'.">
+          <image mime-type="image/png" src="../../media/Picture 236.png" id="id3808372__onlineimage" height="170" width="539"/>
+        </media>
+        
+      <caption>Boolean Operators</caption></figure>
+    </section>
+    <section id="id17370041">
+      <title>Comparison</title>
+      <figure id="id7003252"><media id="id7003252_media" alt="A 4x7 table of icons contained in the directory hierarchy 'Programming' and 'Comparison'.">
+          <image mime-type="image/png" src="../../media/Picture 237.png" id="id7003252__onlineimage" height="231" width="531"/>
+        </media>
+        
+      <caption>Comparison Operators</caption></figure>
+    </section>
+    <section id="id7989955">
+      <title>String</title>
+      <figure id="id11070188"><media id="id11070188_media" alt="A 6x7 table of icons contained in the directory hierarchy 'Programming' and 'Sting'.">
+          <image mime-type="image/png" src="../../media/Picture 238.png" id="id11070188__onlineimage" height="301" width="535"/>
+        </media>
+        
+      <caption>String Operators</caption></figure>
+      <figure id="id4532542"><media id="id4532542_media" alt="A 2x6 table of icons contained in the directory hierarchy 'Programming', 'Sting' and 'String/Number Conversion'.">
+          <image mime-type="image/png" src="../../media/Picture 239.png" id="id4532542__onlineimage" height="160" width="485"/>
+        </media>
+        
+      <caption>String/Number Operators</caption></figure>
+    </section>
+    <section id="id4632445">
+      <title>Math</title>
+      <section id="id10332691">
+        <title>Math Constants</title>
+        <figure id="id16497543"><media id="id16497543_media" alt="A 3x6 table of icons contained in the directory hierarchy 'Programming', 'Numeric' and 'Math and Scientific Constants'.">
+            <image mime-type="image/png" src="../../media/Picture 234.png" id="id16497543__onlineimage" height="173" width="514"/>
+          </media>
+          
+        <caption>Mathematical Constants</caption></figure>
+      </section>
+      <section id="id10113993">
+        <title>Trigonometric Functions</title>
+        <figure id="id7776916"><media id="id7776916_media" alt="A 3x6 table of icons contained in the directory hierarchy 'Mathematics', 'Elementary and Special Functions' and 'Trigonometric Functions'.">
+            <image mime-type="image/png" src="../../media/Picture 240.png" id="id7776916__onlineimage" height="234" width="539"/>
+          </media>
+          
+        <caption>Trigonometric Functions</caption></figure>
+      </section>
+      <section id="id9799826">
+        <title>Exponential and Logarithmic Functions</title>
+        <figure id="id6305637"><media id="id6305637_media" alt="A 2x6 table of icons contained in the directory hierarchy 'Mathematics', 'Elementary and Special Functions' and 'Exponential Functions'.">
+            <image mime-type="image/png" src="../../media/Picture 241.png" id="id6305637__onlineimage" height="177" width="539"/>
+          </media>
+          
+        <caption>Exponential and Logarithmic Functions</caption></figure>
+      </section>
+      <section id="id18077552">
+        <title>Hyperbolic Functions</title>
+        <figure id="id16964274"><media id="id16964274_media" alt="A 2x6 table of icons contained in the directory hierarchy 'Mathematics', 'Elementary and Special Functions' and 'Hyperbolic Functions'.">
+            <image mime-type="image/png" src="../../media/Picture 243.png" id="id16964274__onlineimage" height="177" width="541"/>
+          </media>
+          
+        <caption>Hyperbolic Functions</caption></figure>
+      </section>
+    </section>
+  </content>
+</document>

@@ -1,0 +1,88 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Functions</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34090</md:content-id>
+  <md:title>Functions</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>76e15367-7a68-4fe5-934b-eb0f151f52cb</md:uuid>
+</metadata>
+
+<content>
+    
+    <para id="id4286415">Any G program can become a function. Three operations must be done:</para>
+    <list id="id14343308" list-type="enumerated" number-style="arabic">
+      <item>Edit connecting input and/or output terminals</item>
+      <item>Edit the icon (optional but recommended)</item>
+      <item>Save the G program</item>
+    </list>
+    <section id="id9323747">
+      <title>Connectors</title>
+      <para id="id7495878">Open the <emphasis effect="bold">Fibonacci.vi</emphasis> for this example.</para>
+      <para id="id8652540">On the Front Panel window, right click on the icon located on the right upper corner of the window and select <emphasis effect="bold">Show Connector</emphasis>.</para>
+      <figure id="id7083494"><media id="id7083494_media" alt="A screen cap of a windows window with a menu present. The item  'show connector'is highlighted.">
+          <image mime-type="image/png" src="../../media/Picture 342.png" id="id7083494__onlineimage" height="154" width="285"/>
+        </media>
+        
+      <caption>Show Connector Pane</caption></figure>
+      <para id="id6477228">This brings up the connector pane as shown in <link target-id="id4656412"/>.</para>
+      <figure id="id4656412"><media id="id4656412_media" alt="A screen cap of a windows window showing a 'connector pane'.">
+          <image mime-type="image/png" src="../../media/Picture 343.png" id="id4656412__onlineimage" height="82" width="175"/>
+        </media>
+        
+      <caption>Connector Pane</caption></figure>
+      <para id="id9279846">Right click on the connector pane and select <emphasis effect="bold">Patterns</emphasis>. A menu with connector patterns is presented from which you can select the appropriate pattern. For this example select the pattern highlighted in <link target-id="id8201422"/>.</para>
+      <para id="id5664033">
+        <figure id="id8201422"><media id="id8201422_media" alt="A screen cap of a windows window showing a menu with the item 'patterns' highlighted and a row of icon indicating which patterns can be selected for the Connector Pattern.">
+            <image mime-type="image/png" src="../../media/Picture 344.png" id="id8201422__onlineimage" height="127" width="266"/>
+          </media>
+          
+        <caption>Select Connector Pattern</caption></figure>
+      </para>
+      <para id="id7729176">Click on the connector terminal followed by a click on the input or output control to which the terminal is to be associated. In <link target-id="id5638430"/>, the left connector terminal is associated with the numeric input control <emphasis effect="bold">n</emphasis>.</para>
+      <figure id="id5638430"><media id="id5638430_media" alt="A screen cap with the left side of the Connector pane selected and the left field selected. ">
+          <image mime-type="image/png" src="../../media/Picture 345.png" id="id5638430__onlineimage" height="128" width="175"/>
+        </media>
+        
+      <caption>Associating Terminals</caption></figure>
+      <para id="id8987591">Repeat for all the input and output controls that are to be associated to the terminals. For the <emphasis effect="bold">Fibonacci.vi</emphasis>, <link target-id="id7753270"/> shows the right connector terminal associated with the <emphasis effect="bold">Fib(n)</emphasis> output terminal.</para>
+      <figure id="id7753270"><media id="id7753270_media" alt="A screen cap with the left side of the Connector pane light blue and the right side dark blue. ">
+          <image mime-type="image/png" src="../../media/Picture 346.png" id="id7753270__onlineimage" height="126" width="175"/>
+        </media>
+        
+      <caption>Connected Terminals</caption></figure>
+    </section>
+    <section id="id6931008">
+      <title>Icon Editor</title>
+      <para id="id8004836">Right click on the connector pane and select <emphasis effect="bold">Edit Icon…</emphasis> from the pop-up menu. This will bring the icon editor (<link target-id="id7621312"/>).</para>
+      <para id="id12094604">Edit the icon for black and white, 16-color and 256-color displays and click <emphasis effect="bold">OK</emphasis> when completed.</para>
+      <para id="id13564867">Save the G program to complete the function.</para>
+      <figure id="id13675428"><media id="id13675428_media" alt="A screen cap of a windows window with a menu on top. The item 'edit icon' is highlighted in the menu.">
+          <image mime-type="image/png" src="../../media/Picture 347.png" id="id13675428__onlineimage" height="154" width="253"/>
+        </media>
+        
+      <caption>Selecting Icon Editor</caption></figure>
+      <figure id="id7621312"><media id="id7621312_media" alt="An icon editor window.">
+          <image mime-type="image/png" src="../../media/Picture 348.png" id="id7621312__onlineimage" height="325" width="482"/>
+        </media>
+        
+      <caption>Icon Editor</caption></figure>
+    </section>
+    <section id="id3889790">
+      <title>Invoking Functions</title>
+      <para id="id10559990">To invoke functions, right click on the Block Diagram window and select <emphasis effect="bold">Select a VI…</emphasis> from the pop-up menu. This will bring a file dialog box. Find the desired function to be part of the program and click <emphasis effect="bold">OK</emphasis>.</para>
+      <para id="id7341889">
+        <figure id="id4656627"><media id="id4656627_media" alt="A screencap of the 'Functions' window.">
+            <image mime-type="image/png" src="../../media/Picture 349.png" id="id4656627__onlineimage" height="75" width="211"/>
+          </media>
+          
+        <caption>Invoking Functions</caption></figure>
+      </para>
+      <para id="id9066372">In the example shown in <link target-id="id9821780"/>, the Fibonacci series of the first 20 Fibonacci numbers is stored in an array. The numbers are computed by invoking the <emphasis effect="bold">Fibonacci.vi</emphasis> function.</para>
+      <figure id="id9821780"><media id="id9821780_media" alt="A screencap of the 'Fibonacci Series' function.">
+          <image mime-type="image/png" src="../../media/Picture 350.png" id="id9821780__onlineimage" height="58" width="161"/>
+        </media>
+        
+      <caption>Fibonacci Series</caption></figure>
+    </section>
+  </content>
+</document>

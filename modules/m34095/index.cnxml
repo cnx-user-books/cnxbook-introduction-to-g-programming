@@ -1,0 +1,188 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Input and Output</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m34095</md:content-id>
+  <md:title>Input and Output</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>69e64fa0-dce2-4eac-9799-6f47da6a5994</md:uuid>
+</metadata>
+
+<content>
+      <section id="id1169656786340">
+        <title>Writing to File</title>
+        <para id="id1169658421706">Consider the function in <link target-id="id1169661982278"/> where a set of numbers in a one-dimensional array represents the resulting noisy signal is to be written to a file. This section will outline the steps required to create files.</para>
+        <figure id="id1169661982278"><media id="id1169661982278_media" alt="A screen capture of a noisy Signal function. There are three separate boxes comprised in this screen capture. From left to right, there is a small blue box containing the number 100. Followed bt a large box containing a diagram of the function, and then the last box is labeled the signal and it is an orange box.">
+            <image mime-type="image/png" src="../../media/graphics1-c0b8.png" id="id1169661982278__onlineimage" height="161" width="403"/>
+          </media>
+        <caption>Noisy Signal Function</caption></figure>
+        
+        <para id="id1169652622812">Create a new G program, right click in the G programming window and select <emphasis effect="bold">File Dialog</emphasis> from the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; File I/O &gt;&gt; Advanced Functions</emphasis> menu. Drag and drop the <emphasis effect="bold">File Dialog</emphasis> function onto the G programming window.</para>
+        <figure id="id1169656286018"><media id="id1169656286018_media" alt="A screencap of a file dialog. There is a level listing at the top. The level nesting is as follows, with upper most level first. Programming, them File I/0, and then Advanced File Functions. Below Advanced File Functions is a horizontal list of four icons. From left to right the icons are labeled: Get file position, get file size, set Type &amp;C... and finally, File Dialog. The File Dialog icon is contained within a light blue box.">
+            <image mime-type="image/png" src="../../media/graphics2-e9bf.png" id="id1169656286018__onlineimage" height="203" width="480"/>
+          </media>
+        <caption>File Dialog</caption></figure>
+        
+        <para id="id1169656134102">The <emphasis effect="bold">Configure File Dialog</emphasis> dialog box automatically appears to configure the function. Accept the default configuration shown in <link target-id="id1169658829530"/> to create a single file by clicking the <emphasis effect="bold">OK</emphasis> button.</para>
+        
+        <figure id="id1169658829530"><media id="id1169658829530_media" alt="A typical Windows window. It is labeled 'Configure File Dialog [File Dialog]'. Contained in the window is a form with the top option selected 'Limit Selection to single item' below that the options 'File' and 'New or existing'. At the bottom of the form there are the buttons, 'ok', 'concel' and 'Help'. ">
+            <image mime-type="image/png" src="../../media/graphics3-3201.png" id="id1169658829530__onlineimage" height="317" width="450"/>
+          </media>
+        <caption>Configure File Dialog</caption></figure>
+        
+        <para id="id1169655388155">The resulting diagram after closing the configuration dialog box is shown in . Optionally, right click on <emphasis effect="bold">File Dialog</emphasis> and select <emphasis effect="bold">View As Icon</emphasis> from the pop-up menu. This will save some real estate in the G programming window.</para>
+        <figure id="id1169656420122"><media id="id1169656420122_media" alt="A screencap of a g file dialog. There is a 'selected path' option at the bottom of the icon.">
+            <image mime-type="image/png" src="../../media/graphics4-f86a.png" id="id1169656420122__onlineimage" height="175" width="167"/>
+          </media>
+        <caption>G File Dialog</caption></figure>
+        
+        <figure id="id1169657330790"><media id="id1169657330790_media" alt="A screencap of a menu. From top to bottom the menu options are 'Visible Items', 'Open Front Panel', 'Size To Text', 'View As Icon' and 'Properties'. 'View As Icon' is highlighted blue.">
+            <image mime-type="image/png" src="../../media/graphics5.png" id="id1169657330790__onlineimage" height="178" width="203"/>
+          </media>
+        <caption>View As Icon</caption></figure>
+        
+        
+        <para id="id1169658488141">From the <emphasis effect="bold">Functions &gt;&gt; Programming &gt;&gt; File I/O</emphasis> menu select <emphasis effect="bold">Open/Create File, Write Binary File</emphasis> and <emphasis effect="bold">Close File</emphasis> functions. </para>
+        <figure id="id1169652391537"><media id="id1169652391537_media" alt="A screencap of 'File Input and Output Operators'. There are two main parts to this image. At the top there is a file listing with top level as 'Programming' and then 'File I/O'. The other part of the diagram is located below this file listing and is an array of three rows of icons with 7 icons on the first two row and 6 on the bottom row.">
+            <image mime-type="image/png" src="../../media/graphics6.png" id="id1169652391537__onlineimage" height="215" width="599"/>
+          </media>
+        <caption>File Input and Output Operators</caption></figure>
+        
+        <para id="id1169658805138">Arrange the File I/O operations as shown in <link target-id="id1169660750690"/>.</para>
+        <figure id="id1169660750690"><media id="id1169660750690_media" alt="A row of 4 icons. The icon furthest to the left is highlighted in blue and labeled 'File Dialog'.">
+            <image mime-type="image/png" src="../../media/graphics7.png" id="id1169660750690__onlineimage" height="94" width="342"/>
+          </media>
+          
+        <caption>Open, Write and Close File Diagram</caption></figure>
+        <para id="id1169658563679">Right click on the <emphasis effect="bold">operation (0:open)</emphasis> terminal of the <emphasis effect="bold">Open/Create File</emphasis> function (highlighted in <link target-id="id1169651360088"/>).</para>
+        <figure id="id1169651360088"><media id="id1169651360088_media" alt="A row of 4 icons. The icon furthest to the left is highlighted in blue and labeled 'File Dialog'. The next icon is labeled 'operation (0:open)'.">
+            <image mime-type="image/png" src="../../media/graphics8.png" id="id1169651360088__onlineimage" height="119" width="350"/>
+          </media>
+          
+        <caption>File Create Operation</caption></figure>
+        <para id="id1169656669131">Select <emphasis effect="bold">Create &gt;&gt; Constant</emphasis> from the pop-up menu.</para>
+        <para id="id1169657223756">
+          <figure id="id1169651461568"><media id="id1169651461568_media" alt="A screencap of a typical menu. The first menu has the item 'Create' selected and then points a nested menu with the item 'Constant' highlighted.">
+              <image mime-type="image/png" src="../../media/graphics9.png" id="id1169651461568__onlineimage" height="150" width="330"/>
+            </media>
+            
+          <caption>Create Operation Constant</caption></figure>
+        </para>
+        <para id="id1169651313797">Arrange the diagram to look as in <link target-id="id1169660772376"/>.</para>
+        <figure id="id1169660772376"><media id="id1169660772376_media" alt="A row of four icons. The first icon is highlighted blue and labeled 'File Dialog'. Underneath the first icon is a blue box with the word 'open' contained in it. A line connects that blue box to the second icon. ">
+            <image mime-type="image/png" src="../../media/graphics10.png" id="id1169660772376__onlineimage" height="125" width="353"/>
+          </media>
+          
+        <caption>Operation Constant</caption></figure>
+        <para id="id1169657232176">Click on the down arrow in the <emphasis effect="bold">operation</emphasis> constant just created and select <emphasis effect="bold">open or create</emphasis> from the pop-up menu.</para>
+        <figure id="id1169656322158"><media id="id1169656322158_media" alt="A screencap of a menu. The first item is 'open' and it has a check mark next to it. The fourth item is 'open and create' and it is highlighted blue.">
+            <image mime-type="image/png" src="../../media/graphics11.png" id="id1169656322158__onlineimage" height="189" width="322"/>
+          </media>
+          
+        <caption>Open or Create File Operation</caption></figure>
+        <para id="id1169657270893">The resulting updated <emphasis effect="bold">operation</emphasis> constant value is shown in <link target-id="id1169652368922"/>.</para>
+        <figure id="id1169652368922"><media id="id1169652368922_media" alt="A row of four icons. The first icon is highlighted blue and labeled 'File Dialog'. Underneath the first icon is a blue box with the word 'open or create' contained in it. A line connects that blue box to the second icon. ">
+            <image mime-type="image/png" src="../../media/graphics12.png" id="id1169652368922__onlineimage" height="133" width="447"/>
+          </media>
+          
+        <caption>Create File to Write</caption></figure>
+        
+        <para id="id1169656275298">Repeat the process to create a constant for the <emphasis effect="bold">access (0:read/write)</emphasis> terminal (highlighted in <link target-id="missingfig"/>).</para>
+
+<figure id="missingfig"><media id="missingfig_media" alt="A row of four icons. The first icon is highlighted blue and labeled 'File Dialog'. Underneath the first icon is a blue box with the word 'access (0:read/write)' contained in it. A line connects that blue box to the second icon. The second icon is colored with little diamonds of different colors along the border of the icon. ">
+            <image mime-type="image/png" src="../../media/missingfig.png" id="missingfig__onlineimage" height="133" width="447"/>
+          </media>
+          
+        <caption>File Access Mode</caption></figure>
+
+        <para id="id1169656767588">Set the constant to <emphasis effect="bold">write-only</emphasis>. Re-arrange the block diagram to look like the diagram shown in <link target-id="id1169656377434"/>. At this point, the file is set to create a new file for writing.</para>
+        <figure id="id1169656377434"><media id="id1169656377434_media" alt="A row of four icons. The first icon is highlighted blue and labeled 'File Dialog'. Underneath the first icon is a blue box with the word 'open or create' contained in it. Underneath the first icon is a blue box with the word 'write-only' contained in it. A line connects each of these blue boxes to the second icon.">
+            <image mime-type="image/png" src="../../media/graphics13.png" id="id1169656377434__onlineimage" height="147" width="447"/>
+          </media>
+          
+        <caption>Write Only Mode</caption></figure>
+        <para id="id1169656074314">Get the <emphasis effect="bold">Noisy Signal</emphasis> function and wire its output data to the <emphasis effect="bold">Data</emphasis> terminal of the <emphasis effect="bold">Write to Binary File</emphasis> function.</para>
+        <figure id="id1169657336315"><media id="id1169657336315_media" alt="A row of four icons. The first icon is highlighted blue and labeled 'File Dialog'. Underneath the first icon is a blue box with the word 'open or create' contained in it. Underneath the first icon is a blue box with the word 'write-only' contained in it. A line connects each of these blue boxes to the second icon. Below the second icon there is a box containing the phrase 'Noisy Signal' and A golden line connects this box to the third icon.">
+            <image mime-type="image/png" src="../../media/graphics14.png" id="id1169657336315__onlineimage" height="158" width="480"/>
+          </media>
+          
+        <caption>Writing Binary Data</caption></figure>
+        <para id="id1169656532443">Complete the diagram by connecting the <emphasis effect="bold">Open</emphasis>, <emphasis effect="bold">Write</emphasis> and <emphasis effect="bold">Close</emphasis> file operations as shown in <link target-id="id1169657319857"/>.</para>
+        <figure id="id1169657319857"><media id="id1169657319857_media" alt="A row of four icons. The first icon is highlighted blue and labeled 'File Dialog'. Underneath the first icon is a blue box with the word 'open or create' contained in it. Underneath the first icon is a blue box with the word 'write-only' contained in it. A line connects each of these blue boxes to the second icon. Below the second icon there is a box containing the phrase 'Noisy Signal' and A golden line connects this box to the third icon. A light blue squiggly line connects the first icon to the second icon. Straight light blue lines and yellow squiggly lines connect the second icon to the third icon and the third icon to the fourth icon. ">
+            <image mime-type="image/png" src="../../media/graphics15.png" id="id1169657319857__onlineimage" height="153" width="439"/>
+          </media>
+          
+        <caption>Writing to File G Program</caption></figure>
+        
+        <para id="id1169656782661">When this G program is executed, the standard file dialog box appears. Name the file to be written <emphasis effect="bold">signal.dat</emphasis>.</para>
+        <figure id="id1169661877974"><media id="id1169661877974_media" alt="A screencap of a Windows window. It shows a create file dialog window.">
+            <image mime-type="image/png" src="../../media/graphics16.png" id="id1169661877974__onlineimage" height="381" width="599"/>
+          </media>
+          
+        <caption>Create File Dialog Box</caption></figure>
+        <para id="id1169658825700">Once the program completes executing, the <emphasis effect="bold">signal.dat</emphasis> file is created and located in the location indicated by the path selected.</para>
+        <para id="id1169651169055">
+          <figure id="id1169658315768"><media id="id1169658315768_media" alt="A screencap of a Windows window. It shows the location of Data File signal.dat.">
+              <image mime-type="image/png" src="../../media/graphics17.png" id="id1169658315768__onlineimage" height="257" width="599"/>
+            </media>
+            
+          <caption>Data File signal.dat</caption></figure>
+        </para>
+      </section>
+      <section id="id1169654626685">
+        <title>Reading From Files </title>
+        <para id="id1169658667564">The <emphasis effect="bold">signal.dat</emphasis> file created in the previous example will be used to read data from a file. As in the previous example, select the <emphasis effect="bold">File Dialog</emphasis>, <emphasis effect="bold">Open/Create File</emphasis>, <emphasis effect="bold">Read from Binary File</emphasis> and <emphasis effect="bold">Close File</emphasis> functions.</para>
+        <figure id="id1169662000496"><media id="id1169662000496_media" alt="A row of four icons. The First icon is contained within a light blue box and is labeled 'File Dialog'.">
+            <image mime-type="image/png" src="../../media/graphics18.png" id="id1169662000496__onlineimage" height="92" width="328"/>
+          </media>
+          
+        <caption>Operators to Read Files</caption></figure>
+        <para id="id1169658508402">Create constants by right clicking on the <emphasis effect="bold">operation (0:open)</emphasis> and <emphasis effect="bold">access (0:read/write)</emphasis> terminals of the <emphasis effect="bold">Open/Create File</emphasis> operation. Set the constants to <emphasis effect="bold">open</emphasis> and <emphasis effect="bold">read-only</emphasis> respectively (see <link target-id="id1169661959126"/> <!--Figure 264 Figure 19 id1169661959126-->).</para>
+        <figure id="id1169661959126"><media id="id1169661959126_media" alt="A row of four icons. The First icon is contained within a light blue box and is labeled 'File Dialog'. Below the first icon are two blue boxes the upper box contains the word 'open'and the bottom bos is labeled 'read-only. There are blues lines connecting these boxes to the second icon. A light blue squiggly line connects the first icon to the second.">
+            <image mime-type="image/png" src="../../media/graphics19.png" id="id1169661959126__onlineimage" height="153" width="394"/>
+          </media>
+          
+        <caption>Set to Open and Read-Only</caption></figure>
+        <para id="id1169656085429">Similar to creating arrays, drop an array constant in the G diagram, drop a numeric constant onto the array constant and set the data type representation to <emphasis effect="bold">double</emphasis>. Wire this array constant to the <emphasis effect="bold">data type</emphasis> terminal of the <emphasis effect="bold">Read from Binary File</emphasis> function as shown in <link target-id="id1169652553880"/> <!--Figure 265 Figure 20-->.</para>
+        <figure id="id1169652553880"><media id="id1169652553880_media" alt="A row of four icons. The First icon is contained within a light blue box and is labeled 'File Dialog'. Below the first icon are two blue boxes the upper box contains the word 'open'and the bottom bos is labeled 'read-only. There are blues lines connecting these boxes to the second icon. A light blue squiggly line connects the fist icon to the second. A golden icon comprised of two rectangles is about icons 2 and 3 with a golden line connecting it to the 3rd icon.">
+            <image mime-type="image/png" src="../../media/graphics20.png" id="id1169652553880__onlineimage" height="156" width="386"/>
+          </media>
+          
+        <caption>Data Type to Read</caption></figure>
+        <para id="id1169658512561">In the Front Panel window, drop a <emphasis effect="bold">Waveform Graph.</emphasis></para>
+        <figure id="id1169657229367"><media id="id1169657229367_media" alt="A screencap of a graph. Time is labeled from 0 to 100 on the x axis, and amplitude is labeled from -1.5 to 1.5 on the y-axis.">
+            <image mime-type="image/png" src="../../media/graphics21.png" id="id1169657229367__onlineimage" height="344" width="530"/>
+          </media>
+          
+        <caption>Graph for Data to be Read</caption></figure>
+        <para id="id1169655302834">With the data type specified, wire the <emphasis effect="bold">data</emphasis> terminal of the <emphasis effect="bold">Read from Binary File</emphasis> function to the <emphasis effect="bold">Waveform Graph</emphasis> terminal as shown in <link target-id="id1169658445818"/> <!--Figure 267 Figure 22 id1169658445818-->.</para>
+        <para id="id1169660802435">
+          <figure id="id1169658445818"><media id="id1169658445818_media" alt="A row of four icons. The First icon is contained within a light blue box and is labeled 'File Dialog'. Below the first icon are two blue boxes the upper box contains the word 'open'and the bottom bos is labeled 'read-only. There are blues lines connecting these boxes to the second icon. A light blue squiggly line connects the fist icon to the second. A golden icon comprised of two rectangles is about icons 2 and 3 with a golden line connecting it to the 3rd icon. There is another golden line connecting the third icon to a little graph icon over the fourth icon.">
+              <image mime-type="image/png" src="../../media/graphics22.png" id="id1169658445818__onlineimage" height="153" width="372"/>
+            </media>
+            
+          <caption>Data to be Read</caption></figure>
+        </para>
+        <para id="id1169654546935">Complete the program by wiring <emphasis effect="bold">refnum</emphasis> and <emphasis effect="bold">error</emphasis> terminals of the <emphasis effect="bold">Open/Create File</emphasis>, <emphasis effect="bold">Read from Binary File</emphasis> and <emphasis effect="bold">Close File</emphasis> functions as shown in <link target-id="id1169658577310"/> <!--Figure 268, Figure 23-->.</para>
+        <figure id="id1169658577310"><media id="id1169658577310_media" alt="A row of four icons. The First icon is contained within a light blue box and is labeled 'File Dialog'. Below the first icon are two blue boxes the upper box contains the word 'open'and the bottom bos is labeled 'read-only. There are blues lines connecting these boxes to the second icon. A light blue squiggly line connects the fist icon to the second. A golden icon comprised of two rectangles is about icons 2 and 3 with a golden line connecting it to the 3rd icon. There is another golden line connecting the third icon to a little graph icon over the fourth icon. There are two yellow squiggly lines connection the second icon to the third and the third to the fourth.">
+            <image mime-type="image/png" src="../../media/graphics23.png" id="id1169658577310__onlineimage" height="156" width="378"/>
+          </media>
+          
+        <caption>Read Binary Data G Program</caption></figure>
+        <para id="id1169658834662">When this program is executed, a file dialog box appears. Select the <emphasis effect="bold">signal.dat</emphasis> file and click <emphasis effect="bold">OK</emphasis>.</para>
+        <para id="id1169656574809">
+          <figure id="id1169651443116"><media id="id1169651443116_media" alt="A screencap of a Windows window. It shows how to select a binary file to read from window.">
+              <image mime-type="image/png" src="../../media/graphics24.png" id="id1169651443116__onlineimage" height="363" width="599"/>
+            </media>
+            
+          <caption>Select Binary File to Read From</caption></figure>
+        </para>
+        <para id="id1169652563385">The binary data in <emphasis effect="bold">signal.dat</emphasis> is read and plotted in a <emphasis effect="bold">Waveform Graph</emphasis>. The result is shown in <link target-id="id1169657359293"/> <!--Figure 270, Figure 25 id1169657359293--></para>
+        <figure id="id1169657359293"><media id="id1169657359293_media" alt="A screencap of a graph. Time is labeled from 0 to 100 on the x axis, and amplitude is labeled from -1.5 to 1.5 on the y-axis. Above the graph is a little square that says 'Plot 0'. The graph contains a jagged sin wav.">
+            <image mime-type="image/png" src="../../media/graphics25.png" id="id1169657359293__onlineimage" height="389" width="525"/>
+          </media>
+          
+        <caption>Read Data Graphed</caption></figure>
+      </section>
+   
+  </content>
+</document>

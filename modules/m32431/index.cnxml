@@ -1,0 +1,30 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Preface to an "Introduction to G Programming"</title>
+  <metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m32431</md:content-id>
+  <md:title>Preface to an "Introduction to G Programming"</md:title>
+  <md:abstract>The creation of this content was supported in some part by NSF grant 0538934.</md:abstract>
+  <md:uuid>e5e948a7-20bc-4855-9827-4a7aebb9a25f</md:uuid>
+</metadata>
+<featured-links>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit below.
+       Changes to the links section in the source will not be saved. -->
+    <link-group type="supplemental">
+      <link url="http://www.digitalgap.com/IntroToGProgramming.php" strength="3">Download G programs</link>
+    </link-group>
+  <!-- WARNING! The 'featured-links' section is read only. Do not edit above.
+       Changes to the links section in the source will not be saved. -->
+</featured-links>
+<content>
+    
+    <para id="id10875040">The Internet, personal devices and multicore computers have greatly changed and enhanced our lives by allowing us to access information and entertainment on-demand anytime, anywhere. While these technologies are great on their own merit, the reality is that in order to reap the benefits, someone has to program these devices to develop useful applications.</para>
+    <para id="id9624924">Historically, text-based high-level programming languages provided the first productive alternative to develop targeted applications. As more networked computing platforms enter the mainstream, the programming complexities of text based languages becomes a limiting factor, especially for domain experts who are typically not programming or computer science experts. The G programming language provides the next generation programming alternative allowing users to develop interactive parallel programs whether they have extensive programming experience or not. It’s graphical syntax and constructs allow researchers, teachers, students and even children to program complex devices and systems in minutes rather than hours, days or even months.</para>
+    <para id="id4520351">G is a data flow graphical programming language. Originally designed to address test and measurement needs, its general purpose programming attributes has been applied in telecommunications, biomedical, aerospace, environmental and many other industries. In general, G is used in Science, Technology, Engineering and Math (STEM) projects and programs but is not limited to STEM.</para>
+    <para id="id8959606">The book was written to help the user learn the G programming syntax and begin developing G programs quickly and easily. Although familiarity with programming concepts could help learning G, the book assumes the user has had no previous exposure to any programming languages. Therefore, to avoid confusion, no pseudo-code or syntax comparisons are made with text-based programming languages. All examples in this book are working graphical examples and have been tested thoroughly. Chapter 1 is an introductory tutorial providing a reference for beginners and seasoned programmers alike. Subsequent chapters provide more details on the G syntax building up to the development of parallel programs that run on multicore platforms.</para>
+    <para id="id9079030">This book is not an introduction to programming, style guide, debugging or to development environments. It is strictly a concise G syntax. Additionally, the user must have access to National Instruments LabVIEW and be familiar with LabVIEW basics. Nonetheless, the user should be able to read along to learn and understand the benefits of G programming.</para>
+    
+    <para id="id8725296">As one of the original LabVIEW development team members, developing G programs has been a pleasant and productive experience. It is the author’s sincere hope that the user finds G programming and interesting endeavor as well.</para>
+    <para id="id12731819">Lalo Pérez, Ph.D.</para>
+    
+  </content>
+</document>
